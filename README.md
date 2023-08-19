@@ -1,9 +1,13 @@
 # Obsidian: Table of Contents Snippet
-This is a very simple table of contents script that I use in my Obsidian docs.
+These snippets require you to download a copy of ![Obsidian.md](obsidian.md/)
+
+
+## About
+This is a very simple **Table of Contents / TOC** script that I use in my Obsidian docs.
 
 It auto-generates a list of headers and links associated to the sub-pages that you have created in your vault.
 
-Please select which version you want to install:
+Select which version you want to install:
 
 | Version | Desc |
 | --- | --- |
