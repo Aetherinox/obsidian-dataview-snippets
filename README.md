@@ -1,14 +1,14 @@
 # Obsidian: Table of Contents Snippet
 This is a very simple table of contents script that I use in my Obsidian docs.
 
-It auto generates a list of headers and links associated to the sub-pages that you have created in your vault.
+It auto-generates a list of headers and links associated to the sub-pages that you have created in your vault.
 
 Please select which version you want to install:
 
 | Version | Desc |
 | --- | --- |
-| [Version 1](#version-1) | Requires the Folder Notes Plugin |
-| [Version 2](#version-2) | Only uses Dataview Plugin |
+| [Version 1](#version-1) | Requires ![Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) + ![Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) |
+| [Version 2](#version-2) | Requires ![Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) only |
 
 ## Version 1
 If you do not want to use the script Folder Notes, view [Version 2](#version-2)
@@ -181,4 +181,5 @@ let p = dv.pages(filter_page)
 
 ![ASGH81Y](https://github.com/Aetherinox/obsidian-tableofcontents/assets/118329232/b0a7278e-9281-4db0-9bca-766a959bfe33)
 
-
+## Notes
+This is a very basic script. I wanted an auto-updating snippet where I could edit my vault notes and the script would automatically update the structure itself. Feel free to play with the code and make something better. If you want to share it, I'll add it here with credits.
