@@ -3,9 +3,15 @@ These snippets require you to download a copy of ![Obsidian.md](obsidian.md/)
 
 
 ## About
-This is a very simple **Table of Contents / TOC** script that I use in my Obsidian docs.
+This is a very simple **Table of Contents / TOC** script that I use in my Obsidian docs which auto-generates a list of headers and links associated to the sub-pages that you have created in your vault.
 
-It auto-generates a list of headers and links associated to the sub-pages that you have created in your vault.
+At the time of writing this script, I am using the following:
+
+| Software | Version |
+| --- | --- |
+| ![Obsidian.md](obsidian.md/) | v1.3.7 |
+| ![Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) | v0.5.56 |
+| ![Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) | v1.5.12 |
 
 Select which version you want to install:
 
