@@ -15,7 +15,7 @@ Select which version you want to install:
 | [Version 2](#version-2) | Requires ![Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) only |
 
 ## Version 1
-If you do not want to use the script Folder Notes, view [Version 2](#version-2)
+If you do not want to install the ![Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin), use [Version 2](#version-2) instead.
 
 ### Requirements
 This script requires the ![Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) and ![Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) to run.
