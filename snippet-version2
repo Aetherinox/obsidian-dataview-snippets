@@ -12,8 +12,6 @@ const path            = path_base.substr(0, path_base.lastIndexOf(".md"));
 const filter_page     = '"' + path + "" + page_sub + '"';
 const filter_folder   = path + page_sub;
 
-console.log(filter_folder)
-
 let p = dv.pages(filter_page)
     // .where(p => p.file.name != dv.current().file.name) // Filter out the current page
     //.where(p => p.file.folder == filter_folder) // Filter out folders
