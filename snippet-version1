@@ -33,15 +33,16 @@ let p = dv.pages(filter_page)
                     .map(h =>
                     {
                         // Determine indentation based on heading level
-                        let indent = " ".repeat(h.level);
+                        let indent        = " ".repeat(h.level);
+                        var file_name     = p.file.name;
                         
-                        const file_name = p.file.name;
-                        const file_heading = h.heading
-                        
-                        // remove backticks
-                        const file_head = file_heading.replace(/`/g, '');
-                        
-                        let objLink = "[[" + file_name + "#" + h.heading + "|" + file_head + "]]";
+                        // remove backticks and tag symbols
+                        var file_head     = h.heading
+                        var file_head     = file_head.replace(/`/g, '');
+                        var file_head     = file_head.replace(/#/g, '');
+                        var file_title    = h.heading.split('#')[0];
+
+                        let objLink       = "[[" + file_name + "#" + file_head + "|" + file_title + "]]";
 
                         if ( h.level == 1 )
                             return indent + "- <sub>" + objLink + "</sub>";
