@@ -1,5 +1,5 @@
 # Obsidian: Table of Contents Snippet
-These snippets require you to download a copy of ![Obsidian.md](obsidian.md/)
+These snippets require you to download a copy of [Obsidian.md](obsidian.md/)
 
 
 ## About
@@ -9,26 +9,26 @@ At the time of writing this script, I am using the following:
 
 | Software | Version |
 | --- | --- |
-| ![Obsidian.md](https://obsidian.md/) | v1.3.7 |
-| ![Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) | v0.5.56 |
-| ![Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) | v1.5.12 |
+| [Obsidian.md](https://obsidian.md/) | v1.3.7 |
+| [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) | v0.5.56 |
+| [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) | v1.5.12 |
 
 Select which version you want to install:
 
 | Version | Desc |
 | --- | --- |
-| [Version 1](#version-1) | Requires ![Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) + ![Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) |
-| [Version 2](#version-2) | Requires ![Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) only |
+| [Version 1](#version-1) | Requires [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) + [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) |
+| [Version 2](#version-2) | Requires [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) only |
 
 ## Version 1
-If you do not want to install the ![Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin), use [Version 2](#version-2) instead.
+If you do not want to install the [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin), use [Version 2](#version-2) instead.
 
 ### Requirements
-This script requires the ![Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) and ![Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) to run.
+This script requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) and [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) to run.
 
 ## Usage
-- Install ![Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
-- Install ![Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin)
+- Install [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
+- Install [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin)
 - Right-click on a folder, select `Folder Note Commands` and select `Create folder note`
 - Copy the code below and paste in in an Obsidian note.
 
@@ -114,7 +114,7 @@ If you don't want to target every file assigned to that folder, you can target a
 
 ## Version 2
 
-- Install ![Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
+- Install [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
 - Copy the code below and paste it in an Obsidian note.
 
 ````javascript
