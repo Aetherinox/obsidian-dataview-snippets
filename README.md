@@ -9,7 +9,7 @@ At the time of writing this script, I am using the following:
 
 | Software | Version |
 | --- | --- |
-| ![Obsidian.md](obsidian.md/) | v1.3.7 |
+| ![Obsidian.md](https://obsidian.md/) | v1.3.7 |
 | ![Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) | v0.5.56 |
 | ![Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) | v1.5.12 |
 
