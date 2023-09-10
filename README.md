@@ -111,6 +111,10 @@ let p = dv.pages(filter_page)
 ```
 ````
 
+<br />
+
+### Example
+
 ![R5Ycywr](https://github.com/Aetherinox/obsidian-tableofcontents/assets/118329232/591730dd-605d-4c26-86f2-f4ee675d589e)
 
 <br /><br />
@@ -210,6 +214,10 @@ let p = dv.pages(filter_page)
     });
 ```
 ````
+
+<br />
+
+### Example
 
 ![ASGH81Y](https://github.com/Aetherinox/obsidian-tableofcontents/assets/118329232/b0a7278e-9281-4db0-9bca-766a959bfe33)
 
