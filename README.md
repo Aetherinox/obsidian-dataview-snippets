@@ -29,8 +29,6 @@ Select which version you want to install:
 
 ## Version 1
 This version requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) and [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes) to run.
-<br />
-If you do not want to install the [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes), use [Version 2](#version-2) instead.
 
 <br />
 
