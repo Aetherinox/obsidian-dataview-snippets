@@ -117,9 +117,11 @@ let p = dv.pages(filter_page)
 
 ![R5Ycywr](https://github.com/Aetherinox/obsidian-tableofcontents/assets/118329232/591730dd-605d-4c26-86f2-f4ee675d589e)
 
-<br /><br />
+<br />
 
 If you don't want to target every file assigned to that folder, you can target a sub-folder by editing the code above and entering the name of the sub-folder starting with a forward-slash `/`
+
+<br />
 
 ![KiWPYV0](https://github.com/Aetherinox/obsidian-tableofcontents/assets/118329232/f38ce5c7-14d5-4f2e-8b8c-f25e2539ac3a)
 
