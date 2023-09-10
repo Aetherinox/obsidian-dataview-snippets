@@ -28,8 +28,9 @@ Select which version you want to install:
 <br /><br />
 
 ## Version 1
+This version requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) and [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes) to run.
+<br />
 If you do not want to install the [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes), use [Version 2](#version-2) instead.
-This requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) and [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes) to run.
 
 <br />
 
@@ -134,8 +135,8 @@ If you don't want to target every file assigned to that folder, you can target a
 <br /><br />
 
 ## Version 2
-This version can be implemented directly into the very top of each note in order to outline all the separate headers that exist on that same page.
-This requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) to run.
+This version requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) to run.
+Code should be implemented directly at the top of each note in order to outline all the separate headers that exist on that same page.
 
 <br />
 
