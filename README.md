@@ -14,7 +14,7 @@ At the time of writing this script, I am using the following:
 | --- | --- |
 | [Obsidian.md](https://obsidian.md/) | v1.3.7 |
 | [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) | v0.5.56 |
-| [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) | v1.5.12 |
+| [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes) | v1.5.12 |
 
 <br />
 
@@ -22,20 +22,20 @@ Select which version you want to install:
 
 | Version | Desc |
 | --- | --- |
-| [Version 1](#version-1) | Requires [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) + [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) |
+| [Version 1](#version-1) | Requires [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) + [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes) |
 | [Version 2](#version-2) | Requires [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) only |
 
 <br /><br />
 
 ## Version 1
-If you do not want to install the [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin), use [Version 2](#version-2) instead.
-This requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) and [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) to run.
+If you do not want to install the [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes), use [Version 2](#version-2) instead.
+This requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) and [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes) to run.
 
 <br />
 
 ### Usage
 - Install [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
-- Install [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin)
+- Install [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes)
 - Right-click on a folder, select `Folder Note Commands` and select `Create folder note`
 - Copy the code below and paste in Obsidian folder note.
 
