@@ -6,6 +6,8 @@ These snippets require you to download a copy of [Obsidian.md](obsidian.md/)
 ## About
 This is a very simple **Table of Contents / TOC** script that I use in my Obsidian docs which auto-generates a list of headers and links associated to the sub-pages that you have created in your vault.
 
+<br />
+
 At the time of writing this script, I am using the following:
 
 | Software | Version |
