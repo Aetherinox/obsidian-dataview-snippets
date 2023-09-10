@@ -16,7 +16,7 @@ At the time of writing this script, I am using the following:
 | [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) | v0.5.56 |
 | [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) | v1.5.12 |
 
-<br /><br />
+<br />
 
 Select which version you want to install:
 
