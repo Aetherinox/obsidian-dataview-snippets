@@ -1,6 +1,7 @@
 # Obsidian: Table of Contents Snippet
 These snippets require you to download a copy of [Obsidian.md](obsidian.md/)
 
+<br /><br />
 
 ## About
 This is a very simple **Table of Contents / TOC** script that I use in my Obsidian docs which auto-generates a list of headers and links associated to the sub-pages that you have created in your vault.
@@ -13,6 +14,8 @@ At the time of writing this script, I am using the following:
 | [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) | v0.5.56 |
 | [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) | v1.5.12 |
 
+<br /><br />
+
 Select which version you want to install:
 
 | Version | Desc |
@@ -20,17 +23,21 @@ Select which version you want to install:
 | [Version 1](#version-1) | Requires [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) + [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) |
 | [Version 2](#version-2) | Requires [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) only |
 
+<br /><br />
+
 ## Version 1
 If you do not want to install the [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin), use [Version 2](#version-2) instead.
+This requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) and [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) to run.
 
-### Requirements
-This script requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) and [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin) to run.
+<br />
 
-## Usage
+### Usage
 - Install [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
 - Install [Folder Notes Plugin](https://github.com/xpgo/obsidian-folder-note-plugin)
 - Right-click on a folder, select `Folder Note Commands` and select `Create folder note`
-- Copy the code below and paste in in an Obsidian note.
+- Copy the code below and paste in Obsidian folder note.
+
+<br />
 
 ````javascript
 ```dataviewjs
@@ -106,16 +113,31 @@ let p = dv.pages(filter_page)
 
 ![R5Ycywr](https://github.com/Aetherinox/obsidian-tableofcontents/assets/118329232/591730dd-605d-4c26-86f2-f4ee675d589e)
 
+<br /><br />
+
 If you don't want to target every file assigned to that folder, you can target a sub-folder by editing the code above and entering the name of the sub-folder starting with a forward-slash `/`
 
 ![KiWPYV0](https://github.com/Aetherinox/obsidian-tableofcontents/assets/118329232/f38ce5c7-14d5-4f2e-8b8c-f25e2539ac3a)
 
+<br /><br />
+
 ---
 
-## Version 2
+<br /><br />
 
+## Version 2
+This version can be implemented directly into the very top of each note in order to outline all the separate headers that exist on that same page.
+This requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) to run.
+
+<br />
+
+### Usage
 - Install [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
-- Copy the code below and paste it in an Obsidian note.
+- Create a new note
+- Copy the code below and paste it at the top of the note.
+- Continue to create your different headers lower down on the same page.
+
+<br />
 
 ````javascript
 ```dataviewjs
@@ -190,6 +212,12 @@ let p = dv.pages(filter_page)
 ````
 
 ![ASGH81Y](https://github.com/Aetherinox/obsidian-tableofcontents/assets/118329232/b0a7278e-9281-4db0-9bca-766a959bfe33)
+
+<br /><br />
+
+---
+
+<br /><br />
 
 ## Notes
 This is a very basic script. I wanted an auto-updating snippet where I could edit my vault notes and the script would automatically update the structure itself. Feel free to play with the code and make something better. If you want to share it, I'll add it here with credits.
