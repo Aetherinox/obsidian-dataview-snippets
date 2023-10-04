@@ -252,7 +252,7 @@ and replace it with:
 dv.el("div", p.file.name);
 ```
 
-This will force each page title to display in a `div` and not as a `<li>` listed item.
+This will force each page title to display in a `div` and not as header object.
 
 
 <br />
@@ -295,3 +295,66 @@ You need to modify the following:
 dv.el("div", "<br /><br />");
 ```
 Each `<br />` is a line break. The more breaks you add, the larger the gap between each list. Remove each break to make the gap smaller.
+
+<br />
+<br />
+
+### Display pages as regular list and not indented
+By default, all headers belonging to a page display as an unordered list such as:
+
+```
+1. Page Title
+  - H2 Header
+    - H3 Header
+      - H4 Header
+        - H5 Header
+          - H6 Header
+```
+
+If you wish to have all pages show as a normal list with no indentation depending on the header type such as:
+
+```
+1. Page Title
+H2 Header
+H3 Header
+H4 Header
+H5 Header
+H6 Header
+```
+
+Then change the original code above to the following:
+
+```javascript
+if ( h.level == 1 )
+    return indent + "- <sub>" + objLink + "</sub>";
+else if ( h.level == 2 )
+    return indent + " - <sub>" + objLink + "</sub>";
+else if ( h.level == 3 )
+    return indent + "  - <sub>" + objLink + "</sub>";
+else if ( h.level == 4 )
+    return indent + "   - <sub>" + objLink + "</sub>";
+else if ( h.level == 5 )
+    return indent + "    - <sub>" + objLink + "</sub>";
+else if ( h.level == 6 )
+    return indent + "     - <sub>" + objLink + "</sub>";
+else
+    return indent + "- " + objLink;
+```
+
+And change it to:
+```javascript
+if ( h.level == 1 )
+    return indent + "<sub>" + objLink + "</sub>";
+else if ( h.level == 2 )
+    return indent + "<sub>" + objLink + "</sub>";
+else if ( h.level == 3 )
+    return indent + "<sub>" + objLink + "</sub>";
+else if ( h.level == 4 )
+    return indent + "<sub>" + objLink + "</sub>";
+else if ( h.level == 5 )
+    return indent + "<sub>" + objLink + "</sub>";
+else if ( h.level == 6 )
+    return indent + "<sub>" + objLink + "</sub>";
+else
+    return indent + "" + objLink;
+```
