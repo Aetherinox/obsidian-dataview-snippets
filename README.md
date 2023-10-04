@@ -322,7 +322,7 @@ H5 Header
 H6 Header
 ```
 
-Then change the original code above to the following:
+Then locate the code displayed below:
 
 ```javascript
 if ( h.level == 1 )
