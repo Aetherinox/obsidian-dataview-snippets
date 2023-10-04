@@ -243,16 +243,16 @@ The `4` stands for `H4` or header 4. To make the text bigger, change that number
 <br />
 
 ### Make each page title not display as a listed item
-In the code
+Locate the code toward the top:
 ```javascript
 dv.header(4, p.file.name);
 ```
-Change `dv.header` to the following:
+and replace it with:
 ```javascript
 dv.el("div", p.file.name);
 ```
 
-This will force each page title to display in a `div` and not as a header item.
+This will force each page title to display in a `div` and not as a `<li>` listed item.
 
 
 <br />
