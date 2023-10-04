@@ -12,9 +12,9 @@ At the time of writing this script, I am using the following:
 
 | Software | Version |
 | --- | --- |
-| [Obsidian.md](https://obsidian.md/) | v1.3.7 |
-| [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) | v0.5.56 |
-| [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes) | v1.5.12 |
+| [Obsidian.md](https://obsidian.md/) | v1.4.12 |
+| [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) | v0.5.59 |
+| [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes) | v1.5.13 |
 
 <br />
 
