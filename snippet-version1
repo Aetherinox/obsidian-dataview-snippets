@@ -12,10 +12,10 @@
 let count               = 0;
 const path_base         = dv.current().file.path
 const path_targ         = path_base.substr(0, path_base.lastIndexOf("/"));
-const page_sub          = ""
+const path_sub          = ""
 
-const filter_page       = '"' + path_targ + "" + page_sub + '"';
-const filter_folder     = path_targ + page_sub;
+const filter_page       = '"' + path_targ + "" + path_sub + '"';
+const filter_folder     = path_targ + path_sub;
 
 let p = dv.pages(filter_page)
     .where(p => p.file.name != dv.current().file.name) // Filter out the current page
@@ -24,8 +24,7 @@ let p = dv.pages(filter_page)
     .forEach(p =>
     {
         dv.header(4, p.file.name); // display page name as header
-
-        const cache = this.app.metadataCache.getCache(p.file.path); //get metadata cache for the page
+        const cache = this.app.metadataCache.getCache(p.file.path);
 
         if (cache)
         {
@@ -34,11 +33,11 @@ let p = dv.pages(filter_page)
             if (headings)
             {
                 const houtput = headings.slice(1) // exclude the first heading
-                .filter(h => h.level <= 6) // filter headings based on level
+                .filter(h => h.level <= 6)
                 .map(h =>
                 {
                     count++;
-
+    
                     // Determine indentation based on heading level
                     let indent        = " ".repeat(h.level);
                     var file_name     = p.file.name;
@@ -66,14 +65,12 @@ let p = dv.pages(filter_page)
                     else
                         return indent + "- " + objLink;
                 })
-                .join("\n") // Join the formatted headings with newlines
-                    
-                dv.el("div", houtput); // Display the formatted headings as a div
-                dv.el("div", "<br /><br />"); // insert line-break between sections
+                .join("\n")
+
+                dv.el("div", houtput);
+                dv.el("div", "<br />");
             }
         }
-        
-        count++;
     });
 
     /*
