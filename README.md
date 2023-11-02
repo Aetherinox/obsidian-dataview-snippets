@@ -22,8 +22,8 @@ Select which version you want to install:
 
 | Version | Desc |
 | --- | --- |
-| [Version 1](#version-1) | Requires [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) + [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes) |
-| [Version 2](#version-2) | Requires [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) only |
+| [Version 1](#version-1) | Requires [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) + [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes) <br /><br /> The code for this version should be pasted inside a Folder Note. It will fetch all of the files that exist inside that folder. |
+| [Version 2](#version-2) | Requires [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) only <br /> <br /> The code for this version should be pasted at the top of a note. All headers that exist within that note will be listed at the top in the table of contents. |
 
 <br /><br />
 
