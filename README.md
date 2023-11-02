@@ -204,13 +204,19 @@ let p = dv.pages(filter_page)
                 .map(h =>
                 {
                     count++;
-    
+
+					var file_head     = h.heading
+					var header_skip   = file_head.replace(/ /g,"_").toLowerCase();
+					if (header_skip === "table_of_contents" || header_skip === "toc")
+					{
+						return ""
+					}
+
                     // Determine indentation based on heading level
                     let indent        = " ".repeat(h.level);
                     var file_name     = p.file.name;
                     
                     // remove backticks and tag symbols
-                    var file_head     = h.heading
                     var file_head     = file_head.replace(/`/g, '');
                     var file_head     = file_head.replace(/#/g, '');
                     var file_title    = h.heading.split('#')[0];
