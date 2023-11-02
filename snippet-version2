@@ -1,26 +1,28 @@
 ```dataviewjs
 
-const page_sub        = "" // Edit if wanting to bypass to a certain subpage
+/*
+    Table of Contents Script
 
-// ------------------------------------
-// No need to edit below this section
-// ------------------------------------
+    Should be pasted at the top of the page to outline
+    all of the headers you want to list on the same page
 
-const path_base       = dv.current().file.path
-const path            = path_base.substr(0, path_base.lastIndexOf(".md"));
+    For this script, "path_sub" should not be edited.
+*/
 
-const filter_page     = '"' + path + "" + page_sub + '"';
-const filter_folder   = path + page_sub;
+let count               = 0;
+const path_base         = dv.current().file.path
+const path_targ         = path_base.substr(0, path_base.lastIndexOf(".md"));
+const path_sub          = ""
+
+const filter_page       = '"' + path_targ + "" + path_sub + '"';
+const filter_folder     = path_targ + path_sub;
 
 let p = dv.pages(filter_page)
-    // .where(p => p.file.name != dv.current().file.name) // Filter out the current page
-    //.where(p => p.file.folder == filter_folder) // Filter out folders
     .sort(p => p.file.path)
     .forEach(p =>
     {
-        //dv.header(4, p.file.name); // display page name as header
-
-        const cache = this.app.metadataCache.getCache(p.file.path); //get metadata cache for the page
+        // dv.header(4, p.file.name); // display page name as header
+        const cache = this.app.metadataCache.getCache(p.file.path);
 
         if (cache)
         {
@@ -28,42 +30,54 @@ let p = dv.pages(filter_page)
 
             if (headings)
             {
-                const houtput = headings.slice(0) // exclude the first heading
-                    .filter(h => h.level <= 6) // filter headings based on level
-                    .map(h =>
-                    {
-                        // Determine indentation based on heading level
-                        let indent        = " ".repeat(h.level);
-                        var file_name     = p.file.name;
-                        
-                        // remove backticks and tag symbols
-                        var file_head     = h.heading
-                        var file_head     = file_head.replace(/`/g, '');
-                        var file_head     = file_head.replace(/#/g, '');
-                        var file_title    = h.heading.split('#')[0];
-
-                        let objLink       = "[[" + file_name + "#" + file_head + "|" + file_title + "]]";
-
-                        if ( h.level == 1 )
-                            return indent + "- <sub>" + objLink + "</sub>";
-                        else if ( h.level == 2 )
-                            return indent + " - <sub>" + objLink + "</sub>";
-                        else if ( h.level == 3 )
-                            return indent + "  - <sub>" + objLink + "</sub>";
-                        else if ( h.level == 4 )
-                            return indent + "   - <sub>" + objLink + "</sub>";
-                        else if ( h.level == 5 )
-                            return indent + "    - <sub>" + objLink + "</sub>";
-                        else if ( h.level == 6 )
-                            return indent + "     - <sub>" + objLink + "</sub>";
-                        else
-                            return indent + "- " + objLink;
-                    })
-                    .join("\n") // Join the formatted headings with newlines
+                const houtput = headings.slice(1) // exclude the first heading
+                .filter(h => h.level <= 6)
+                .map(h =>
+                {
+                    count++;
+    
+                    // Determine indentation based on heading level
+                    let indent        = " ".repeat(h.level);
+                    var file_name     = p.file.name;
                     
-                dv.el("div", houtput); // Display the formatted headings as a div
-                dv.el("div", "<br />"); // insert line-break between sections
+                    // remove backticks and tag symbols
+                    var file_head     = h.heading
+                    var file_head     = file_head.replace(/`/g, '');
+                    var file_head     = file_head.replace(/#/g, '');
+                    var file_title    = h.heading.split('#')[0];
+
+                    let objLink       = "[[" + file_name + "#" + file_head + "|" + file_title + "]]";
+
+                    if ( h.level == 1 )
+                        return indent + "- <sub>" + objLink + "</sub>";
+                    else if ( h.level == 2 )
+                        return indent + " - <sub>" + objLink + "</sub>";
+                    else if ( h.level == 3 )
+                        return indent + "  - <sub>" + objLink + "</sub>";
+                    else if ( h.level == 4 )
+                        return indent + "   - <sub>" + objLink + "</sub>";
+                    else if ( h.level == 5 )
+                        return indent + "    - <sub>" + objLink + "</sub>";
+                    else if ( h.level == 6 )
+                        return indent + "     - <sub>" + objLink + "</sub>";
+                    else
+                        return indent + "- " + objLink;
+                })
+                .join("\n")
+
+                dv.el("div", houtput);
+                dv.el("div", "<br />");
             }
         }
     });
+
+    /*
+        display NO RESULTS
+    */
+
+    if (count === 0)
+    {
+        const rootNode = dv.el("div", "No results", { cls: "toc-results-none" });
+        rootNode.setAttribute("style", "text-align:center;");
+    }
 ```
