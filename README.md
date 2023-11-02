@@ -43,6 +43,7 @@ This version requires the [Dataview Plugin](https://github.com/blacksmithgu/obsi
 ````javascript
 ```dataviewjs
 
+let count             = 0;
 const page_sub        = "" // Edit if wanting to bypass to a certain subpage
 
 // ------------------------------------
@@ -108,7 +109,15 @@ let p = dv.pages(filter_page)
                 dv.el("div", "<br /><br />"); // insert line-break between sections
             }
         }
+
+        count++;
     });
+
+    if (count === 0)
+    {
+        const rootNode = dv.el("div", "No results", { cls: "toc-results-none" });
+        rootNode.setAttribute("style", "text-align:center;");
+    }
 ```
 ````
 
