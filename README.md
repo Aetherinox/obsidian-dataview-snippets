@@ -44,12 +44,16 @@ This version requires the [Dataview Plugin](https://github.com/blacksmithgu/obsi
 ```dataviewjs
 
 /*
-    Table of Contents Script
+    Table of Contents Script > Version 1
 
-    Should be pasted at the top of the page to outline
-    all of the headers you want to list on the same page
+    This version requires the plugin
+        https://github.com/LostPaul/obsidian-folder-notes
 
-    For this script, "path_sub" should not be edited.
+    Create a new folder, right-click, and create a folder note.
+    At the top of the new folder note, paste the code below.
+
+    Inside that folder, place the files you want the table of
+    contents to display. Make sure each file contains headers.
 */
 
 let count               = 0;
