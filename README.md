@@ -373,18 +373,5 @@ else
 
 And change it to:
 ```javascript
-if ( h.level == 1 )
-    return indent + "<sub>" + objLink + "</sub>";
-else if ( h.level == 2 )
-    return indent + "<sub>" + objLink + "</sub>";
-else if ( h.level == 3 )
-    return indent + "<sub>" + objLink + "</sub>";
-else if ( h.level == 4 )
-    return indent + "<sub>" + objLink + "</sub>";
-else if ( h.level == 5 )
-    return indent + "<sub>" + objLink + "</sub>";
-else if ( h.level == 6 )
-    return indent + "<sub>" + objLink + "</sub>";
-else
-    return indent + "" + objLink;
+return indent + "<sub>" + objLink + "</sub>";
 ```
