@@ -205,12 +205,12 @@ let p = dv.pages(filter_page)
                 {
                     count++;
 
-					var file_head     = h.heading
-					var header_skip   = file_head.replace(/ /g,"_").toLowerCase();
-					if (header_skip === "table_of_contents" || header_skip === "toc")
-					{
-						return ""
-					}
+                    var file_head     = h.heading
+                    var header_skip   = file_head.replace(/ /g,"_").toLowerCase();
+                    if (header_skip === "table_of_contents" || header_skip === "toc")
+                    {
+                        return ""
+                    }
 
                     // Determine indentation based on heading level
                     let indent        = " ".repeat(h.level);
