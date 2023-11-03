@@ -1,33 +1,27 @@
 ```dataviewjs
 
 /*
-    Table of Contents Script > Version 1
+    Table of Contents Script
 
-    This version requires the plugin
-        https://github.com/LostPaul/obsidian-folder-notes
+    Should be pasted at the top of the page to outline
+    all of the headers you want to list on the same page
 
-    Create a new folder, right-click, and create a folder note.
-    At the top of the new folder note, paste the code below.
-
-    Inside that folder, place the files you want the table of
-    contents to display. Make sure each file contains headers.
+    For this script, "path_sub" should not be edited.
 */
 
 let count               = 0;
 const path_base         = dv.current().file.path
-const path_targ         = path_base.substr(0, path_base.lastIndexOf("/"));
+const path_targ         = path_base.substr(0, path_base.lastIndexOf(".md"));
 const path_sub          = ""
 
 const filter_page       = '"' + path_targ + "" + path_sub + '"';
 const filter_folder     = path_targ + path_sub;
 
 let p = dv.pages(filter_page)
-    .where(p => p.file.name != dv.current().file.name) // Filter out the current page
-    .where(p => p.file.folder == filter_folder) // Filter out folders
     .sort(p => p.file.path)
     .forEach(p =>
     {
-        dv.header(4, p.file.name); // display page name as header
+        // dv.header(4, p.file.name); // display page name as header
         const cache = this.app.metadataCache.getCache(p.file.path);
 
         if (cache)
@@ -40,14 +34,20 @@ let p = dv.pages(filter_page)
                 .filter(h => h.level <= 6)
                 .map(h =>
                 {
+                    var file_head     = h.heading
+                    var header_skip   = file_head.replace(/ /g,"_").toLowerCase();
+                    if (header_skip === "table_of_contents" || header_skip === "toc")
+                    {
+                        return ""
+                    }
+
                     count++;
-    
+
                     // Determine indentation based on heading level
                     let indent        = " ".repeat(h.level);
                     var file_name     = p.file.name;
                     
                     // remove backticks and tag symbols
-                    var file_head     = h.heading
                     var file_head     = file_head.replace(/`/g, '');
                     var file_head     = file_head.replace(/#/g, '');
                     var file_title    = h.heading.split('#')[0];
