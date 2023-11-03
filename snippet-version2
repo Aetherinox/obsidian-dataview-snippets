@@ -54,8 +54,6 @@ let p = dv.pages(filter_page)
 
                     let objLink       = "[[" + file_name + "#" + file_head + "|" + file_title + "]]";
 
-                    count++;
-
                     if ( h.level == 1 )
                         return indent + "- <sub>" + objLink + "</sub>";
                     else if ( h.level == 2 )
