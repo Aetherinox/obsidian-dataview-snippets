@@ -34,8 +34,6 @@ let p = dv.pages(filter_page)
                 .filter(h => h.level <= 6)
                 .map(h =>
                 {
-                    count++;
-
                     var file_head     = h.heading
                     var header_skip   = file_head.replace(/ /g,"_").toLowerCase();
                     if (header_skip === "table_of_contents" || header_skip === "toc")
@@ -53,6 +51,8 @@ let p = dv.pages(filter_page)
                     var file_title    = h.heading.split('#')[0];
 
                     let objLink       = "[[" + file_name + "#" + file_head + "|" + file_title + "]]";
+
+                    count++;
 
                     if ( h.level == 1 )
                         return indent + "- <sub>" + objLink + "</sub>";
