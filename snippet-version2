@@ -1,7 +1,7 @@
 ```dataviewjs
 
 /*
-    Table of Contents Script
+    Table of Contents Script > Version 2
 
     Should be pasted at the top of the page to outline
     all of the headers you want to list on the same page
@@ -40,6 +40,8 @@ let p = dv.pages(filter_page)
                     {
                         return ""
                     }
+
+                    count++;
 
                     // Determine indentation based on heading level
                     let indent        = " ".repeat(h.level);
