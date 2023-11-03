@@ -170,7 +170,7 @@ Code should be implemented directly at the top of each note in order to outline 
 ```dataviewjs
 
 /*
-    Table of Contents Script
+    Table of Contents Script > Version 2
 
     Should be pasted at the top of the page to outline
     all of the headers you want to list on the same page
@@ -210,6 +210,8 @@ let p = dv.pages(filter_page)
                         return ""
                     }
 
+                    count++;
+
                     // Determine indentation based on heading level
                     let indent        = " ".repeat(h.level);
                     var file_name     = p.file.name;
@@ -220,8 +222,6 @@ let p = dv.pages(filter_page)
                     var file_title    = h.heading.split('#')[0];
 
                     let objLink       = "[[" + file_name + "#" + file_head + "|" + file_title + "]]";
-
-                    count++;
 
                     if ( h.level == 1 )
                         return indent + "- <sub>" + objLink + "</sub>";
