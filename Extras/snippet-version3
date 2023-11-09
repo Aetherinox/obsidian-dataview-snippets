@@ -30,8 +30,6 @@ let p = dv.pages(filter_page)
         dv.header(4, p.file.name); // display page name as header
         const cache = this.app.metadataCache.getCache(p.file.path);
 
-		console.log(p.file.path)
-
         if (cache)
         {
             const headings = cache.headings; // get headings from cache
