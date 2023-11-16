@@ -100,9 +100,13 @@ Open Obsidian Settings, click **Appearance**, and then scroll all the way down. 
 
 Click the mini folder icon to open your **Obsidian Snippets folder**.
 
-Create a new file named whatever (toc.css in our example).
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Bad%20Links/images/install_1.gif"></p>
+
+Create a new file named whatever (`toc.css` in our example).
 
 Copy the code below and paste it into the new `toc.css` file which should be in `YourVaultName/.obsidian/snippets/toc.css`
+
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Bad%20Links/images/install_2.png"></p>
 
 ```css
 /*
@@ -158,3 +162,4 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
 
 Save the file and go back to **Obsidian Settings** -> **Appearance**. Scroll all the way down and enable the checkbox to the right of `toc.css`.
 
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Bad%20Links/images/install_3.gif"></p>
