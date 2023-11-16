@@ -1,18 +1,16 @@
-# Obsidian: Table of Contents: Version 1
+# Obsidian: Table of Contents: Version 2
 This snippet requires a copy of [Obsidian.md](obsidian.md/)
 <br />
 This snippet requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview).
-<br />
-This snippet requires the [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes).
 
 <br /><br />
 
 ## About
-The `Table of Contents: Version 1` snippet displays a table of contents. It compiles a list of all your folder's current subpages and pulls the headers from each page to display in a simple and neat list.
+The `Table of Contents: Version 2` snippet displays a table of contents. It compiles a list of all your folder's current subpages and pulls the headers from each page to display in a simple and neat list.
 
 <br />
 
-The code for this version should be pasted inside a **Folder Note**. It will fetch all of the files that exist inside that folder.
+The code for this version should be pasted at the top of a note. It will fetch all of the headers that exist on that page and display them in an unordered list at the top.
 
 <br />
 
@@ -22,7 +20,6 @@ At the time of writing this script, I am using the following:
 | --- | --- |
 | [Obsidian.md](https://obsidian.md/) | ![GitHub release](https://img.shields.io/github/v/release/obsidianmd/obsidian-releases?label=v&color=ba0f56) |
 | [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) | ![GitHub release](https://img.shields.io/github/v/release/blacksmithgu/obsidian-dataview?label=v&color=ba0f56) |
-| [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes) | ![GitHub release](https://img.shields.io/github/v/release/LostPaul/obsidian-folder-notes?label=v&color=ba0f56) |
 
 <br />
 
@@ -31,7 +28,7 @@ The following are preview images of what the snippet will do and appear like:
 
 <br />
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/TOC%20Version%201/images/example_1.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/TOC%20Version%202/images/example_1.gif"></p>
 
 <br />
 
@@ -44,9 +41,7 @@ The following are preview images of what the snippet will do and appear like:
 ## Usage
 
 - Install [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
-- Install [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes)
-- Right-click on a folder, select `Folder Note Commands` and select `Create Folder Note`
-- Copy the code below and paste in Obsidian folder note:
+- Copy the code below and paste it at the top of a note you want to display a list of headers for:
 
 <br />
 
@@ -54,34 +49,27 @@ The following are preview images of what the snippet will do and appear like:
 ```dataviewjs
 
 /*
-    Table of Contents Script > Version 1
+    Table of Contents Script > Version 2
 
-    This version requires the plugins:
-        https://github.com/LostPaul/obsidian-folder-notes
-        https://github.com/blacksmithgu/obsidian-dataview
+    Should be pasted at the top of the page to outline
+    all of the headers you want to list on the same page
 
-    Create a new folder, right-click, and create folder note.
-    Click inside the folder note and paste the code below.
-
-    Inside that folder, place the files you want the table of
-    contents to display. Make sure each file contains headers.
+    For this script, "path_sub" should not be edited.
 */
 
 let count               = 0;
 const path_base         = dv.current().file.path
-const path_targ         = path_base.substr(0, path_base.lastIndexOf("/"));
+const path_targ         = path_base.substr(0, path_base.lastIndexOf(".md"));
 const path_sub          = ""
 
 const filter_page       = '"' + path_targ + "" + path_sub + '"';
 const filter_folder     = path_targ + path_sub;
 
 let p = dv.pages(filter_page)
-    .where(p => p.file.name != dv.current().file.name) // Filter out the current page
-    .where(p => p.file.folder == filter_folder) // Filter out folders
     .sort(p => p.file.path)
     .forEach(p =>
     {
-        dv.header(4, p.file.name); // display page name as header
+        // dv.header(4, p.file.name); // display page name as header
         const cache = this.app.metadataCache.getCache(p.file.path);
 
         if (cache)
@@ -166,7 +154,7 @@ Click the mini folder icon to open your **Obsidian Snippets folder**.
 
 <br />
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/TOC%20Version%201/images/install_1.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/TOC%20Version%202/images/install_1.gif"></p>
 
 <br />
 
@@ -176,7 +164,7 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
 
 <br />
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/TOC%20Version%201/images/install_2.png"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/TOC%20Version%202/images/install_2.png"></p>
 
 <br />
 
@@ -248,7 +236,7 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
 
 Save the file and go back to **Obsidian Settings** -> **Appearance**. Scroll all the way down and enable the checkbox to the right of `toc.css`.
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/TOC%20Version%201/images/install_3.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/TOC%20Version%202/images/install_3.gif"></p>
 
 <br />
 
