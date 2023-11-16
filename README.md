@@ -6,8 +6,6 @@ These snippets require you to download a copy of [Obsidian.md](obsidian.md/)
 ## About
 This repo originally started a single **Table of Contents** script which displays at the top of your obsidian note. However, numerous other scripts have been added since then.
 
-<br />
-
 <br /><br />
 
 ---
