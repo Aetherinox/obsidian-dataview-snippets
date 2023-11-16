@@ -102,11 +102,17 @@ Click the mini folder icon to open your **Obsidian Snippets folder**.
 
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Bad%20Links/images/install_1.gif"></p>
 
+<br />
+
 Create a new file named whatever (`toc.css` in our example).
 
 Copy the code below and paste it into the new `toc.css` file which should be in `YourVaultName/.obsidian/snippets/toc.css`
 
+<br />
+
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Bad%20Links/images/install_2.png"></p>
+
+<br />
 
 ```css
 /*
