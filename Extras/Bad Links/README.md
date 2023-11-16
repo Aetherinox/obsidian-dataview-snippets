@@ -129,49 +129,63 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
     table of contents > header 2
 */
 
-    .toc_h2 a
-    {
-        color: #7fa8f5 !important;
-        font-size: 10pt;
-        font-weight: lighter;
-        line-height: 20px;
-    }
+    /*
+        table of contents > header 2
+    */
+
+        .toc_h2 a
+        {
+            color: #7fa8f5 !important;
+            font-size: 10pt;
+            font-weight: lighter;
+            line-height: 20px;
+        }
 
     /*
         table of contents > header 3
     */
 
-    .toc_h3 a
-    {
-        color: #f85289 !important;
-        font-size: 9pt;
-        font-weight: lighter;
-        line-height: 20px;
-    }
+        .toc_h3 a
+        {
+            color: #f85289 !important;
+            font-size: 9pt;
+            font-weight: lighter;
+            line-height: 20px;
+        }
 
     /*
         table of contents > header 4, 5, 6
     */
 
-    .toc_h4 a, .toc_h5 a, .toc_h6 a
-    {
-        color: #969696 !important;
-        font-size: 8pt;
-        font-weight: normal;
-        line-height: 20px;
-    }
+        .toc_h4 a, .toc_h5 a, .toc_h6 a
+        {
+            color: #969696 !important;
+            font-size: 8pt;
+            font-weight: normal;
+            line-height: 20px;
+        }
 
     /*
-        table of contents > header 4, 5, 6
+        table of contents > bad links > path
     */
 
-    .toc_badpaths_path, .toc_badpaths_path a
-    {
-        color: #adadad !important;
-        font-size: 9pt;
-        font-weight: normal;
-        line-height: 20px;
-    }
+        .toc_badpaths_path, .toc_badpaths_path a
+        {
+            color: #adadad !important;
+            font-size: 8pt;
+            font-weight: normal;
+            line-height: 20px;
+        }
+
+    /*
+        table of contents > no results
+    */
+
+        .toc_results_none
+        {
+            text-align: center;
+            font-size: 12pt;
+        }
 ```
 
 <br />
