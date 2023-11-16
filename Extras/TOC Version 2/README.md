@@ -241,3 +241,77 @@ Save the file and go back to **Obsidian Settings** -> **Appearance**. Scroll all
 <br />
 
 You should see a table of contents which is populated with the headings of your subfolders.
+
+<br /><br />
+
+---
+
+<br /><br />
+
+## Customization
+### How to make page title above the each list appear bigger
+In your code, locate
+```javascript
+dv.header(4, p.file.name);
+```
+
+The `4` stands for `H4` or header 4. To make the text bigger, change that number to `3 or lower`. Overall, it accepts any number between `1 - 6`, with 1 being the biggest and 6 being the smallest text size.
+
+<br />
+<br />
+
+### Make each page title not display as a listed item
+Locate the code toward the top:
+```javascript
+dv.header(4, p.file.name);
+```
+and replace it with:
+```javascript
+dv.el("div", p.file.name);
+```
+
+This will force each page title to display in a `div` and not as header object.
+
+<br />
+<br />
+
+### My list is cutting off the first header of each page
+Locate the following code:
+```javascript
+const houtput = headings.slice(1)
+```
+
+The number `1` represents how many headers on the page that should be excluded from the first going from the top down. If you enter the number `0`, then no headers will be filtered out / all will show in the list. If you enter `3`, then the first three headers of each page will not appear in the table of contents list.
+
+To disable any headers from being excluded in the list, change the code above to the following:
+```javascript
+const houtput = headings.slice(0)
+```
+
+<br />
+<br />
+
+### Exclude certain headers from appearing in the list
+Much like the example above which allows you to filter from from the top, you can also filter exactly which headers display in the list with the following code:
+```javascript
+.filter(h => h.level <= 6)
+```
+
+The number `6` represents which headers will be included in the list. If you change the value to a `4`, that means any sections of your page with headers 5 or 6 will not show.
+```
+##### This is H5
+###### This is H6
+```
+
+<br />
+<br />
+
+### Making the gap between each list smaller/bigger
+You need to modify the following:
+```javascript
+dv.el("div", "<br /><br />");
+```
+Each `<br />` is a line break. The more breaks you add, the larger the gap between each list. Remove each break to make the gap smaller.
+
+<br />
+<br />
