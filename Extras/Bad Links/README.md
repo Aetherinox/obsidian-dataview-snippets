@@ -16,11 +16,21 @@ This requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dat
 
 <br />
 
+
+### Previews
+The following are preview images of what the snippet will do and appear like:
+
+<br />
+
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Bad%20Links/images/example_1.png"></p>
 
 <br />
 
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Bad%20Links/images/example_2.gif"></p>
+
+<br />
+
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Bad%20Links/images/example_3.png"></p>
 
 <br /><br />
 
@@ -99,6 +109,8 @@ Next, you need to add some custom CSS.
 Open Obsidian Settings, click **Appearance**, and then scroll all the way down. (See image below).
 
 Click the mini folder icon to open your **Obsidian Snippets folder**.
+
+<br />
 
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Bad%20Links/images/install_1.gif"></p>
 
