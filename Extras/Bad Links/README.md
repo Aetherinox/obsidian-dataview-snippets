@@ -95,7 +95,7 @@ const arr = Object.entries( dv.app.metadataCache.unresolvedLinks )
 
     if (count === 0)
     {
-        const results = dv.el("div", "No Broken Links Found 😊", { cls: "toc-results-none" });
+        const results = dv.el("div", "No Broken Links Found 😊", { cls: "toc_results_none" });
         results.setAttribute("style", "text-align:center;");
     }
 ```
