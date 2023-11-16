@@ -2,11 +2,17 @@
 This snippet requires a copy of [Obsidian.md](obsidian.md/)
 <br />
 This snippet requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview).
+<br />
+This snippet requires the [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes).
 
 <br /><br />
 
 ## About
-The `Subfolder Data` snippet displays a table of contents listing based on a specified subfolder. This is useful if you want to pull a list of headers which exist on a page that is not associated to the current folder you are working in.
+The `Table of Contents: Version 1` snippet displays a table of contents. It compiles a list of all your folder's current subpages and pulls the headers from each page to display in a simple and neat list.
+
+<br />
+
+The code for this version should be pasted inside a **Folder Note**. It will fetch all of the files that exist inside that folder.
 
 <br />
 
@@ -38,38 +44,40 @@ The following are preview images of what the snippet will do and appear like:
 ## Usage
 
 - Install [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
-- Install [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes) *(if wanting to use notes*)
-- Copy the code below and paste it in a note.
+- Install [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes)
+- Right-click on a folder, select `Folder Note Commands` and select `Create folder note`
+- Copy the code below and paste in Obsidian folder note.
 
 <br />
 
-````shell
+````javascript
 ```dataviewjs
+
 /*
-    Table of Contents Script > Version 3
+    Table of Contents Script > Version 1
 
-    This version allows for pulling subfolder notes to
-    another table of contents page.
+    This version requires the plugins:
+        https://github.com/LostPaul/obsidian-folder-notes
+        https://github.com/blacksmithgu/obsidian-dataview
 
-    Excludes any subfolder table of contents pages
-    labeled FOLDERNAME/FOLDERNAME.md
+    Create a new folder, right-click, and create folder note.
+    Click inside the folder note and paste the code below.
 
-    Change "General" to the subpage you are wanting to target
+    Inside that folder, place the files you want the table of
+    contents to display. Make sure each file contains headers.
 */
-
-const path_sub          = "General"
 
 let count               = 0;
 const path_base         = dv.current().file.path
 const path_targ         = path_base.substr(0, path_base.lastIndexOf("/"));
-const path_fnote_excl   = path_sub + ".md"
-const filter_page       = '"' + path_targ + "/" + path_sub + '"';
-const filter_folder     = path_targ + "/" + path_sub;
+const path_sub          = ""
+
+const filter_page       = '"' + path_targ + "" + path_sub + '"';
+const filter_folder     = path_targ + path_sub;
 
 let p = dv.pages(filter_page)
     .where(p => p.file.name != dv.current().file.name) // Filter out the current page
     .where(p => p.file.folder == filter_folder) // Filter out folders
-    .where(p => !p.file.path.endsWith(path_fnote_excl) ) // Filter folder note index
     .sort(p => p.file.path)
     .forEach(p =>
     {
@@ -82,7 +90,7 @@ let p = dv.pages(filter_page)
 
             if (headings)
             {
-                const houtput = headings.slice(1) // exclude the first heading
+                const houtput = headings.slice(0) // exclude the first heading
                 .filter(h => h.level <= 6)
                 .map(h =>
                 {
@@ -94,7 +102,7 @@ let p = dv.pages(filter_page)
                     }
 
                     count++;
-    
+
                     // Determine indentation based on heading level
                     let indent        = " ".repeat(h.level);
                     var file_name     = p.file.name;
@@ -107,17 +115,17 @@ let p = dv.pages(filter_page)
                     let objLink       = "[[" + file_name + "#" + file_head + "|" + file_title + "]]";
 
                     if ( h.level == 1 )
-                        return indent + "- " + objLink + "";
+                        return indent + "- <sub>" + objLink + "</sub>";
                     else if ( h.level == 2 )
-                        return indent + " - <span class='toc_h2'>" + objLink + "</span>";
+                        return indent + " - <sub>" + objLink + "</sub>";
                     else if ( h.level == 3 )
-                        return indent + "  - <span class='toc_h3'>" + objLink + "</span>";
+                        return indent + "  - <sub>" + objLink + "</sub>";
                     else if ( h.level == 4 )
-                        return indent + "   - <span class='toc_h4'>" + objLink + "</span>";
+                        return indent + "   - <sub>" + objLink + "</sub>";
                     else if ( h.level == 5 )
-                        return indent + "    - <span class='toc_h5'>" + objLink + "</span>";
+                        return indent + "    - <sub>" + objLink + "</sub>";
                     else if ( h.level == 6 )
-                        return indent + "     - <span class='toc_h6'>" + objLink + "</span>";
+                        return indent + "     - <sub>" + objLink + "</sub>";
                     else
                         return indent + "- " + objLink;
                 })
@@ -143,18 +151,10 @@ let p = dv.pages(filter_page)
 
 <br />
 
-Ensure you change the path to the **subfolder** you want to target:
+If you want to target a subfolder / path, you can modify the variable `path_sub`. If you leave it blank, it will target the folder you paste the code in.
 
 ```javascript
-const path_sub          = "General"
-```
-
-<br />
-
-In the screenshot example, I changed it `Plugins` because the Plugins folder is a subfolder of what I wanted to target and build a table of contents from. You can use an entirely different path to whatever folder you want to generate a list of headers from. 
-
-```javascript
-const path_sub          = "Plugins"
+const path_sub          = "Path/To/Subfolder"
 ```
 
 <br />

@@ -14,6 +14,15 @@ Once the link has been fixed, it will be removed from the list.
 
 <br />
 
+At the time of writing this script, I am using the following:
+
+| Software | Version |
+| --- | --- |
+| [Obsidian.md](https://obsidian.md/) | ![GitHub release](https://img.shields.io/github/v/release/obsidianmd/obsidian-releases?label=v&color=ba0f56) |
+| [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) | ![GitHub release](https://img.shields.io/github/v/release/blacksmithgu/obsidian-dataview?label=v&color=ba0f56) |
+
+<br />
+
 ### Previews
 The following are preview images of what the snippet will do and appear like:
 
@@ -126,11 +135,11 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
 
 ```css
 /*
-    table of contents > header 2
+    Snippet: Table of Contents
 */
 
     /*
-        table of contents > header 2
+        toc > header 2
     */
 
         .toc_h2 a
@@ -142,7 +151,7 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
         }
 
     /*
-        table of contents > header 3
+        toc > header 3
     */
 
         .toc_h3 a
@@ -154,7 +163,7 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
         }
 
     /*
-        table of contents > header 4, 5, 6
+        toc > header 4, 5, 6
     */
 
         .toc_h4 a, .toc_h5 a, .toc_h6 a
@@ -166,7 +175,7 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
         }
 
     /*
-        table of contents > bad links > path
+        toc > bad links > path
     */
 
         .toc_badpaths_path, .toc_badpaths_path a
@@ -178,7 +187,7 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
         }
 
     /*
-        table of contents > no results
+        toc > no results
     */
 
         .toc_results_none
