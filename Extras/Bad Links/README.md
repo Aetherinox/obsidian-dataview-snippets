@@ -1,5 +1,7 @@
 # Obsidian: Bad Links Snippet
-These snippets require you to download a copy of [Obsidian.md](obsidian.md/)
+This snippet requires a copy of [Obsidian.md](obsidian.md/)
+<br />
+This snippet requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview).
 
 <br /><br />
 
@@ -11,11 +13,6 @@ To fix these, you can either delete the link on the associated page, or you can 
 Once the link has been fixed, it will be removed from the list.
 
 <br />
-
-This requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) to run.
-
-<br />
-
 
 ### Previews
 The following are preview images of what the snippet will do and appear like:
@@ -43,6 +40,7 @@ The following are preview images of what the snippet will do and appear like:
 - Install [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
 - Copy the code below and paste it in a note.
 
+<br />
 
 ````shell
 ```dataviewjs
@@ -181,3 +179,7 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
 Save the file and go back to **Obsidian Settings** -> **Appearance**. Scroll all the way down and enable the checkbox to the right of `toc.css`.
 
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Bad%20Links/images/install_3.gif"></p>
+
+<br />
+
+You should now see either a list of broken links that exist within your vault, or a happy face and an "All Clear" message.
