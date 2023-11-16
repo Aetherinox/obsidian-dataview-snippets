@@ -129,3 +129,102 @@ let p = dv.pages(filter_page)
     }
 ```
 ````
+
+<br />
+
+Ensure you change the path to the **subfolder** you want to target:
+
+```javascript
+const path_sub          = "General"
+```
+
+<br />
+
+In the screenshot example, I changed it `Plugins` because the Plugins folder is a subfolder of what I wanted to target and build a table of contents from. You can use an entirely different path to whatever folder you want to generate a list of headers from. 
+
+```javascript
+const path_sub          = "Plugins"
+```
+
+<br />
+
+Next, you need to add some custom CSS.
+Open Obsidian Settings, click **Appearance**, and then scroll all the way down. (See image below).
+
+Click the mini folder icon to open your **Obsidian Snippets folder**.
+
+<br />
+
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Subfolder%20Data/images/install_1.gif"></p>
+
+<br />
+
+Create a new file named whatever (`toc.css` in our example).
+
+Copy the code below and paste it into the new `toc.css` file which should be in `YourVaultName/.obsidian/snippets/toc.css`
+
+<br />
+
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Subfolder%20Data/images/install_2.png"></p>
+
+<br />
+
+```css
+/*
+    table of contents > header 2
+*/
+
+    .toc_h2 a
+    {
+        color: #7fa8f5 !important;
+        font-size: 10pt;
+        font-weight: lighter;
+        line-height: 20px;
+    }
+
+    /*
+        table of contents > header 3
+    */
+
+    .toc_h3 a
+    {
+        color: #f85289 !important;
+        font-size: 9pt;
+        font-weight: lighter;
+        line-height: 20px;
+    }
+
+    /*
+        table of contents > header 4, 5, 6
+    */
+
+    .toc_h4 a, .toc_h5 a, .toc_h6 a
+    {
+        color: #969696 !important;
+        font-size: 8pt;
+        font-weight: normal;
+        line-height: 20px;
+    }
+
+    /*
+        table of contents > header 4, 5, 6
+    */
+
+    .toc_badpaths_path, .toc_badpaths_path a
+    {
+        color: #adadad !important;
+        font-size: 9pt;
+        font-weight: normal;
+        line-height: 20px;
+    }
+```
+
+<br />
+
+Save the file and go back to **Obsidian Settings** -> **Appearance**. Scroll all the way down and enable the checkbox to the right of `toc.css`.
+
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Subfolder%20Data/images/install_3.gif"></p>
+
+<br />
+
+You should see a table of contents which is populated with the headings of your subfolders.
