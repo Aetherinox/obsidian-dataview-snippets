@@ -31,7 +31,7 @@ The following are preview images of what the snippet will do and appear like:
 
 <br />
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/Subfolder%20Data/images/example_1.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Extras/TOC%20Version%201/images/example_1.gif"></p>
 
 <br />
 
@@ -45,8 +45,8 @@ The following are preview images of what the snippet will do and appear like:
 
 - Install [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
 - Install [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes)
-- Right-click on a folder, select `Folder Note Commands` and select `Create folder note`
-- Copy the code below and paste in Obsidian folder note.
+- Right-click on a folder, select `Folder Note Commands` and select `Create Folder Note`
+- Copy the code below and paste in Obsidian folder note:
 
 <br />
 
@@ -115,17 +115,17 @@ let p = dv.pages(filter_page)
                     let objLink       = "[[" + file_name + "#" + file_head + "|" + file_title + "]]";
 
                     if ( h.level == 1 )
-                        return indent + "- <sub>" + objLink + "</sub>";
+                        return indent + "- " + objLink + "";
                     else if ( h.level == 2 )
-                        return indent + " - <sub>" + objLink + "</sub>";
+                        return indent + " - <span class='toc_h2'>" + objLink + "</span>";
                     else if ( h.level == 3 )
-                        return indent + "  - <sub>" + objLink + "</sub>";
+                        return indent + "  - <span class='toc_h3'>" + objLink + "</span>";
                     else if ( h.level == 4 )
-                        return indent + "   - <sub>" + objLink + "</sub>";
+                        return indent + "   - <span class='toc_h4'>" + objLink + "</span>";
                     else if ( h.level == 5 )
-                        return indent + "    - <sub>" + objLink + "</sub>";
+                        return indent + "    - <span class='toc_h5'>" + objLink + "</span>";
                     else if ( h.level == 6 )
-                        return indent + "     - <sub>" + objLink + "</sub>";
+                        return indent + "     - <span class='toc_h6'>" + objLink + "</span>";
                     else
                         return indent + "- " + objLink;
                 })
