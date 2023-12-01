@@ -543,7 +543,7 @@ const QueryStr = `-"Personal Stuff/My PIN Codes"`;
 <br />
 
 #### Exclude Tags
-To filter out specific tags, this is done slightly differently than the other options above. You can prevent certain tags from appearing in your cloud by modifying the following property:
+To filter out specific tags, this is done slightly different than the other options above. You can prevent certain tags from appearing in your cloud by modifying the following property:
 
 <br />
 
@@ -554,23 +554,6 @@ const tagsFilter = [ "#tag1", "#tag2" ];
 <br />
 
 Ensure you use the structure provided. Each tag must be wrapped in quotation marks `"`, with a comma `,` separating each one.
-
-<br />
-<br />
-
-### Font Weight
-The font weight of a tag is determined by two things:
-1. Number of times a tag is used
-2. Number of words associated to a tag.
-
-<br />
-
-To limit the font weight sizes used, edit the two properties below. The lower the value, the thinner the tag. Higher numbers will display more bold text. This setting also plays a role in the [Font Size](#font-size)
-
-```javascript
-const weightBacklinks = 0.1;
-const weightWordCount = 0.3;
-```
 
 <br />
 <br />
