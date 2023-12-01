@@ -19,7 +19,7 @@ The following snippets are available in this repo
 
 ### Table of Contents: Version 1
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Snippets/TOC%20Version%201/images/example_1.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/TOC%20Version%201/images/example_1.gif"></p>
 
 The `Table of Contents: Version 1` snippet displays a table of contents. It compiles a list of all your folder's current subpages and pulls the headers from each page to display in a simple and neat list.
 
@@ -37,7 +37,7 @@ This version requires you to install the following:
 
 <div align="center">
 
-[![View](https://img.shields.io/badge/%20-%20View%20Version%201%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-table-of-contents/tree/main/Snippets/TOC%20Version%201)
+[![View](https://img.shields.io/badge/%20-%20View%20Version%201%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/TOC%20Version%201)
 
 </div>
 
@@ -49,7 +49,7 @@ This version requires you to install the following:
 
 ### Table of Contents: Version 2
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Snippets/TOC%20Version%202/images/example_1.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/TOC%20Version%202/images/example_1.gif"></p>
 
 The `Table of Contents: Version 2` snippet displays a table of contents. It compiles a list of all your folder's current subpages and pulls the headers from each page to display in a simple and neat list.
 
@@ -66,7 +66,7 @@ This version requires you to install the following:
 
 <div align="center">
 
-[![View](https://img.shields.io/badge/%20-%20View%20Version%202%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-table-of-contents/tree/main/Snippets/TOC%20Version%202)
+[![View](https://img.shields.io/badge/%20-%20View%20Version%202%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/TOC%20Version%202)
 
 </div>
 
@@ -78,7 +78,7 @@ This version requires you to install the following:
 
 ### Subfolder Data
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Snippets/Subfolder%20Data/images/example_1.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Subfolder%20Data/images/example_1.gif"></p>
 
 The `Subfolder Data` snippet displays a table of contents listing based on a specified subfolder. This is useful if you want to pull a list of headers which exist on a page that is not associated to the current folder you are working in.
 
@@ -96,7 +96,7 @@ The following plugins are **optional**:
 
 <div align="center">
 
-[![View](https://img.shields.io/badge/%20-%20View%20Subfolder%20Data%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-table-of-contents/tree/main/Snippets/Subfolder%20Data)
+[![View](https://img.shields.io/badge/%20-%20View%20Subfolder%20Data%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Subfolder%20Data)
 
 </div>
 
@@ -108,7 +108,7 @@ The following plugins are **optional**:
 
 ### Bad Links
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-table-of-contents/main/Snippets/Bad%20Links/images/example_2.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Bad%20Links/images/example_2.gif"></p>
 
 The `Table of Contents: Bad Links` snippet displays a list of internal links within your vault that lead nowhere (are broken).
 
@@ -123,6 +123,33 @@ This version **requires** you to install the following:
 
 <div align="center">
 
-[![View](https://img.shields.io/badge/%20-%20View%20Bad%20Links%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-table-of-contents/tree/main/Snippets/Bad%20Links)
+[![View](https://img.shields.io/badge/%20-%20View%20Bad%20Links%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Bad%20Links)
+
+</div>
+
+<br /><br />
+
+---
+
+<br /><br />
+
+### Tag Cloud
+
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud/images/example_1.gif"></p>
+
+The `Tag Cloud` snippet fetches a list of tags associated to your vault and displays them in a series of columns.
+
+Each tag can be clicked on, which will open the Search interface and display all other pages associated to the selected tag.
+
+<br />
+
+This version **requires** you to install the following:
+- [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
+
+<br />
+
+<div align="center">
+
+[![View](https://img.shields.io/badge/%20-%20View%20Tag%20Cloud%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Tag%20Cloud)
 
 </div>
