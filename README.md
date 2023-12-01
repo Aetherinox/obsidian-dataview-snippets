@@ -17,6 +17,23 @@ The following snippets are available in this repo
 
 <br />
 
+- [Obsidian: Script Collection](#obsidian-script-collection)
+  - [About](#about)
+  - [Snippets](#snippets)
+    - [Table of Contents: Version 1](#table-of-contents-version-1)
+    - [Table of Contents: Version 2](#table-of-contents-version-2)
+    - [Subfolder Data](#subfolder-data)
+    - [Bad Links](#bad-links)
+    - [Tag Cloud: Version 1](#tag-cloud-version-1)
+    - [Tag Cloud: Version 2](#tag-cloud-version-2)
+
+
+<br /><br />
+
+---
+
+<br /><br />
+
 ### Table of Contents: Version 1
 
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/TOC%20Version%201/images/example_1.gif"></p>
