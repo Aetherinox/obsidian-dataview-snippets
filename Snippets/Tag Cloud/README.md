@@ -42,7 +42,7 @@ The following are preview images of what the snippet will do and appear like:
 ````shell
 ```dataviewjs
 /*
-    Snippet: Cloud Tags
+    Snippet: Tag Cloud
 
     This snippet requires the Dataview Plugin
       https://github.com/blacksmithgu/obsidian-dataview
@@ -58,6 +58,11 @@ The following are preview images of what the snippet will do and appear like:
 var bRandomColor        = true;
 const QueryStr          = `""`;
 const QueryFiles        = dv.pages( QueryStr );
+
+const weightBacklinks   = 0.1;
+const weightWordCount   = 0.5;
+const minFontSize       = 12;
+const maxFontSize       = 32;
 
 /*
     Get all backlinks
@@ -134,10 +139,6 @@ async function QueryWordcount( q )
 
 function Generate_FontSize( backlinks, wordCount )
 {
-    const weightBacklinks       = 0.1;
-    const weightWordCount       = 0.5;
-    const minFontSize           = 14;
-    const maxFontSize           = 28;
     const calcFontSize          = Math.sqrt( ( backlinks * weightBacklinks ) + ( wordCount * weightWordCount ) ) * 2.5;
 
     return Math.round( ( calcFontSize / 100 ) * ( maxFontSize - minFontSize ) + minFontSize );
@@ -145,17 +146,6 @@ function Generate_FontSize( backlinks, wordCount )
 
 /*
     Generate font color
-
-    grey    : #474a51
-    teal    : #60BBD0
-    green   : #00935d
-    yellow  : #dba022
-    orange  : #da6f01
-    red     : #8f0d15
-    fuchsia : #F20F5C
-    purple  : #613493
-    blue    : #3c4d93
-    dblue   : #3c4256
 */
 
 function Generate_Color( tagName, tagInfo )
@@ -223,11 +213,6 @@ function Generate_Color( tagName, tagInfo )
     {
         return colors[ Object.keys( colors )[ colorIndex ] ];
     }
-    else
-    {
-        return colors[ Object.keys( colors )[ colorID ] ];
-    }
-
 
     return colors[ Object.keys( colors )[ colorID ] ];
 }
