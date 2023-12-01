@@ -133,9 +133,9 @@ This version **requires** you to install the following:
 
 <br /><br />
 
-### Tag Cloud
+### Tag Cloud: Version 1
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud/images/example_1.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud%201/images/example_1.gif"></p>
 
 The `Tag Cloud` snippet fetches a list of tags associated to your vault and displays them in a series of columns.
 
@@ -150,6 +150,33 @@ This version **requires** you to install the following:
 
 <div align="center">
 
-[![View](https://img.shields.io/badge/%20-%20View%20Tag%20Cloud%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Tag%20Cloud)
+[![View](https://img.shields.io/badge/%20-%20View%20Tag%20Cloud%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Tag%20Cloud%201)
+
+</div>
+
+<br /><br />
+
+---
+
+<br /><br />
+
+### Tag Cloud: Version 2
+
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud%202/images/example_1.gif"></p>
+
+The `Tag Cloud` snippet fetches a list of tags associated to your vault and displays them in a series of columns.
+
+Each tag can be clicked on, which will open the Search interface and display all other pages associated to the selected tag.
+
+<br />
+
+This version **requires** you to install the following:
+- [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
+
+<br />
+
+<div align="center">
+
+[![View](https://img.shields.io/badge/%20-%20View%20Tag%20Cloud%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Tag%20Cloud%202)
 
 </div>
