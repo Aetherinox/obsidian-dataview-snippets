@@ -1,4 +1,4 @@
-# Obsidian: Tag Cloud
+# Obsidian: Tag Cloud : Version 2
 This snippet requires a copy of [Obsidian.md](obsidian.md/)
 <br />
 This snippet requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview).
@@ -42,7 +42,7 @@ The following are preview images of what the snippet will do and appear like:
 ````shell
 ```dataviewjs
 /*
-    Snippet: Tag Cloud
+    Snippet: Tag Cloud Version 2
 
     This snippet requires the Dataview Plugin
       https://github.com/blacksmithgu/obsidian-dataview
@@ -69,7 +69,7 @@ const QueryFiles        = dv.pages( QueryStr );
 const bRandomColor      = true;
 const sortOption        = 1;
 const weightBacklinks   = 0.1;
-const weightWordCount   = 0.3;
+const weightWordCount   = 0.5;
 const minFontSize       = 12;
 const maxFontSize       = 32;
 const tagsFilter        = [ "#tag1", "#tag2" ];
@@ -315,7 +315,7 @@ const CreateTags = async ( ) =>
 
     return eval( funcSort )( data ).map( ( tag ) =>
     {
-        return `<div class="cloudtags-item"><a class="cloudtags-link" href="obsidian://search?query=tag:${encodeURIComponent(tag.id)}" style="font-size:${tag.fontSize}px; color: ${tag.color};">${tag.id}</a><div class="tagcloud-length">${tag.length}</div></div>`;
+        return `<div class="cloudtags-v2-item"><a class="cloudtags-v2-link" href="obsidian://search?query=tag:${encodeURIComponent(tag.id)}" style="font-size:${tag.fontSize}px; color: ${tag.color};">${tag.id}</a><div class="tagcloud-v2-length">${tag.length}</div></div>`;
     } ).join( "" );
     } ).then( res => dv.paragraph( res ) )
     .catch( error =>
@@ -353,7 +353,7 @@ Copy the code below and paste it into the new `tag_cloud.css` file which should 
 
 ```css
 /*
-    Snippet: Tag Cloud
+    Snippet: Tag Cloud v2
 */
 
     /*
@@ -380,94 +380,121 @@ Copy the code below and paste it into the new `tag_cloud.css` file which should 
         {
             0%
             {
-                transform: scale(0.85);
-                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+                transform:      scale(0.85);
+                box-shadow:     0 0 0 0 rgba(0, 0, 0, 0.7);
             }
 
             70%
             {
-                transform: scale(1);
-                box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+                transform:      scale(1);
+                box-shadow:     0 0 0 10px rgba(0, 0, 0, 0);
             }
 
             100%
             {
-                transform: scale(0.85);
-                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                transform:      scale(0.85);
+                box-shadow:     0 0 0 0 rgba(0, 0, 0, 0);
             }
+        }
+
+    /*
+        Tag Cloud > Disable Colorful Animation
+    */
+
+        body.colorful-link-animation :is(.markdown-preview-view,.markdown-rendered) a:hover
+        {
+            animation:          none !important; 
         }
 
     /*
         Tag Cloud > Item
     */
 
-        .cloudtags-item
+        .cloudtags-v2-item
         {
-            margin-top: 5px;
-            margin-bottom: 5px;
-            margin-left: 7px;
-            margin-right: 7px;
-            padding-left: 7px;
-            padding-right: 7px;
-            padding-top: 4px;
-            padding-bottom: 4px;
-            background-color: #252525;
-            border: 1px solid #353535 !important;
-            border-radius: 6px;
-            display: inline-block;
-            font-weight: bold;
-            position:relative;
+            margin-top:         5px;
+            margin-bottom:      5px;
+            margin-left:        7px;
+            margin-right:       7px;
+            padding-left:       2px;
+            padding-right:      2px;
+            padding-top:        4px;
+            padding-bottom:     4px;
+            display:            inline-block;
+            position:           relative;
+            font-weight:        bold !important;
         }
 
-        .cloudtags-item:hover
+        .cloudtags-v2-item:hover
         {
-            opacity: 0.9;
-            background: #810d3d;
-            animation: pulse 2s infinite !important;
-            border: 1px solid #dd2a74 !important;
-            cursor: pointer;
+            cursor:                     pointer;
+            font-weight:                bold !important;
+            animation-name:             glow;
+            animation-duration:         1s;
+            animation-timing-function:  ease-in-out;
+            animation-iteration-count:  infinite;
+            animation-direction:        alternate;
+            transition-property:        all; 
+            transition-duration:        0.3s; 
+            transition-timing-function: ease; 
+            transform:                  scale(1.1); 
         }
 
-        .cloudtags-item:hover a
+        .cloudtags-v2-item:hover a
         {
             color:              #FFF !important;
             background:         none;
-            -webkit-animation:  glow 1s ease-in-out infinite alternate !important;
-            -moz-animation:     glow 1s ease-in-out infinite alternate  !important;
-            animation:          glow 1s ease-in-out infinite alternate  !important;
+        }
+
+        .cloudtags-v2-item a
+        {
+            padding-left:       10px !important;
         }
 
     /*
         Tag Cloud > Links
     */
 
-        a.cloudtags-link
+        a.cloudtags-v2-link
         {
-            line-height: 30px;
-            vertical-align: middle;
-            text-decoration: none;
+            line-height:        15px;
+            vertical-align:     middle;
+            text-decoration:    none;
+            font-weight:        bold !important;
+        }
+
+    /*
+        Tag Cloud > Display Length Div on Item Hover
+    */
+
+        .cloudtags-v2-item:hover .tagcloud-v2-length
+        {
+            font-weight:        bold !important;
+            display:            block;
         }
 
     /*
         Tag Cloud > Length
     */
 
-        .tagcloud-length
+        .tagcloud-v2-length
         {
-            border-radius: 50%;
-            width: 18px;
-            height: 18px;
-            background: #424242;
-            color: #FFF;
-            text-align: center;
-            font: 8px sans-serif;
-            position: absolute;
-            vertical-align: middle;
-            margin: auto 0;
-            left: 3%;
-            top: -5px;
-            transform: translateX(-50%);
-            line-height: 19px;
+            font-weight:        normal !important;
+            display:            none;
+            border-radius:      50%;
+            width:              18px;
+            height:             18px;
+            background:         #424242;
+            color:              #FFF;
+            text-align:         center;
+            font:               10px sans-serif;
+            position:           absolute;
+            vertical-align:     middle;
+            margin:             auto 0;
+            left:               3%;
+            top:                -5px;
+            transform:          translateX(-50%);
+            line-height:        19px;
           }
 ```
 
