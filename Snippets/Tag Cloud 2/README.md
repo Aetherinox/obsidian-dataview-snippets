@@ -289,7 +289,7 @@ const CreateTags = async ( ) =>
     {
         const fontSize      = Generate_FontSize( tagInfo.backlinks, tagInfo.wordCount );
         const color         = Generate_Color( tagName, tagInfo );
-		const length        = dv.pages( tagName ).length;
+        const length        = dv.pages( tagName ).length;
 		
         data.push( { name: `\\${tagName}`, id: tagName, length: length, fontSize, color } );
     });
