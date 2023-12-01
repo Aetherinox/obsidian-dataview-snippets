@@ -24,7 +24,7 @@ The following are preview images of what the snippet will do and appear like:
 
 <br />
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud/images/example_1.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud%201/images/example_1.gif"></p>
 
 <br /><br />
 
@@ -42,7 +42,7 @@ The following are preview images of what the snippet will do and appear like:
 ````shell
 ```dataviewjs
 /*
-    Snippet: Tag Cloud
+    Snippet: Tag Cloud Version 1
 
     This snippet requires the Dataview Plugin
       https://github.com/blacksmithgu/obsidian-dataview
@@ -51,8 +51,9 @@ The following are preview images of what the snippet will do and appear like:
     search for associated pages related to the selected cloud.
 
     sortOption
-        1       = Sort Alphabetically
-        2       = Sort Random / Shuffle
+        1       = Sort Alphabetically (Descending)
+        2       = Sort Alphabetically (Ascending)
+        3       = Sort Random / Shuffle
 
     bRandomColor
         true    = Uses random colors for each tag
@@ -315,7 +316,7 @@ const CreateTags = async ( ) =>
 
     return eval( funcSort )( data ).map( ( tag ) =>
     {
-        return `<div class="cloudtags-item"><a class="cloudtags-link" href="obsidian://search?query=tag:${encodeURIComponent(tag.id)}" style="font-size:${tag.fontSize}px; color: ${tag.color};">${tag.id}</a><div class="tagcloud-length">${tag.length}</div></div>`;
+        return `<div class="cloudtags-v1-item"><a class="cloudtags-v1-link" href="obsidian://search?query=tag:${encodeURIComponent(tag.id)}" style="font-size:${tag.fontSize}px; color: ${tag.color};">${tag.id}</a><div class="tagcloud-v1-length">${tag.length}</div></div>`;
     } ).join( "" );
     } ).then( res => dv.paragraph( res ) )
     .catch( error =>
@@ -337,17 +338,17 @@ Click the mini folder icon to open your **Obsidian Snippets folder**.
 
 <br />
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud/images/install_1.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud%201/images/install_1.gif"></p>
 
 <br />
 
-Create a new file named whatever (`tag_cloud.css` in our example).
+Create a new file named whatever (`tag_cloud_v1.css` in our example).
 
-Copy the code below and paste it into the new `tag_cloud.css` file which should be in `YourVaultName/.obsidian/snippets/tag_cloud.css`
+Copy the code below and paste it into the new `tag_cloud_v1.css` file which should be in `YourVaultName/.obsidian/snippets/tag_cloud_v1.css`
 
 <br />
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud/images/install_2.png"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud%201/images/install_2.png"></p>
 
 <br />
 
@@ -401,7 +402,7 @@ Copy the code below and paste it into the new `tag_cloud.css` file which should 
         Tag Cloud > Item
     */
 
-        .cloudtags-item
+        .cloudtags-v1-item
         {
             margin-top: 5px;
             margin-bottom: 5px;
@@ -419,7 +420,7 @@ Copy the code below and paste it into the new `tag_cloud.css` file which should 
             position:relative;
         }
 
-        .cloudtags-item:hover
+        .cloudtags-v1-item:hover
         {
             opacity: 0.9;
             background: #810d3d;
@@ -428,7 +429,7 @@ Copy the code below and paste it into the new `tag_cloud.css` file which should 
             cursor: pointer;
         }
 
-        .cloudtags-item:hover a
+        .cloudtags-v1-item:hover a
         {
             color:              #FFF !important;
             background:         none;
@@ -441,7 +442,7 @@ Copy the code below and paste it into the new `tag_cloud.css` file which should 
         Tag Cloud > Links
     */
 
-        a.cloudtags-link
+        a.cloudtags-v1-link
         {
             line-height: 30px;
             vertical-align: middle;
@@ -452,7 +453,7 @@ Copy the code below and paste it into the new `tag_cloud.css` file which should 
         Tag Cloud > Length
     */
 
-        .tagcloud-length
+        .tagcloud-v1-length
         {
             border-radius: 50%;
             width: 18px;
@@ -473,9 +474,9 @@ Copy the code below and paste it into the new `tag_cloud.css` file which should 
 
 <br />
 
-Save the file and go back to **Obsidian Settings** -> **Appearance**. Scroll all the way down and enable the checkbox to the right of `toc.css`.
+Save the file and go back to **Obsidian Settings** -> **Appearance**. Scroll all the way down and enable the checkbox to the right of `tag_cloud_v1.css`.
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud/images/install_3.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud%201/images/install_3.gif"></p>
 
 <br />
 

@@ -24,7 +24,7 @@ The following are preview images of what the snippet will do and appear like:
 
 <br />
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud/images/example_1.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud%202/images/example_1.gif"></p>
 
 <br /><br />
 
@@ -51,8 +51,9 @@ The following are preview images of what the snippet will do and appear like:
     search for associated pages related to the selected cloud.
 
     sortOption
-        1       = Sort Alphabetically
-        2       = Sort Random / Shuffle
+        1       = Sort Alphabetically (Descending)
+        2       = Sort Alphabetically (Ascending)
+        3       = Sort Random / Shuffle
 
     bRandomColor
         true    = Uses random colors for each tag
@@ -337,23 +338,23 @@ Click the mini folder icon to open your **Obsidian Snippets folder**.
 
 <br />
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud/images/install_1.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud%202/images/install_1.gif"></p>
 
 <br />
 
-Create a new file named whatever (`tag_cloud.css` in our example).
+Create a new file named whatever (`tag_cloud_v2.css` in our example).
 
-Copy the code below and paste it into the new `tag_cloud.css` file which should be in `YourVaultName/.obsidian/snippets/tag_cloud.css`
+Copy the code below and paste it into the new `tag_cloud_v2.css` file which should be in `YourVaultName/.obsidian/snippets/tag_cloud_v2.css`
 
 <br />
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud/images/install_2.png"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud%202/images/install_2.png"></p>
 
 <br />
 
 ```css
 /*
-    Snippet: Tag Cloud v2
+    Snippet: Tag Cloud
 */
 
     /*
@@ -500,9 +501,9 @@ Copy the code below and paste it into the new `tag_cloud.css` file which should 
 
 <br />
 
-Save the file and go back to **Obsidian Settings** -> **Appearance**. Scroll all the way down and enable the checkbox to the right of `toc.css`.
+Save the file and go back to **Obsidian Settings** -> **Appearance**. Scroll all the way down and enable the checkbox to the right of `tag_cloud_v2.css`.
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud/images/install_3.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud%202/images/install_3.gif"></p>
 
 <br />
 
