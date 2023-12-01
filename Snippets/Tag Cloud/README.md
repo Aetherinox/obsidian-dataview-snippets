@@ -49,18 +49,27 @@ The following are preview images of what the snippet will do and appear like:
 
     Creates a cloud with all of your tags which are clickable to
     search for associated pages related to the selected cloud.
+
+    sortOption
+        1       = Sort Alphabetically
+        2       = Sort Random / Shuffle
+
+    bRandomColor
+        true    = Uses random colors for each tag
+        false   = Tags with more uses gets more colorful
 */
 
 /*
     Settings
 */
 
-var bRandomColor        = true;
 const QueryStr          = `""`;
 const QueryFiles        = dv.pages( QueryStr );
 
+const bRandomColor      = true;
+const sortOption        = 1;
 const weightBacklinks   = 0.1;
-const weightWordCount   = 0.5;
+const weightWordCount   = 0.3;
 const minFontSize       = 12;
 const maxFontSize       = 32;
 
@@ -81,32 +90,6 @@ async function QueryBacklinks( q )
 }
 
 /*
-    Get all md files and associated tags
-*/
-
-async function tagsQuery( q )
-{
-    return dv.query(
-    `
-        LIST
-        FROM "${q}"
-        where tags != ""
-        SORT file.name DESC
-    `);
-}
-
-async function tagFilesQuery( q )
-{
-    return dv.query(
-    `
-        LIST
-        FROM ${QueryStr}
-        where tags = "${q}"
-        SORT file.name DESC
-    `);
-}
-
-/*
     Get number of words in each file
 */
 
@@ -115,21 +98,14 @@ async function QueryWordcount( q )
     const fs            = require( 'fs' );
     const path          = require( 'path' );
     const text          = fs.readFileSync( path.join( app.vault.adapter.basePath, q ), 'utf-8' );
-
-    /*
-        Remove blocks
-    */
-
     const pattern       = /---[\s\S]*?---|```[\s\S]*?```|\$[\s\S]*?\$|\$\$[\s\S]*?\$\$/g;
     const cleanedText   = text.replace( pattern, '' );
+    const matchText     = cleanedText.match( /\S+/g );
 
-    /*
-        Count words
-
-        return cleanedText.match(/\S+/g).length;
-    */
-
-    return 20;
+    if ( !matchText )
+        return 0;
+    
+    return matchText.length;
 }
 
 /*
@@ -139,8 +115,7 @@ async function QueryWordcount( q )
 
 function Generate_FontSize( backlinks, wordCount )
 {
-    const calcFontSize          = Math.sqrt( ( backlinks * weightBacklinks ) + ( wordCount * weightWordCount ) ) * 2.5;
-
+    const calcFontSize = Math.sqrt( ( backlinks * weightBacklinks ) + ( wordCount * weightWordCount ) ) * 2.5;
     return Math.round( ( calcFontSize / 100 ) * ( maxFontSize - minFontSize ) + minFontSize );
 }
 
@@ -210,15 +185,13 @@ function Generate_Color( tagName, tagInfo )
     const colorID       = dv.pages( tagName ).length;
 
     if ( bRandomColor === true )
-    {
         return colors[ Object.keys( colors )[ colorIndex ] ];
-    }
 
     return colors[ Object.keys( colors )[ colorID ] ];
 }
 
 /*
-    Sort > Desc
+    Sort > DESC / ASC
 
     alphabetize array results
 */
@@ -226,6 +199,12 @@ function Generate_Color( tagName, tagInfo )
 function Sort_DESC( arr )
 {
     arr.sort( ( a, b ) => a.id.localeCompare( b.id ) )
+    return arr;
+}
+
+function Sort_ASC( arr )
+{
+    arr.sort( ( a, b ) => b.id.localeCompare( a.id ) )
     return arr;
 }
 
@@ -308,18 +287,34 @@ const CreateTags = async ( ) =>
     });
 
     /*
+        Sorting functions
+    */
+
+    const sortOptions =
+    {
+        1: 'Sort_DESC',
+        2: 'Sort_ASC',
+        3: 'Sort_Shuffle',
+    };
+
+    let funcSort = sortOptions[ sortOption ]
+
+    if ( funcSort === undefined )
+        funcSort = sortOptions[ 1 ]
+
+    /*
         Return results
     */
 
-    return Sort_DESC( data ).map( ( tag ) =>
+    return eval( funcSort )( data ).map( ( tag ) =>
     {
         return `<div class="cloudtags-item"><a class="cloudtags-link" href="obsidian://search?query=tag:${encodeURIComponent(tag.id)}" style="font-size:${tag.fontSize}px; color: ${tag.color};">${tag.id}</a><div class="tagcloud-length">${tag.length}</div></div>`;
-    }).join("");
-    }).then( res => dv.paragraph( res ) )
+    } ).join( "" );
+    } ).then( res => dv.paragraph( res ) )
     .catch( error =>
     {
-        console.error( error );
-    });
+        console.error( "Error: " + error );
+    } );
 }
 
 CreateTags( )
@@ -478,3 +473,76 @@ Save the file and go back to **Obsidian Settings** -> **Appearance**. Scroll all
 <br />
 
 You should see a list of tags associated to your vault.
+
+<br /><br />
+
+---
+
+<br /><br />
+
+## Customization
+The section below explains how to customize this snippet.
+
+<br />
+
+### Change Sorting
+This snippet allows for two ways of sorting tags:
+1. Alphabetically (Descending A-Z)
+2. Alphabetically (Ascending Z-A)
+3. Random / Shuffle
+
+<br />
+
+To change the sorting, edit the property:
+
+```javascript
+const sortOption = 1;
+```
+
+<br />
+<br />
+
+### Random Tag Colors
+Tags can either be assigned random colors, or colors can be assigned depending on how many times that tag has been called.
+
+<br />
+
+To change this, edit the property:
+
+```javascript
+const bRandomColor = true;
+```
+
+<br />
+<br />
+
+### Font Size
+The font size of a tag is determined by two things:
+1. Number of times a tag is used
+2. Number of words associated to a tag.
+
+<br />
+
+To limit the font sizes that are used, edit the two properties below:
+
+```javascript
+const minFontSize = 12;
+const maxFontSize = 32;
+```
+
+<br />
+<br />
+
+### Font Weight
+The font weight of a tag is determined by two things:
+1. Number of times a tag is used
+2. Number of words associated to a tag.
+
+<br />
+
+To limit the font weight sizes used, edit the two properties below. The lower the value, the thinner the tag. Higher numbers will display more bold text. This setting also plays a role in the [Font Size](#font-size)
+
+```javascript
+const weightBacklinks = 0.1;
+const weightWordCount = 0.3;
+```
