@@ -42,7 +42,7 @@ The following are preview images of what the snippet will do and appear like:
 ````shell
 ```dataviewjs
 /*
-    Snippet: Tag Cloud
+    Snippet: Cloud Tags
 
     This snippet requires the Dataview Plugin
       https://github.com/blacksmithgu/obsidian-dataview
@@ -55,6 +55,7 @@ The following are preview images of what the snippet will do and appear like:
     Settings
 */
 
+var bRandomColor        = true;
 const QueryStr          = `""`;
 const QueryFiles        = dv.pages( QueryStr );
 
@@ -144,6 +145,17 @@ function Generate_FontSize( backlinks, wordCount )
 
 /*
     Generate font color
+
+    grey    : #474a51
+    teal    : #60BBD0
+    green   : #00935d
+    yellow  : #dba022
+    orange  : #da6f01
+    red     : #8f0d15
+    fuchsia : #F20F5C
+    purple  : #613493
+    blue    : #3c4d93
+    dblue   : #3c4256
 */
 
 function Generate_Color( tagName, tagInfo )
@@ -151,60 +163,71 @@ function Generate_Color( tagName, tagInfo )
     if ( tagName == null ) { return "#FFFFFF"; }
     const colors =
     {
-
-        "grey-2": "#5e5e5e",
-        "grey-3": "#717171",
-        "teal-2": "#52b788",
-        "teal-3": "#c4fff9",
-        "cyan-2": "#4dd0e1",
-        "cyan-3": "#26c6da",
-
-        "blue-1": "#81d4fa",
-        "blue-2": "#4fc3f7",
-        "blue-3": "#29b6f6",
-        "blue-4": "#03a9f4",
-
-        "indigo-1": "#7986cb",
-        "indigo-2": "#3f51b5",
-        "indigo-3": "#ba68c8",
-        "indigo-4": "#ab47bc",
-        "indigo-5": "#d500f9",
-
-        "red-1": "#f06292",
-        "red-2": "#e91e63",
-        "red-3": "#f50057",
-
-    
-        "orange": "#ffb364",
-        "yellow": "#ffd664",
-        "green": "#64ff64",
-        "blue": "#64bfff",
-        "purple": "#b864ff",
-        "ruby-red": "#D62E4D",
-        "sunny-yellow": "#F6C026",
-        "vivid-orange": "#FF6E1F",
-        "bright-pink": "#F1478A",
-        "electric-blue": "#0F7DC2",
-        "deep-purple": "#5B0F91",
-        "teal-green": "#007F86",
-        "golden-brown": "#AA8F6A",
-        "moss-green": "#8BC34A",
-        "navy-blue": "#3F51B5",
-        "pale-pink": "#F7B1B1",
-        "soft-lilac": "#C9A1E9",
-        "pastel-green": "#B3E6C3",
-        "sky-blue": "#87CEEB",
-        "light-gray": "#D3D3D3",
-        "chocolate-brown": "#5F4B32",
-        "cream-yellow": "#FFFDD0",
-        "peach-orange": "#FFCC99",
-        "dusty-rose": "#C4A4A4",
-        "seafoam-green": "#71BC9C"
+        "grey-01": "#636363",
+        "grey-02": "#777777",
+        "grey-03": "#8e8e8e",
+        "grey-1": "#c8c9cb",
+        "teal-1": "#cfebf1",
+        "green-1": "#b3dfce",
+        "yellow-1": "#f4e3bd",
+        "orange-1": "#f4d4b3",
+        "red-1": "#ddb6b9",
+        "fuchsia-1": "#fbb7ce",
+        "purple-1": "#d0c2df",
+        "blue-1": "#c5cadf",
+        "dblue-1": "#c5c6cc",
+        "grey-2": "#a3a5a8",
+        "teal-2": "#b0dde8",
+        "green-2": "#80c9ae",
+        "yellow-2": "#edd091",
+        "orange-2": "#edb780",
+        "red-2": "#c7868a",
+        "fuchsia-2": "#f987ae",
+        "purple-2": "#b09ac9",
+        "blue-2": "#9ea6c9",
+        "dblue-2": "#9ea1ab",
+        "grey-3": "#7e8085",
+        "teal-3": "#90cfde",
+        "green-3": "#4db38e",
+        "yellow-3": "#e6bd64",
+        "orange-3": "#e59a4d",
+        "red-3": "#b1565b",
+        "fuchsia-3": "#f6578d",
+        "purple-3": "#9071b3",
+        "blue-3": "#7782b3",
+        "dblue-3": "#777b89",
+        "teal-4": "#60bbd0",
+        "green-4": "#00935d",
+        "yellow-4": "#dba022",
+        "orange-4": "#da6f01",
+        "red-4": "#a93c43",
+        "fuchsia-4": "#f20f5c",
+        "purple-4": "#613493",
+        "blue-4": "#3c4d93",
+        "grey-5": "#535f77",
+        "green-5": "#008454",
+        "yellow-5": "#c5901f",
+        "orange-5": "#c57a2d",
+        "red-5": "#b93f45",
+        "red-6": "#9b3a40",
+        "fuchsia-5": "#da0e53",
+        "fuchsia-6": "#bf2458",
     };
 
+    let cntColors       = Object.keys( colors ).length;
     const tagWords      = tagName.split(/\W+/g);
-    const colorIndex    = Math.floor( Math.random( ) * 30 );
+    const colorIndex    = Math.floor( Math.random( ) * cntColors );
     const colorID       = dv.pages( tagName ).length;
+
+    if ( bRandomColor === true )
+    {
+        return colors[ Object.keys( colors )[ colorIndex ] ];
+    }
+    else
+    {
+        return colors[ Object.keys( colors )[ colorID ] ];
+    }
+
 
     return colors[ Object.keys( colors )[ colorID ] ];
 }
@@ -294,8 +317,9 @@ const CreateTags = async ( ) =>
     {
         const fontSize      = Generate_FontSize( tagInfo.backlinks, tagInfo.wordCount );
         const color         = Generate_Color( tagName, tagInfo );
-    
-        data.push( { name: `\\${tagName}`, id: tagName, fontSize, color } );
+		const length        = dv.pages( tagName ).length;
+		
+        data.push( { name: `\\${tagName}`, id: tagName, length: length, fontSize, color } );
     });
 
     /*
@@ -304,7 +328,7 @@ const CreateTags = async ( ) =>
 
     return Sort_DESC( data ).map( ( tag ) =>
     {
-        return `<span class="cloudtags-item"><a class="cloudtags-link" href="obsidian://search?query=tag:${encodeURIComponent(tag.id)}" style="font-size:${tag.fontSize}px; color: ${tag.color};">${tag.name}</a></span>`;
+        return `<div class="cloudtags-item"><a class="cloudtags-link" href="obsidian://search?query=tag:${encodeURIComponent(tag.id)}" style="font-size:${tag.fontSize}px; color: ${tag.color};">${tag.id}</a><div class="tagcloud-length">${tag.length}</div></div>`;
     }).join("");
     }).then( res => dv.paragraph( res ) )
     .catch( error =>
@@ -405,6 +429,7 @@ Copy the code below and paste it into the new `tag_cloud.css` file which should 
             border-radius: 6px;
             display: inline-block;
             font-weight: bold;
+            position:relative;
         }
 
         .cloudtags-item:hover
@@ -435,6 +460,28 @@ Copy the code below and paste it into the new `tag_cloud.css` file which should 
             vertical-align: middle;
             text-decoration: none;
         }
+
+    /*
+        Tag Cloud > Length
+    */
+
+        .tagcloud-length
+        {
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            background: #424242;
+            color: #FFF;
+            text-align: center;
+            font: 8px sans-serif;
+            position: absolute;
+            vertical-align: middle;
+            margin: auto 0;
+            left: 3%;
+            top: -5px;
+            transform: translateX(-50%);
+            line-height: 19px;
+          }
 ```
 
 <br />
