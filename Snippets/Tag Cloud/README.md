@@ -445,4 +445,4 @@ Save the file and go back to **Obsidian Settings** -> **Appearance**. Scroll all
 
 <br />
 
-You should now see either a list of broken links that exist within your vault, or a happy face and an "All Clear" message.
+You should see a list of tags associated to your vault.
