@@ -72,6 +72,7 @@ const weightBacklinks   = 0.1;
 const weightWordCount   = 0.3;
 const minFontSize       = 12;
 const maxFontSize       = 32;
+const tagsFilter        = [ "#tag1", "#tag2" ];
 
 /*
     Get all backlinks
@@ -258,16 +259,22 @@ const CreateTags = async ( ) =>
         
                 const wc            = await wcq;
                 tagInfo.wordCount += wc;
-            }));
+            } ) );
         }
 
-    const fileInfo          = { backlinks: 0, wordCount: 0 };
-    const res               = await blq;
-    fileInfo.backlinks      = res.value.values.length;
-    const wc                = await wcq;
-    fileInfo.wordCount      = wc;
+        for ( let i = 0; i < tagsFilter.length; i++ )
+        {
+            if ( tags.has( tagsFilter[ i ] ) )
+                tags.delete( tagsFilter[ i ] );
+        }
 
-    files.set( file, fileInfo );
+        const fileInfo          = { backlinks: 0, wordCount: 0 };
+        const res               = await blq;
+        fileInfo.backlinks      = res.value.values.length;
+        const wc                = await wcq;
+        fileInfo.wordCount      = wc;
+
+        files.set( file, fileInfo );
 
 })).then( ( ) =>
 {
@@ -483,6 +490,89 @@ You should see a list of tags associated to your vault.
 ## Customization
 The section below explains how to customize this snippet.
 
+<br />
+
+### Filtering Folders, Pages & Tags
+This snippet allows you to filter out folders, pages and tags which will not be included in your list of generated tags that appear in your cloud. The syntax is the same as normal Dataview queries.
+
+To filter out folders, pages or tags, edit the following:
+
+```javascript
+const QueryStr = `""`;
+```
+
+<br />
+
+#### Exclude Folders
+
+To filter out or exclude the folder `"My Personal Stuff"`, and all notes in that folder; use the following:
+
+```javascript
+const QueryStr = `-"My Personal Stuff"`;
+```
+
+The folder name **must** be enclosed in quotation marks `"`. 
+
+<br />
+
+The `-` character represents an `exclude`, and must be used OUTSIDE the quotation marks.
+
+<br />
+
+To exclude multiple folders, add `AND` between each folder.
+
+```javascript
+const QueryStr = `-"My Personal Stuff" AND `-"Another Folder"`;
+```
+
+<br />
+<br />
+
+#### Exclude Page
+To filter out a specific file or page, it is similar to the above, except you must provide the full path to the page, including the folder.
+
+<br />
+
+For example, if you have a folder named `Personal Stuff`, and a page inside called `My Pin Codes`, you can exclude it using:
+
+```javascript
+const QueryStr = `-"Personal Stuff/My PIN Codes"`;
+```
+
+<br />
+<br />
+
+#### Exclude Tags
+To filter out specific tags, this is done slightly differently than the other options above. You can prevent certain tags from appearing in your cloud by modifying the following property:
+
+<br />
+
+```javascript
+const tagsFilter = [ "#tag1", "#tag2" ];
+```
+
+<br />
+
+Ensure you use the structure provided. Each tag must be wrapped in quotation marks `"`, with a comma `,` separating each one.
+
+<br />
+<br />
+
+### Font Weight
+The font weight of a tag is determined by two things:
+1. Number of times a tag is used
+2. Number of words associated to a tag.
+
+<br />
+
+To limit the font weight sizes used, edit the two properties below. The lower the value, the thinner the tag. Higher numbers will display more bold text. This setting also plays a role in the [Font Size](#font-size)
+
+```javascript
+const weightBacklinks = 0.1;
+const weightWordCount = 0.3;
+```
+
+<br />
 <br />
 
 ### Change Sorting
