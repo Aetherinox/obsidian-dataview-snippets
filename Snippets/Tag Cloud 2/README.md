@@ -354,7 +354,7 @@ Copy the code below and paste it into the new `tag_cloud_v2.css` file which shou
 
 ```css
 /*
-    Snippet: Tag Cloud
+    Snippet: Tag Cloud - Version 2
 */
 
     /*
@@ -365,11 +365,11 @@ Copy the code below and paste it into the new `tag_cloud_v2.css` file which shou
         {
             from
             {
-                text-shadow:      0 0 110px #6f00ff, 0 0 120px #0084ff, 0 0 130px #e60073, 0 0 140px #e60073, 0 0 150px #e60073, 0 0 160px #e60073, 0 0 170px #e60073;
+                text-shadow:            0 0 110px #6f00ff, 0 0 120px #0084ff, 0 0 130px #e60073, 0 0 140px #e60073, 0 0 150px #e60073, 0 0 160px #e60073, 0 0 170px #e60073;
             }
             to
             {
-                text-shadow:      0 0 20px #6f00ff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+                text-shadow:            0 0 20px #6f00ff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
             }
         }
 
@@ -381,20 +381,20 @@ Copy the code below and paste it into the new `tag_cloud_v2.css` file which shou
         {
             0%
             {
-                transform:      scale(0.85);
-                box-shadow:     0 0 0 0 rgba(0, 0, 0, 0.7);
+                transform:              scale(0.85);
+                box-shadow:             0 0 0 0 rgba(0, 0, 0, 0.7);
             }
 
             70%
             {
-                transform:      scale(1);
-                box-shadow:     0 0 0 10px rgba(0, 0, 0, 0);
+                transform:              scale(1);
+                box-shadow:             0 0 0 10px rgba(0, 0, 0, 0);
             }
 
             100%
             {
-                transform:      scale(0.85);
-                box-shadow:     0 0 0 0 rgba(0, 0, 0, 0);
+                transform:              scale(0.85);
+                box-shadow:             0 0 0 0 rgba(0, 0, 0, 0);
             }
         }
 
@@ -404,7 +404,7 @@ Copy the code below and paste it into the new `tag_cloud_v2.css` file which shou
 
         body.colorful-link-animation :is(.markdown-preview-view,.markdown-rendered) a:hover
         {
-            animation:          none !important; 
+            animation:                  none !important; 
         }
 
     /*
@@ -413,17 +413,17 @@ Copy the code below and paste it into the new `tag_cloud_v2.css` file which shou
 
         .cloudtags-v2-item
         {
-            margin-top:         5px;
-            margin-bottom:      5px;
-            margin-left:        7px;
-            margin-right:       7px;
-            padding-left:       2px;
-            padding-right:      2px;
-            padding-top:        4px;
-            padding-bottom:     4px;
-            display:            inline-block;
-            position:           relative;
-            font-weight:        bold !important;
+            margin-top:                 5px;
+            margin-bottom:              5px;
+            margin-left:                7px;
+            margin-right:               7px;
+            padding-left:               2px;
+            padding-right:              2px;
+            padding-top:                4px;
+            padding-bottom:             4px;
+            display:                    inline-block;
+            position:                   relative;
+            font-weight:                bold !important;
         }
 
         .cloudtags-v2-item:hover
@@ -435,21 +435,21 @@ Copy the code below and paste it into the new `tag_cloud_v2.css` file which shou
             animation-timing-function:  ease-in-out;
             animation-iteration-count:  infinite;
             animation-direction:        alternate;
-            transition-property:        all; 
-            transition-duration:        0.3s; 
-            transition-timing-function: ease; 
+            transition-property:        all;
+            transition-duration:        0.3s;
+            transition-timing-function: ease;
             transform:                  scale(1.1); 
         }
 
         .cloudtags-v2-item:hover a
         {
-            color:              #FFF !important;
-            background:         none;
+            color:                      #FFF !important;
+            background:                 none;
         }
 
         .cloudtags-v2-item a
         {
-            padding-left:       10px !important;
+            padding-left:               10px !important;
         }
 
     /*
@@ -458,10 +458,10 @@ Copy the code below and paste it into the new `tag_cloud_v2.css` file which shou
 
         a.cloudtags-v2-link
         {
-            line-height:        15px;
-            vertical-align:     middle;
-            text-decoration:    none;
-            font-weight:        bold !important;
+            line-height:                15px;
+            vertical-align:             middle;
+            text-decoration:            none;
+            font-weight:                bold !important;
         }
 
     /*
@@ -470,8 +470,8 @@ Copy the code below and paste it into the new `tag_cloud_v2.css` file which shou
 
         .cloudtags-v2-item:hover .tagcloud-v2-length
         {
-            font-weight:        bold !important;
-            display:            block;
+            font-weight:                bold !important;
+            display:                    block;
         }
 
     /*
@@ -480,22 +480,22 @@ Copy the code below and paste it into the new `tag_cloud_v2.css` file which shou
 
         .tagcloud-v2-length
         {
-            font-weight:        normal !important;
-            display:            none;
-            border-radius:      50%;
-            width:              18px;
-            height:             18px;
-            background:         #424242;
-            color:              #FFF;
-            text-align:         center;
-            font:               10px sans-serif;
-            position:           absolute;
-            vertical-align:     middle;
-            margin:             auto 0;
-            left:               3%;
-            top:                -5px;
-            transform:          translateX(-50%);
-            line-height:        19px;
+            font-weight:                normal !important;
+            display:                    none;
+            border-radius:              50%;
+            width:                      18px;
+            height:                     18px;
+            background:                 #424242;
+            color:                      #FFF;
+            text-align:                 center;
+            font:                       10px sans-serif;
+            position:                   absolute;
+            vertical-align:             middle;
+            margin:                     auto 0;
+            left:                       3%;
+            top:                        -5px;
+            transform:                  translateX(-50%);
+            line-height:                19px;
           }
 ```
 
