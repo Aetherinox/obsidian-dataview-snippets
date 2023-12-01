@@ -495,7 +495,7 @@ The section below explains how to customize this snippet.
 ### Filtering Folders, Pages & Tags
 This snippet allows you to filter out folders, pages and tags which will not be included in your list of generated tags that appear in your cloud. The syntax is the same as normal Dataview queries.
 
-To filter out folders, pages or tags, edit the following:
+To filter out folders or pages, edit the following:
 
 ```javascript
 const QueryStr = `""`;
