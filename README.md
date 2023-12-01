@@ -1,38 +1,30 @@
-# Obsidian: Script Collection
-These snippets require you to download a copy of [Obsidian.md](obsidian.md/)
-
-<br /><br />
-
-## About
+# Obsidian: Script Collection <!-- omit from toc -->
 This repo originally started a single **Table of Contents** script which displays at the top of your obsidian note. However, numerous other scripts have been added since then.
+
+These snippets in this repo require you to download and install [Obsidian.md](obsidian.md/)
+
+<br />
+
+- [Snippets](#snippets)
+  - [Table of Contents: Version 1](#table-of-contents-version-1)
+  - [Table of Contents: Version 2](#table-of-contents-version-2)
+  - [Subfolder Data](#subfolder-data)
+  - [Bad Links](#bad-links)
+  - [Tag Cloud: Version 1](#tag-cloud-version-1)
+  - [Tag Cloud: Version 2](#tag-cloud-version-2)
+
 
 <br /><br />
 
 ---
 
 <br /><br />
+
 
 ## Snippets
 The following snippets are available in this repo
 
 <br />
-
-- [Obsidian: Script Collection](#obsidian-script-collection)
-  - [About](#about)
-  - [Snippets](#snippets)
-    - [Table of Contents: Version 1](#table-of-contents-version-1)
-    - [Table of Contents: Version 2](#table-of-contents-version-2)
-    - [Subfolder Data](#subfolder-data)
-    - [Bad Links](#bad-links)
-    - [Tag Cloud: Version 1](#tag-cloud-version-1)
-    - [Tag Cloud: Version 2](#tag-cloud-version-2)
-
-
-<br /><br />
-
----
-
-<br /><br />
 
 ### Table of Contents: Version 1
 
@@ -154,9 +146,12 @@ This version **requires** you to install the following:
 
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud%201/images/example_1.gif"></p>
 
-The `Tag Cloud` snippet fetches a list of tags associated to your vault and displays them in a series of columns.
+The `Tag Cloud: Version 1` snippet fetches a list of tags associated to your vault and displays them in a series of columns.
 
 Each tag can be clicked on, which will open the Search interface and display all other pages associated to the selected tag.
+
+The functionality of `Version 1` and `Version 2` are the same. Both just have difference appearances.
+
 
 <br />
 
@@ -181,9 +176,11 @@ This version **requires** you to install the following:
 
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Tag%20Cloud%202/images/example_1.gif"></p>
 
-The `Tag Cloud` snippet fetches a list of tags associated to your vault and displays them in a series of columns.
+The `Tag Cloud: Version 2` snippet fetches a list of tags associated to your vault and displays them in a series of columns.
 
 Each tag can be clicked on, which will open the Search interface and display all other pages associated to the selected tag.
+
+The functionality of `Version 1` and `Version 2` are the same. Both just have difference appearances.
 
 <br />
 
