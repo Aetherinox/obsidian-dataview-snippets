@@ -36,7 +36,7 @@ The `Page Cloud - Version 1` snippet will fetch a list of all the pages that exi
 
 <br />
 
-This snippet supports `Frontmatter` values for the page names. For more information on this, view the customization section: [Page Titles](#page-titles).
+This snippet supports `Frontmatter` values for the page names. For more information on this, view the customization section: [Page Titles / Frontmatter Support](#page-titles--frontmatter-support).
 
 <br />
 
