@@ -83,6 +83,24 @@ const weightWordCount   = 0.5;
 const minFontSize       = 12;
 const maxFontSize       = 32;
 const tagsFilter        = [ "#tag1", "#tag2" ];
+const arrColors         = [];
+
+/*
+    Generate 40 colors
+*/
+
+for ( let i = 0; i < 40; i++ )
+{
+
+    let R           = Math.floor( ( Math.random( ) * 100 ) + 100 );
+    let G           = Math.floor( ( Math.random( ) * 100 ) + 100 );
+    let B           = Math.floor( ( Math.random( ) * 100 ) + 100 );
+    
+    let rgb         = ( R << 16 ) + ( G << 8 ) + B;
+    let itemColor   = `#${rgb.toString( 16 )}`;
+
+    arrColors.push( itemColor );
+}
 
 /*
     Get all backlinks
@@ -136,74 +154,11 @@ function Generate_FontSize( backlinks, wordCount )
 function Generate_Color( tagName )
 {
     if ( tagName == null ) { return "#FFFFFF"; }
-    const colors =
-    {
-        "grey-01": "#636363",
-        "grey-02": "#777777",
-        "grey-03": "#8e8e8e",
-        "F79393": "#F79393",
-        "C72E6C": "#C72E6C",
-        "F2930B": "#F2930B",
-        "558ACF": "#558ACF",
-        "e04a3d": "#e04a3d",
-        "FFA5D8": "#FFA5D8",
-        "F3D910": "#F3D910",
-        "E823A1": "#E823A1",
-        "00A6FF": "#00A6FF",
-        "65B08F": "#65B08F",
-        "3A6671": "#3A6671",
-        "AE3B40": "#AE3B40",
-        "d4785c": "#d4785c",
-        "b63277": "#b63277",
-        "e27f32": "#e27f32",
-        "f5d58a": "#f5d58a",
-        "6A9358": "#6A9358",
-        "D35A1E": "#D35A1E",
-        "F27929": "#F27929",
-        "F2982C": "#F2982C",
-        "FADD43": "#FADD43",
-        "ffc562": "#ffc562",
-        "4fddc3": "#4fddc3",
-        "61a8e8": "#61a8e8",
-        "DB02C2": "#DB02C2",
-        "FA01B3": "#FA01B3",
-        "6B7485": "#6B7485",
-        "99A3A0": "#99A3A0",
-        "7D898A": "#7D898A",
-        "fe0052": "#fe0052",
-        "ff40b7": "#ff40b7",
-        "fd0188": "#fd0188",
-        "ffd700": "#ffd700",
-        "d78f00": "#d78f00",
-        "658035": "#658035",
-        "FFC312": "#FFC312",
-        "12CBC4": "#12CBC4",
-        "FDA7DF": "#FDA7DF",
-        "ED4C67": "#ED4C67",
-        "F79F1F": "#F79F1F",
-        "1289A7": "#1289A7",
-        "D980FA": "#D980FA",
-        "B53471": "#B53471",
-        "EE5A24": "#EE5A24",
-        "009432": "#009432",
-        "9980FA": "#9980FA",
-        "5758BB": "#5758BB",
-        "ef7c8e": "#ef7c8e",
-        "b6e2d3": "#b6e2d3",
-        "d8a7b1": "#d8a7b1",
-        "d48c70": "#d48c70",
-        "e98980": "#e98980",
-        "01949a": "#01949a",
-        "04ecf0": "#04ecf0",
-        "04d4f0": "#04d4f0",
-        "6af2f0": "#6af2f0",
-        "059dc0": "#059dc0",
-    };
 
     const tagWords      = tagName.split( /\W+/g );
-    const colorIndex    = tagWords.reduce( ( total, word ) => total + word.charCodeAt( 0 ), 0 ) % Object.keys( colors ).length;
+    const colorIndex    = tagWords.reduce( ( total, word ) => total + word.charCodeAt( 0 ), 0 ) % Object.keys( arrColors ).length;
 
-    return colors[ Object.keys( colors )[ colorIndex ] ];
+    return arrColors[ Object.keys( arrColors )[ colorIndex ] ];
 }
 
 /*
