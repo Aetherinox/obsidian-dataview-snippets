@@ -14,6 +14,13 @@ This snippet supports `Frontmatter` values for the page names. For more informat
 
 <br />
 
+> [!WARNING]
+> This snippet may be slow loading depending on the number of pages you have available in your vault. At the time of developing this, it was tested on a vault with over 400 pages / notes. Which took 1-3 seconds to load the cloud.
+>
+> Unfortunately this is mostly limited by the performance of Dataview. Larger projects should either use a Cloud plugin solution, or decrease the dataview refresh interval.
+
+<br />
+
 At the time of writing this script, I am using the following:
 
 | Software | Version |
@@ -21,7 +28,11 @@ At the time of writing this script, I am using the following:
 | [Obsidian.md](https://obsidian.md/) | ![GitHub release](https://img.shields.io/github/v/release/obsidianmd/obsidian-releases?label=v&color=ba0f56) |
 | [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) | ![GitHub release](https://img.shields.io/github/v/release/blacksmithgu/obsidian-dataview?label=v&color=ba0f56) |
 
-<br />
+<br /><br />
+
+---
+
+<br /><br />
 
 ### Previews
 The following are preview images of what the snippet will do and appear like:
