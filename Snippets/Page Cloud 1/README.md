@@ -297,7 +297,7 @@ CreatePageCloud( )
 <br />
 
 ### Minified Version
-This version only formats the settings. All comments and formatting are removed.
+This version only formats the settings. All other formatting and comments are removed.
 
 <br />
 
