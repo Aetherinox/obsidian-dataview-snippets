@@ -57,7 +57,7 @@ At the time of writing this script, I am using the following:
 
 <br /><br />
 
-**[`^        back to top        ^`](#table-of-contents)**
+**[`^        back to top        ^`](#table-of-contents-)**
 
 <br /><br />
 
@@ -74,7 +74,7 @@ The following are preview images of what the snippet will do and appear like:
 
 <br /><br />
 
-**[`^        back to top        ^`](#table-of-contents)**
+**[`^        back to top        ^`](#table-of-contents-)**
 
 <br /><br />
 
@@ -742,7 +742,7 @@ This snippet supports modifying the CSS values using the **[Style Settings](http
 
 <br /><br />
 
-**[`^        back to top        ^`](#table-of-contents)**
+**[`^        back to top        ^`](#table-of-contents-)**
 
 <br /><br />
 
@@ -937,6 +937,6 @@ This snippet supports tweaking the look and feel of the cloud & tags using the *
 
 <br /><br />
 
-**[`^        back to top        ^`](#table-of-contents)**
+**[`^        back to top        ^`](#table-of-contents-)**
 
 <br /><br />
