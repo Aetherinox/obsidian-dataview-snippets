@@ -265,7 +265,7 @@ const CreatePageCloud = async ( ) =>
             if ( fileName == null )
                 return;
 
-            var file_name_fm   = fileName.frontmatter.name || fileName.frontmatter.title;
+            var file_name_fm   = fileName.frontmatter.name || fileName.frontmatter.title || fileName.frontmatter.alias;
             var file_name      = fileName.name
 
             if (file_name_fm)
@@ -276,7 +276,7 @@ const CreatePageCloud = async ( ) =>
             const color         = Generate_Color( fileName.name );
             const length        = 0;
 
-            data.push( { name: fileName.name, id: file_name, fontSize, color } );
+            data.push( { name: file_name, id: fileName.name, size: fileName.size, path: fileName.path, fontSize, color } );
         });
 
 
@@ -302,7 +302,7 @@ const CreatePageCloud = async ( ) =>
 
         return eval( funcSort )( data ).map( ( tag ) =>
         {
-            return `<span class="page-cloud-v1-item"><a class="page-cloud-v1-link" href="obsidian://open?file=${encodeURIComponent(tag.id)}" style="font-size:${tag.fontSize}px; color: ${tag.color};">${tag.id}</a></span>`;
+            return `<span class="page-cloud-v1-item"><a class="page-cloud-v1-link" href="obsidian://open?file=${encodeURIComponent(tag.id)}" style="font-size:${tag.fontSize}px; color: ${tag.color};">${tag.name}</a></span>`;
         }
     ).join( "" );
     } ).then( res => dv.paragraph( res ) )
