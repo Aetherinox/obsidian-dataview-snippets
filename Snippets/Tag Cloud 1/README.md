@@ -583,7 +583,7 @@ const weightWordCount = 0.3;
 <br />
 
 ### Cloud Colors
-As of `v1.3.0`, this snippet auto generates the colors that will be used for each page listed in the cloud. The color generation code will keep the color tones in the **pastel** range, and will exclude darker colors since the background box is dark.
+As of `v1.3.0`, this snippet auto generates the colors that will be used for each tag listed in the cloud. The color generation code will keep the color tones in the **pastel** range, and will exclude darker colors since the background box color is dark.
 
 <br />
 
