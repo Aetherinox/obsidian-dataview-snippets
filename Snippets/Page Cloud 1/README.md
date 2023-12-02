@@ -757,9 +757,9 @@ You should see a list of pages associated to your vault.
 <br />
 
 This snippet supports modifying the CSS values using the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)** plugin. If you want to change how the tags in this snippet look:
-- Open Obsidian Settings
-- Install the **Style Settings** plugin
-- Select **Style Settings** config panel under **Community Plugins**.
+- Open `Obsidian Settings`
+- Install the `Style Settings` plugin
+- Select `Style Settings` config panel under `Community Plugins`.
 - Click the tab `Page Cloud - Version 1`
 - Edit the settings for the Page Cloud tags
 
