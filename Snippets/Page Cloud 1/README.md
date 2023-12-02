@@ -126,52 +126,63 @@ function Generate_Color( tagName )
         "grey-01": "#636363",
         "grey-02": "#777777",
         "grey-03": "#8e8e8e",
-        "grey-1": "#c8c9cb",
-        "teal-1": "#cfebf1",
-        "green-1": "#b3dfce",
-        "yellow-1": "#f4e3bd",
-        "orange-1": "#f4d4b3",
-        "red-1": "#ddb6b9",
-        "fuchsia-1": "#fbb7ce",
-        "purple-1": "#d0c2df",
-        "blue-1": "#c5cadf",
-        "dblue-1": "#c5c6cc",
-        "grey-2": "#a3a5a8",
-        "teal-2": "#b0dde8",
-        "green-2": "#80c9ae",
-        "yellow-2": "#edd091",
-        "orange-2": "#edb780",
-        "red-2": "#c7868a",
-        "fuchsia-2": "#f987ae",
-        "purple-2": "#b09ac9",
-        "blue-2": "#9ea6c9",
-        "dblue-2": "#9ea1ab",
-        "grey-3": "#7e8085",
-        "teal-3": "#90cfde",
-        "green-3": "#4db38e",
-        "yellow-3": "#e6bd64",
-        "orange-3": "#e59a4d",
-        "red-3": "#b1565b",
-        "fuchsia-3": "#f6578d",
-        "purple-3": "#9071b3",
-        "blue-3": "#7782b3",
-        "dblue-3": "#777b89",
-        "teal-4": "#60bbd0",
-        "green-4": "#00935d",
-        "yellow-4": "#dba022",
-        "orange-4": "#da6f01",
-        "red-4": "#a93c43",
-        "fuchsia-4": "#f20f5c",
-        "purple-4": "#613493",
-        "blue-4": "#3c4d93",
-        "grey-5": "#535f77",
-        "green-5": "#008454",
-        "yellow-5": "#c5901f",
-        "orange-5": "#c57a2d",
-        "red-5": "#b93f45",
-        "red-6": "#9b3a40",
-        "fuchsia-5": "#da0e53",
-        "fuchsia-6": "#bf2458",
+        "F79393": "#F79393",
+        "C72E6C": "#C72E6C",
+        "F2930B": "#F2930B",
+        "558ACF": "#558ACF",
+        "e04a3d": "#e04a3d",
+        "FFA5D8": "#FFA5D8",
+        "F3D910": "#F3D910",
+        "E823A1": "#E823A1",
+        "00A6FF": "#00A6FF",
+        "65B08F": "#65B08F",
+        "3A6671": "#3A6671",
+        "AE3B40": "#AE3B40",
+        "d4785c": "#d4785c",
+        "b63277": "#b63277",
+        "e27f32": "#e27f32",
+        "f5d58a": "#f5d58a",
+        "6A9358": "#6A9358",
+        "D35A1E": "#D35A1E",
+        "F27929": "#F27929",
+        "F2982C": "#F2982C",
+        "FADD43": "#FADD43",
+        "ffc562": "#ffc562",
+        "4fddc3": "#4fddc3",
+        "61a8e8": "#61a8e8",
+        "DB02C2": "#DB02C2",
+        "FA01B3": "#FA01B3",
+        "6B7485": "#6B7485",
+        "99A3A0": "#99A3A0",
+        "7D898A": "#7D898A",
+        "fe0052": "#fe0052",
+        "ff40b7": "#ff40b7",
+        "fd0188": "#fd0188",
+        "ffd700": "#ffd700",
+        "d78f00": "#d78f00",
+        "658035": "#658035",
+        "FFC312": "#FFC312",
+        "12CBC4": "#12CBC4",
+        "FDA7DF": "#FDA7DF",
+        "ED4C67": "#ED4C67",
+        "F79F1F": "#F79F1F",
+        "1289A7": "#1289A7",
+        "D980FA": "#D980FA",
+        "B53471": "#B53471",
+        "EE5A24": "#EE5A24",
+        "009432": "#009432",
+        "9980FA": "#9980FA",
+        "5758BB": "#5758BB",
+        "ef7c8e": "#ef7c8e",
+        "b6e2d3": "#b6e2d3",
+        "d8a7b1": "#d8a7b1",
+        "d48c70": "#d48c70",
+        "e98980": "#e98980",
+        "01949a": "#01949a",
+        "04ecf0": "#04ecf0",
+        "04d4f0": "#04d4f0",
+        "6af2f0": "#6af2f0",
+        "059dc0": "#059dc0",
     };
 
     const tagWords      = tagName.split( /\W+/g );
@@ -188,13 +199,13 @@ function Generate_Color( tagName )
 
 function Sort_DESC( arr )
 {
-    arr.sort( ( a, b ) => a.name.localeCompare( b.name ) )
+    arr.sort( ( a, b ) => a.id.localeCompare( b.id ) )
     return arr;
 }
 
 function Sort_ASC( arr )
 {
-    arr.sort( ( a, b ) => b.name.localeCompare( a.name ) )
+    arr.sort( ( a, b ) => b.id.localeCompare( a.id ) )
     return arr;
 }
 
@@ -254,17 +265,18 @@ const CreatePageCloud = async ( ) =>
             if ( fileName == null )
                 return;
 
-            var file_name_fm   = fileName.frontmatter.name || fileName.frontmatter.title || fileName.frontmatter.alias;
+            var file_name_fm   = fileName.frontmatter.name || fileName.frontmatter.title;
             var file_name      = fileName.name
 
             if (file_name_fm)
                 file_name      = file_name_fm;
 
+
             const fontSize      = Generate_FontSize( fileInfo.backlinks, fileInfo.wordCount );
             const color         = Generate_Color( fileName.name );
             const length        = 0;
 
-            data.push( { name: file_name, id: fileName.name, size: fileName.size, path: fileName.path, fontSize, color } );
+            data.push( { name: fileName.name, id: file_name, fontSize, color } );
         });
 
 
@@ -290,7 +302,7 @@ const CreatePageCloud = async ( ) =>
 
         return eval( funcSort )( data ).map( ( tag ) =>
         {
-            return `<span class="page-cloud-v1-item"><a class="page-cloud-v1-link" href="obsidian://open?file=${encodeURIComponent(tag.id)}" style="font-size:${tag.fontSize}px; color: ${tag.color};">${tag.name}</a></span>`;
+            return `<span class="page-cloud-v1-item"><a class="page-cloud-v1-link" href="obsidian://open?file=${encodeURIComponent(tag.id)}" style="font-size:${tag.fontSize}px; color: ${tag.color};">${tag.id}</a></span>`;
         }
     ).join( "" );
     } ).then( res => dv.paragraph( res ) )
