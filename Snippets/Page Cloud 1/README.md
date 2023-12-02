@@ -948,6 +948,10 @@ This snippet supports tweaking the look and feel of the cloud & tags using the *
 
 <br /><br />
 
+<p align="center" style="text-align;center;">
+
 **[`^        back to top        ^`](#table-of-contents-)**
+
+</p>
 
 <br /><br />
