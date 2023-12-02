@@ -494,6 +494,24 @@ Based on the priority list above, if you provide both a frontmatter `name` AND `
 If you provide a frontmatter `title` and frontmatter `alias`, then the frontmatter **title** will be used.
 
 <br />
+
+To define frontmatter values, add the following to the very top of your page:
+
+```markdown
+---
+title:   "Your Page Title"
+---
+```
+
+<br />
+
+You cannot have any blank lines above the first `---`.
+
+<br />
+
+If you do not specify `title`, `name`, or `alias` in your frontmatter, the normal page filename will be used.
+
+<br />
 <br />
 
 ### Filtering Folders and Pages
