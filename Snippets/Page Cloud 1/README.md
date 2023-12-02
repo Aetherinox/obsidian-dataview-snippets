@@ -17,7 +17,7 @@ This snippet supports `Frontmatter` values for the page names. For more informat
 > [!WARNING]
 > This snippet may be slow loading depending on the number of pages you have available in your vault. At the time of developing this, it was tested on a vault with over 400 pages / notes. Which took 1-3 seconds to load the cloud.
 >
-> Unfortunately this is mostly limited by the performance of Dataview. Larger projects should either use a Cloud plugin solution, or decrease the dataview refresh interval.
+> Unfortunately this is mostly limited by the performance of Dataview. Larger projects should either use a Cloud plugin solution, or increase the dataview refresh interval. The refresh interval `100` was used in this test.
 
 <br />
 
