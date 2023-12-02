@@ -604,3 +604,25 @@ To limit the font weight sizes used, edit the two properties below. The lower th
 const weightBacklinks = 0.1;
 const weightWordCount = 0.3;
 ```
+
+<br />
+<br />
+
+### Cloud Colors
+As of `v1.3.0`, this snippet auto generates the colors that will be used for each page listed in the cloud. The color generation code will keep the color tones in the **pastel** range, and will exclude darker colors since the background box is dark.
+
+<br />
+
+To modify the color range, edit the following code:
+
+```javascript
+let R = Math.floor( ( Math.random( ) * 100 ) + 100 );
+let G = Math.floor( ( Math.random( ) * 100 ) + 100 );
+let B = Math.floor( ( Math.random( ) * 100 ) + 100 );
+```
+
+<br />
+
+For brighter colors, increase `100`. Don't exceed `255`.
+
+For darker colors, decrease `100`. Don't go below `0`.
