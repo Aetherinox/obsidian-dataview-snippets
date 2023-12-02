@@ -679,8 +679,12 @@ settings:
 ```
 
 <br />
+<br />
 
 Save the file and go back to **Obsidian Settings** -> **Appearance**. Scroll all the way down and enable the checkbox to the right of `page_cloud_v1.css`.
+
+<br />
+<br />
 
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Page%20Cloud%201/images/install_3.gif"></p>
 
