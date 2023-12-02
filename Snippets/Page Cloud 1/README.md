@@ -290,7 +290,7 @@ const CreatePageCloud = async ( ) =>
 
         return eval( funcSort )( data ).map( ( tag ) =>
         {
-            return `<span class="page-cloud-v1-item"><a class="page-cloud-v1-link" href="obsidian://open?file=${encodeURIComponent(tag.id)}" style="font-size:${tag.fontSize}px; color: ${tag.color};">${tag.id}</a></span>`;
+            return `<span class="page-cloud-v1-item"><a class="page-cloud-v1-link" href="obsidian://open?file=${encodeURIComponent(tag.id)}" style="font-size:${tag.fontSize}px; color: ${tag.color};">${tag.name}</a></span>`;
         }
     ).join( "" );
     } ).then( res => dv.paragraph( res ) )
