@@ -339,23 +339,208 @@ Copy the code below and paste it into the new `page_cloud_v1.css` file which sho
 <br />
 
 ```css
-/*
-    Snippet: Page Cloud - Version 1
+/* @settings
+name: ☁️ Page Cloud - Version 1
+id: atx-pcv1
+settings:
+-
+    id:                     atx-pcv1-cat-general
+    title:                  '1. Appearance'
+    description:            'General appearance settings'
+    type:                   heading
+    level:                  1
+    collapsed:              true
+-
+        id:                 atx-pcv1-bg-clr-n
+        title:              'Background Color (Normal)'
+        description:        'Background color for each page in cloud.'
+        type:               variable-themed-color
+        opacity:            true
+        format:             hex
+        default-light:      '#252525'
+        default-dark:       '#252525'
+-
+        id:                 atx-pcv1-bg-clr-h
+        title:              'Background Color (Hover)'
+        description:        'Background color for each page in cloud when hovered.'
+        type:               variable-themed-color
+        opacity:            true
+        format:             hex
+        default-light:      '#810d3d'
+        default-dark:       '#810d3d'
+-
+        id:                 atx-pcv1-bg-border-clr-n
+        title:              'Border Color (Normal)'
+        description:        'Border color for each page in cloud.'
+        type:               variable-themed-color
+        opacity:            true
+        format:             hex
+        default-light:      '#353535'
+        default-dark:       '#353535'
+-
+        id:                 atx-pcv1-bg-border-clr-h
+        title:              'Border Color (Hover)'
+        description:        'Border color for each page in cloud when hovered.'
+        type:               variable-themed-color
+        opacity:            true
+        format:             hex
+        default-light:      '#dd2a74'
+        default-dark:       '#dd2a74'
+-
+        id:                 atx-pcv1-txt-clr-h
+        title:              'Text Color (Hover)'
+        description:        'Text color for each page in cloud when hovered.'
+        type:               variable-themed-color
+        opacity:            true
+        format:             hex
+        default-light:      '#FFFFFF'
+        default-dark:       '#FFFFFF'
+-
+        id:                 atx-pcv1-txt-weight-n
+        title:              'Font Weight (Normal)'
+        description:        'Options: normal, bold, lighter, bolder'
+        type:               variable-text
+        default:            normal
+-
+        id:                 atx-pcv1-txt-weight-h
+        title:              'Font Weight (Hover)'
+        description:        'Options: normal, bold, lighter, bolder'
+        type:               variable-text
+        default:            normal
+-
+        id:                 atx-pcv1-txt-margin-vertical
+        title:              'Tag: Margin (Vertical)'
+        description:        'Vertical margin for each tag'
+        type:               variable-number-slider
+        default:            5
+        format:             px
+        min:                0
+        max:                20
+        step:               1
+-
+        id:                 atx-pcv1-txt-margin-horizontal
+        title:              'Tag: Margin (Horizontal)'
+        description:        'Horizontal margin for each tag'
+        type:               variable-number-slider
+        default:            7
+        format:             px
+        min:                0
+        max:                20
+        step:               1
+-
+        id:                 atx-pcv1-txt-padding-vertical
+        title:              'Tag: Padding (Vertical)'
+        description:        'Vertical padding for each tag'
+        type:               variable-number-slider
+        default:            4
+        format:             px
+        min:                0
+        max:                20
+        step:               1
+-
+        id:                 atx-pcv1-txt-padding-horizontal
+        title:              'Tag: Padding (Horizontal)'
+        description:        'Horizontal padding for each tag'
+        type:               variable-number-slider
+        default:            7
+        format:             px
+        min:                0
+        max:                20
+        step:               1
+-
+        id:                 atx-pcv1-txt-line-height
+        title:              'Tag: Line Height'
+        description:        'Line height between each row of page tags.'
+        type:               variable-number-slider
+        default:            30
+        format:             px
+        min:                0
+        max:                40
+        step:               1
+-
+    id:                     atx-pcv1-cat-anim
+    title:                  '2. Animations'
+    description:            'Animation settings'
+    type:                   heading
+    level:                  1
+    collapsed:              true
+-
+        id:                 atx-pcv1-cat-anim-1
+        title:              'Hover Animation 1'
+        type:               class-select
+        allowEmpty:         false
+        default:            anim-1-pulse
+        options:
+        -
+            label: None
+            value: anim-1-disabled
+        -
+            label: Pulse
+            value: anim-1-pulse
+-
+        id:                 atx-pcv1-cat-anim-2
+        title:              'Hover Animation 2'
+        type:               class-select
+        allowEmpty:         false
+        default:            anim-2-glow
+        options:
+        -
+            label: None
+            value: anim-2-disabled
+        -
+            label: Glow
+            value: anim-2-glow
+-
+    id:                     atx-pcv1-bg-anim-clr-n
+    title:                  'Glow Color'
+    description:            'Glow color on page tag hover.'
+    type:                   variable-themed-color
+    opacity:                true
+    format:                 rgb
+    default-light:          'rgba(237, 29, 68, 0.19)'
+    default-dark:           'rgba(237, 29, 68, 0.19)'
+-
+    id:                     atx-pcv1-cat-support
+    title:                  '3. Support'
+    description:            'Links associated to this snippet'
+    type:                   heading
+    level:                  1
+    collapsed:              true
+-
+    id:                     atx-pcv1-support-updates
+    title:                  View Updates
+    description:            "[https://github.com/Aetherinox/obsidian-dataview-snippets](https://github.com/Aetherinox/obsidian-dataview-snippets)"
+    type:                   info-text
+    markdown:               true
+-
+
 */
 
     /*
         animation: glow
     */
 
-        @keyframes glow
+        @keyframes atx-pcv1-anim-glow-box
         {
             from
             {
-                text-shadow:            0 0 110px #6f00ff, 0 0 120px #0084ff, 0 0 130px #e60073, 0 0 140px #e60073, 0 0 150px #e60073, 0 0 160px #e60073, 0 0 170px #e60073;
+                box-shadow:             0 0 20px var(--atx-pcv1-bg-anim-clr-n),
+                                        0 0 20px var(--atx-pcv1-bg-anim-clr-n),
+                                        0 0 20px var(--atx-pcv1-bg-anim-clr-n),
+                                        0 0 20px var(--atx-pcv1-bg-anim-clr-n),
+                                        0 0 20px var(--atx-pcv1-bg-anim-clr-n),
+                                        0 0 20px var(--atx-pcv1-bg-anim-clr-n),
+                                        0 0 20px var(--atx-pcv1-bg-anim-clr-n);
             }
             to
             {
-                text-shadow:            0 0 20px #6f00ff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+                box-shadow:             0 0 10px var(--atx-pcv1-bg-anim-clr-n),
+                                        0 0 15px var(--atx-pcv1-bg-anim-clr-n),
+                                        0 0 20px var(--atx-pcv1-bg-anim-clr-n),
+                                        0 0 25px var(--atx-pcv1-bg-anim-clr-n),
+                                        0 0 30px var(--atx-pcv1-bg-anim-clr-n),
+                                        0 0 35px var(--atx-pcv1-bg-anim-clr-n),
+                                        0 0 40px var(--atx-pcv1-bg-anim-clr-n);
             }
         }
 
@@ -363,30 +548,77 @@ Copy the code below and paste it into the new `page_cloud_v1.css` file which sho
         animation: pulse
     */
 
-        @keyframes pulse
+        @keyframes atx-pcv1-anim-pulse
         {
             0%
             {
-                transform:              scale(0.85);
+                transform:              scale(1);
                 box-shadow:             0 0 0 0 rgba(0, 0, 0, 0.7);
             }
 
-            70%
+            50%
             {
-                transform:              scale(1);
+                transform:              scale(1.07);
                 box-shadow:             0 0 0 10px rgba(0, 0, 0, 0);
             }
 
             100%
             {
-                transform:              scale(0.85);
+                transform:              scale(1);
                 box-shadow:             0 0 0 0 rgba(0, 0, 0, 0);
             }
         }
 
     /*
-        Tag Cloud > Disable Colorful Animation
+        Snippet: Page Cloud - Version 1
     */
+
+        body
+        {
+            --atx-pcv1-bg-clr-n:                    #252525;
+            --atx-pcv1-bg-clr-h:                    #810d3d;
+            --atx-pcv1-bg-border-clr-n:             #353535;
+            --atx-pcv1-bg-border-clr-h:             #dd2a74;
+            --atx-pcv1-txt-clr-h:                   #FFFFFF;
+            --atx-pcv1-txt-margin-vertical:         5px;
+            --atx-pcv1-txt-margin-horizontal:       7px;
+            --atx-pcv1-txt-padding-vertical:        4px;
+            --atx-pcv1-txt-padding-horizontal:      7px;
+            --atx-pcv1-anim-1:                      atx-pcv1-anim-pulse;
+            --atx-pcv1-anim-2:                      atx-pcv1-anim-glow-box;
+            --atx-pcv1-txt-line-height:             30px;
+            --atx-pcv1-txt-weight-n:                bold;
+            --atx-pcv1-txt-weight-h:                normal;
+            --atx-pcv1-bg-anim-clr-n:               rgba(237, 29, 68, 0.19);
+        }
+
+    /*
+        Settings > Animations
+    */
+
+        body.theme-light.anim-1-disabled,
+        body.theme-dark.anim-1-disabled
+        {
+            --atx-pcv1-anim-1:          none;
+        }
+        
+        body.theme-light.anim-1-default,
+        body.theme-dark.anim-1-default
+        {
+            --atx-pcv1-anim-1:          atx-pcv1-anim-pulse;
+        }
+
+        body.theme-light.anim-2-disabled,
+        body.theme-dark.anim-2-disabled
+        {
+            --atx-pcv1-anim-2:          none;
+        }
+        
+        body.theme-light.anim-2-default,
+        body.theme-dark.anim-2-default
+        {
+            --atx-pcv1-anim-2:          atx-pcv1-anim-glow-box;
+        }
 
         body.colorful-link-animation :is(.markdown-preview-view,.markdown-rendered) a:hover
         {
@@ -399,38 +631,30 @@ Copy the code below and paste it into the new `page_cloud_v1.css` file which sho
 
         .page-cloud-v1-item
         {
-            margin-top:                 5px;
-            margin-bottom:              5px;
-            margin-left:                7px;
-            margin-right:               7px;
-            padding-left:               7px;
-            padding-right:              7px;
-            padding-top:                4px;
-            padding-bottom:             4px;
-            background-color:           #252525;
-            border:                     1px solid #353535 !important;
+            background-color:           var(--atx-pcv1-bg-clr-n);
+            margin-top:                 var(--atx-pcv1-txt-margin-vertical);
+            margin-bottom:              var(--atx-pcv1-txt-margin-vertical);
+            margin-left:                var(--atx-pcv1-txt-margin-horizontal);
+            margin-right:               var(--atx-pcv1-txt-margin-horizontal);
+            padding-top:                var(--atx-pcv1-txt-padding-vertical);
+            padding-bottom:             var(--atx-pcv1-txt-padding-vertical);
+            padding-left:               var(--atx-pcv1-txt-padding-horizontal);
+            padding-right:              var(--atx-pcv1-txt-padding-horizontal);
+            border:                     1px solid var(--atx-pcv1-bg-border-clr-n);
             border-radius:              6px;
             display:                    inline-block;
-            font-weight:                bold;
         }
 
-        .page-cloud-v1-item:hover
+        .page-cloud-v1-item:has( > a:hover )
         {
-            opacity:                    1;
-            background:                 #810d3d;
-            border:                     1px solid #dd2a74 !important;
+            background:                 var(--atx-pcv1-bg-clr-h);
+            border:                     1px solid var(--atx-pcv1-bg-border-clr-h) !important;
             cursor:                     pointer;
-            animation-name:             pulse, anim_glow;
+            animation-name:             var(--atx-pcv1-anim-1), var(--atx-pcv1-anim-2) !important;
             animation-duration:         2s, 1s;
             animation-timing-function:  ease, ease-in-out;
             animation-iteration-count:  infinite, infinite;
             animation-direction:        normal, alternate;
-        }
-
-        .page-cloud-v1-item:hover a
-        {
-            color:                      #FFF !important;
-            background:                 none;
         }
 
     /*
@@ -439,9 +663,18 @@ Copy the code below and paste it into the new `page_cloud_v1.css` file which sho
 
         a.page-cloud-v1-link
         {
-            line-height:                30px;
+            line-height:                var(--atx-pcv1-txt-line-height);
             vertical-align:             middle;
             text-decoration:            none;
+            font-weight:                var(--atx-pcv1-txt-weight-n);
+            background:                 none;
+        }
+
+        a.page-cloud-v1-link:hover
+        {
+            color:                      var(--atx-pcv1-txt-clr-h) !important;
+            background:                 none;
+            font-weight:                var(--atx-pcv1-txt-weight-h);
         }
 ```
 
@@ -454,6 +687,19 @@ Save the file and go back to **Obsidian Settings** -> **Appearance**. Scroll all
 <br />
 
 You should see a list of pages associated to your vault.
+
+<br />
+
+This snippet supports modifying the CSS values using the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)** plugin. If you want to change how the tags in this snippet look:
+- Open Obsidian Settings
+- Install the **Style Settings** plugin
+- Select **Style Settings** config panel under **Community Plugins**.
+- Click the tab `Page Cloud - Version 1`
+- Edit the settings for the Page Cloud tags
+
+<br />
+
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Page%20Cloud%201/images/install_4.gif"></p>
 
 <br /><br />
 
