@@ -95,11 +95,7 @@ The following are preview images of what the snippet will do and appear like:
 <br /><br />
 
 ### Javascript
-
-<br />
-
-Pick **One**.
-<br />
+Pick **One** of the versions below.
 <small>The features are the same, just the code is structured differently.</small>
 1. [Normal Version](#normal-version)<br /><small>Much easier to read the code</small>
 2. [Minified Version](#minified-version)<br /><small>Much easier to paste</small>
