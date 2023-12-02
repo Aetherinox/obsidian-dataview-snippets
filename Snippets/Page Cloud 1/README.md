@@ -254,18 +254,17 @@ const CreatePageCloud = async ( ) =>
             if ( fileName == null )
                 return;
 
-            var file_name_fm   = fileName.frontmatter.name || fileName.frontmatter.title;
+            var file_name_fm   = fileName.frontmatter.name || fileName.frontmatter.title || fileName.frontmatter.alias;
             var file_name      = fileName.name
 
             if (file_name_fm)
                 file_name      = file_name_fm;
 
-
             const fontSize      = Generate_FontSize( fileInfo.backlinks, fileInfo.wordCount );
             const color         = Generate_Color( fileName.name );
             const length        = 0;
 
-            data.push( { name: fileName.name, id: file_name, fontSize, color } );
+            data.push( { name: fileName.name, id: file_name, size: fileName.size, path: fileName.path, fontSize, color } );
         });
 
 
