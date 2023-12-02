@@ -265,12 +265,11 @@ const CreatePageCloud = async ( ) =>
             if ( fileName == null )
                 return;
 
-            var file_name_fm   = fileName.frontmatter.name || fileName.frontmatter.title || fileName.frontmatter.alias;
-            var file_name      = fileName.name
+            var file_name_fm    = fileName.frontmatter.name || fileName.frontmatter.title || fileName.frontmatter.alias;
+            var file_name       = fileName.name
 
             if (file_name_fm)
-                file_name      = file_name_fm;
-
+                file_name       = file_name_fm;
 
             const fontSize      = Generate_FontSize( fileInfo.backlinks, fileInfo.wordCount );
             const color         = Generate_Color( fileName.name );
@@ -278,7 +277,6 @@ const CreatePageCloud = async ( ) =>
 
             data.push( { name: file_name, id: fileName.name, size: fileName.size, path: fileName.path, fontSize, color } );
         });
-
 
         /*
             Sorting functions
@@ -421,6 +419,11 @@ Copy the code below and paste it into the new `page_cloud_v1.css` file which sho
             background:                 #810d3d;
             border:                     1px solid #dd2a74 !important;
             cursor:                     pointer;
+            animation-name:             pulse, anim_glow;
+            animation-duration:         2s, 1s;
+            animation-timing-function:  ease, ease-in-out;
+            animation-iteration-count:  infinite, infinite;
+            animation-direction:        normal, alternate;
         }
 
         .page-cloud-v1-item:hover a
@@ -460,6 +463,33 @@ You should see a list of pages associated to your vault.
 ## Customization
 The section below explains how to customize this snippet.
 
+<br />
+<br />
+
+### Page Titles
+Each page within your vault will be displayed in a cloud structure. The name of each page displayed has several ways of being defined, and supports **frontmatter**.
+
+<br />
+
+The name that displays for each page will have the following priority:
+1. `frontmatter.name`
+2. `frontmatter.title`
+3. `frontmatter.alias`
+4. `filename.Name`
+
+<br />
+
+If none of the above frontmatter values are specified, the normal file name of the page will be used.
+
+<br />
+
+Based on the priority list above, if you provide both a frontmatter `name` AND `title`, the frontmatter **name** will be used first. 
+
+<br />
+
+If you provide a frontmatter `title` and frontmatter `alias`, then the frontmatter **title** will be used.
+
+<br />
 <br />
 
 ### Filtering Folders and Pages
