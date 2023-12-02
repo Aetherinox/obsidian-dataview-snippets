@@ -42,22 +42,13 @@ The following are preview images of what the snippet will do and appear like:
 ````shell
 ```dataviewjs
 /*
-    Snippet: Tag Cloud Version 1
+    Snippet: Tag Cloud - Version 1
 
     This snippet requires the Dataview Plugin
-      https://github.com/blacksmithgu/obsidian-dataview
+        https://github.com/blacksmithgu/obsidian-dataview
 
-    Creates a cloud with all of your tags which are clickable to
-    search for associated pages related to the selected cloud.
-
-    sortOption
-        1       = Sort Alphabetically (Descending)
-        2       = Sort Alphabetically (Ascending)
-        3       = Sort Random / Shuffle
-
-    bRandomColor
-        true    = Uses random colors for each tag
-        false   = Tags with more uses gets more colorful
+    View settings at:
+        https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Tag%20Cloud%201
 */
 
 /*
@@ -74,6 +65,24 @@ const weightWordCount   = 0.3;
 const minFontSize       = 12;
 const maxFontSize       = 32;
 const tagsFilter        = [ "#tag1", "#tag2" ];
+const arrColors         = [];
+
+/*
+    Generate 40 colors
+*/
+
+for ( let i = 0; i < 40; i++ )
+{
+
+    let R           = Math.floor( ( Math.random( ) * 100 ) + 100 );
+    let G           = Math.floor( ( Math.random( ) * 100 ) + 100 );
+    let B           = Math.floor( ( Math.random( ) * 100 ) + 100 );
+    
+    let rgb         = ( R << 16 ) + ( G << 8 ) + B;
+    let itemColor   = `#${rgb.toString( 16 )}`;
+
+    arrColors.push( itemColor );
+}
 
 /*
     Get all backlinks
@@ -128,68 +137,16 @@ function Generate_FontSize( backlinks, wordCount )
 function Generate_Color( tagName, tagInfo )
 {
     if ( tagName == null ) { return "#FFFFFF"; }
-    const colors =
-    {
-        "grey-01": "#636363",
-        "grey-02": "#777777",
-        "grey-03": "#8e8e8e",
-        "grey-1": "#c8c9cb",
-        "teal-1": "#cfebf1",
-        "green-1": "#b3dfce",
-        "yellow-1": "#f4e3bd",
-        "orange-1": "#f4d4b3",
-        "red-1": "#ddb6b9",
-        "fuchsia-1": "#fbb7ce",
-        "purple-1": "#d0c2df",
-        "blue-1": "#c5cadf",
-        "dblue-1": "#c5c6cc",
-        "grey-2": "#a3a5a8",
-        "teal-2": "#b0dde8",
-        "green-2": "#80c9ae",
-        "yellow-2": "#edd091",
-        "orange-2": "#edb780",
-        "red-2": "#c7868a",
-        "fuchsia-2": "#f987ae",
-        "purple-2": "#b09ac9",
-        "blue-2": "#9ea6c9",
-        "dblue-2": "#9ea1ab",
-        "grey-3": "#7e8085",
-        "teal-3": "#90cfde",
-        "green-3": "#4db38e",
-        "yellow-3": "#e6bd64",
-        "orange-3": "#e59a4d",
-        "red-3": "#b1565b",
-        "fuchsia-3": "#f6578d",
-        "purple-3": "#9071b3",
-        "blue-3": "#7782b3",
-        "dblue-3": "#777b89",
-        "teal-4": "#60bbd0",
-        "green-4": "#00935d",
-        "yellow-4": "#dba022",
-        "orange-4": "#da6f01",
-        "red-4": "#a93c43",
-        "fuchsia-4": "#f20f5c",
-        "purple-4": "#613493",
-        "blue-4": "#3c4d93",
-        "grey-5": "#535f77",
-        "green-5": "#008454",
-        "yellow-5": "#c5901f",
-        "orange-5": "#c57a2d",
-        "red-5": "#b93f45",
-        "red-6": "#9b3a40",
-        "fuchsia-5": "#da0e53",
-        "fuchsia-6": "#bf2458",
-    };
 
-    let cntColors       = Object.keys( colors ).length;
+    let cntColors       = Object.keys( arrColors ).length;
     const tagWords      = tagName.split(/\W+/g);
     const colorIndex    = Math.floor( Math.random( ) * cntColors );
     const colorID       = dv.pages( tagName ).length;
 
     if ( bRandomColor === true )
-        return colors[ Object.keys( colors )[ colorIndex ] ];
+        return arrColors[ Object.keys( arrColors )[ colorIndex ] ];
 
-    return colors[ Object.keys( colors )[ colorID ] ];
+    return arrColors[ Object.keys( arrColors )[ colorID ] ];
 }
 
 /*
@@ -228,10 +185,10 @@ function Sort_Shuffle( arr )
 }
 
 /*
-    Create cloud tags
+    Create Cloud
 */
 
-const CreateTags = async ( ) =>
+const CreateTagCloud = async ( ) =>
 {
     const tags      = new Map( );
     const files     = new Map( );
@@ -325,7 +282,7 @@ const CreateTags = async ( ) =>
     } );
 }
 
-CreateTags( )
+CreateTagCloud( )
 ```
 ````
 
