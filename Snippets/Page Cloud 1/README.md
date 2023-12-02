@@ -54,9 +54,11 @@ The following are preview images of what the snippet will do and appear like:
 
 <br />
 
-Pick One:
-1. [Normal Version](#normal-version)<br />Much easier to read the code
-2. [Minified Version](#minified-version)<br />Much easier to paste
+Pick **One**.
+<br />
+<small>The features are the same, just the code is structured differently.</small>
+1. [Normal Version](#normal-version)<br /><small>Much easier to read the code</small>
+2. [Minified Version](#minified-version)<br /><small>Much easier to paste</small>
 
 <br />
 
