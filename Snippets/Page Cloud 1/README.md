@@ -12,8 +12,10 @@
 - [About](#about)
   - [Previews](#previews)
 - [Install](#install)
-  - [Normal Version](#normal-version)
-  - [Minified Version](#minified-version)
+  - [Javascript](#javascript)
+    - [Normal Version](#normal-version)
+    - [Minified Version](#minified-version)
+  - [CSS](#css)
 - [Customization](#customization)
   - [Page Titles / Frontmatter Support](#page-titles--frontmatter-support)
   - [Filtering Folders and Pages](#filtering-folders-and-pages)
@@ -85,7 +87,21 @@ The following are preview images of what the snippet will do and appear like:
 ## Install
 
 - Install [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
-- Pick one of the two versions below, copy the code, and paste it in your Obsidian note.
+- View the [Javascript](#javascript) section below, and copy the [Normal](#normal-version) or [Minified](#minified-version) version of the code and paste it into your Obsidian note.
+- View the [CSS](#css) section below, and copy the provided CSS, then create a new `.css` snippet and paste the copied code.
+- Enable the new CSS snippet in your `Obsidian Settings` under `Appearance`.
+
+<br />
+
+More detailed instructions below.
+
+<br />
+
+---
+
+<br />
+
+### Javascript
 
 <br />
 
@@ -97,7 +113,7 @@ Pick **One**.
 
 <br />
 
-### Normal Version
+#### Normal Version
 This version is much easier to read the code. It includes formatting and comments.
 
 <br />
@@ -331,7 +347,7 @@ CreatePageCloud( )
 
 <br />
 
-### Minified Version
+#### Minified Version
 This version only formats the settings. All other formatting and comments are removed.
 
 <br />
@@ -349,9 +365,13 @@ arrColors=[],QueryFiles=dv.pages(QueryStr);for(let i=0;i<40;i++){let itemColor=`
 ```
 ````
 
-<br />
-<br />
+<br /><br />
 
+---
+
+<br /><br />
+
+### CSS
 Next, you need to add some custom CSS.
 Open Obsidian Settings, click **Appearance**, and then scroll all the way down. (See image below).
 
