@@ -1,4 +1,4 @@
-# Obsidian: Page Cloud : Version 1 <!-- omit from toc -->
+# Obsidian: Page Cloud - Version 1 <!-- omit from toc -->
 - This snippet requires the program [Obsidian.md](obsidian.md/)
 - This snippet requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
 - This snippet has optional support for [Style Settings Plugin](https://github.com/mgmeyers/obsidian-style-settings)
