@@ -364,6 +364,14 @@ arrColors=[],QueryFiles=dv.pages(QueryStr);for(let i=0;i<40;i++){let itemColor=`
 
 <br /><br />
 
+<div align="center">
+
+**[`^        back to top        ^`](#table-of-contents-)**
+
+</div>
+
+<br /><br />
+
 ---
 
 <br /><br />
