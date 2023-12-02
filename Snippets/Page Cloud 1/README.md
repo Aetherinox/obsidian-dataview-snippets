@@ -10,7 +10,7 @@ The `Page Cloud` snippet will fetch a list of all the pages that exist within yo
 
 <br />
 
-This snippet supports `Frontmatter` values for the page names. For more information on this, view the section customization section: [Page Titles](#page-titles).
+This snippet supports `Frontmatter` values for the page names. For more information on this, view the customization section: [Page Titles](#page-titles).
 
 <br />
 
