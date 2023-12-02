@@ -90,16 +90,9 @@ The following are preview images of what the snippet will do and appear like:
 - View the [Javascript](#javascript) section below, and copy the [Normal](#normal-version) or [Minified](#minified-version) version of the code and paste it into your Obsidian note.
 - View the [CSS](#css) section below, and copy the provided CSS, then create a new `.css` snippet and paste the copied code.
 - Enable the new CSS snippet in your `Obsidian Settings` under `Appearance`.
+- More detailed instructions below.
 
-<br />
-
-More detailed instructions below.
-
-<br />
-
----
-
-<br />
+<br /><br />
 
 ### Javascript
 
@@ -385,11 +378,13 @@ Click the mini folder icon to open your **Obsidian Snippets folder**.
 
 Create a new file named whatever (`page_cloud_v1.css` in our example).
 
-Copy the code below and paste it into the new `page_cloud_v1.css` file which should be in `YourVaultName/.obsidian/snippets/page_cloud_v1.css`
-
 <br />
 
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Page%20Cloud%201/images/install_2.png"></p>
+
+<br />
+
+Copy the code below and paste it into the new `page_cloud_v1.css` file which should be in `YourVaultName/.obsidian/snippets/page_cloud_v1.css`
 
 <br />
 
