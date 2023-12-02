@@ -59,7 +59,11 @@ At the time of writing this script, I am using the following:
 
 <br /><br />
 
+<div align="center">
+
 **[`^        back to top        ^`](#table-of-contents-)**
+
+</div>
 
 <br /><br />
 
@@ -76,7 +80,11 @@ The following are preview images of what the snippet will do and appear like:
 
 <br /><br />
 
+<div align="center">
+
 **[`^        back to top        ^`](#table-of-contents-)**
+
+</div>
 
 <br /><br />
 
@@ -753,7 +761,11 @@ This snippet supports modifying the CSS values using the **[Style Settings](http
 
 <br /><br />
 
+<div align="center">
+
 **[`^        back to top        ^`](#table-of-contents-)**
+
+</div>
 
 <br /><br />
 
@@ -948,7 +960,7 @@ This snippet supports tweaking the look and feel of the cloud & tags using the *
 
 <br /><br />
 
-<div align="center" style="text-align;center;">
+<div align="center">
 
 **[`^        back to top        ^`](#table-of-contents-)**
 
