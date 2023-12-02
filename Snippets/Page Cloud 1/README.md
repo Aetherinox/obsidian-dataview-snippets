@@ -60,14 +60,12 @@ The following are preview images of what the snippet will do and appear like:
     Snippet: Page Cloud - Version 1
 
     This snippet requires the Dataview Plugin
-      https://github.com/blacksmithgu/obsidian-dataview
+        https://github.com/blacksmithgu/obsidian-dataview
+
+    View settings at:
+        https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Page%20Cloud%201
 
     Creates a cloud which shows all of the pages that exist in your vault.
-
-    sortOption
-        1       = Sort Alphabetically (Descending)
-        2       = Sort Alphabetically (Ascending)
-        3       = Sort Random / Shuffle
 */
 
 /*
