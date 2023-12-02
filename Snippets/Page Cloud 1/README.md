@@ -54,6 +54,11 @@ At the time of writing this script, I am using the following:
 | [Obsidian.md](https://obsidian.md/) | ![GitHub release](https://img.shields.io/github/v/release/obsidianmd/obsidian-releases?label=v&color=ba0f56) |
 | [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview) | ![GitHub release](https://img.shields.io/github/v/release/blacksmithgu/obsidian-dataview?label=v&color=ba0f56) |
 
+
+<br /><br />
+
+**[`^        back to top        ^`](#table-of-contents)**
+
 <br /><br />
 
 ---
@@ -66,6 +71,10 @@ The following are preview images of what the snippet will do and appear like:
 <br />
 
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Page%20Cloud%201/images/example_1.gif"></p>
+
+<br /><br />
+
+**[`^        back to top        ^`](#table-of-contents)**
 
 <br /><br />
 
@@ -733,6 +742,10 @@ This snippet supports modifying the CSS values using the **[Style Settings](http
 
 <br /><br />
 
+**[`^        back to top        ^`](#table-of-contents)**
+
+<br /><br />
+
 ---
 
 <br /><br />
@@ -921,3 +934,9 @@ This snippet supports tweaking the look and feel of the cloud & tags using the *
 <br />
 
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Page%20Cloud%201/images/install_4.gif"></p>
+
+<br /><br />
+
+**[`^        back to top        ^`](#table-of-contents)**
+
+<br /><br />
