@@ -50,25 +50,20 @@ The following are preview images of what the snippet will do and appear like:
 ## Usage
 
 - Install [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
-- Copy the code below and paste it in a note.
+- Pick one of the two versions below, copy the code, and paste it in your Obsidian note.
 
 <br />
 
-Two versions of the script are provided below.
-1. [Normal Version](#normal-version)
-2. [Minified Version](#minified-version)
-
-<br />
-
-The [Minified](#minified-version) version is much easier to paste. 
-<br />
-The [Normal](#normal-version) version can help you read the code. 
-
-Pick one or the other to paste in your Obsidian note.
+Pick One:
+1. [Normal Version](#normal-version)<br />Much easier to read the code
+2. [Minified Version](#minified-version)<br />Much easier to paste
 
 <br />
 
 ### Normal Version
+This version is much easier to read the code. It includes formatting and comments.
+
+<br />
 
 ````shell
 ```dataviewjs
@@ -300,6 +295,9 @@ CreatePageCloud( )
 <br />
 
 ### Minified Version
+This version only formats the settings. All comments and formatting are removed.
+
+<br />
 
 ````shell
 ```dataviewjs
