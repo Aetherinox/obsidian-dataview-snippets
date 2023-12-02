@@ -188,13 +188,13 @@ function Generate_Color( tagName )
 
 function Sort_DESC( arr )
 {
-    arr.sort( ( a, b ) => a.id.localeCompare( b.id ) )
+    arr.sort( ( a, b ) => a.name.localeCompare( b.name ) )
     return arr;
 }
 
 function Sort_ASC( arr )
 {
-    arr.sort( ( a, b ) => b.id.localeCompare( a.id ) )
+    arr.sort( ( a, b ) => b.name.localeCompare( a.name ) )
     return arr;
 }
 
@@ -264,7 +264,7 @@ const CreatePageCloud = async ( ) =>
             const color         = Generate_Color( fileName.name );
             const length        = 0;
 
-            data.push( { name: fileName.name, id: file_name, size: fileName.size, path: fileName.path, fontSize, color } );
+            data.push( { name: file_name, id: fileName.name, size: fileName.size, path: fileName.path, fontSize, color } );
         });
 
 
