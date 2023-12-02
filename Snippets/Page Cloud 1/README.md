@@ -1,12 +1,38 @@
-# Obsidian: Page Cloud : Version 1
-This snippet requires a copy of [Obsidian.md](obsidian.md/)
+# Obsidian: Page Cloud : Version 1 <!-- omit from toc -->
+- This snippet requires the program [Obsidian.md](obsidian.md/)
+- This snippet requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
+- This snippet has optional support for [Style Settings Plugin](https://github.com/mgmeyers/obsidian-style-settings)
+
+---
+
 <br />
-This snippet requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview).
+
+## Table of Contents <!-- omit from toc -->
+
+- [About](#about)
+  - [Previews](#previews)
+- [Install](#install)
+  - [Normal Version](#normal-version)
+  - [Minified Version](#minified-version)
+- [Customization](#customization)
+  - [Page Titles / Frontmatter Support](#page-titles--frontmatter-support)
+  - [Filtering Folders and Pages](#filtering-folders-and-pages)
+    - [Exclude Folders](#exclude-folders)
+    - [Exclude Page](#exclude-page)
+  - [Sort Order](#sort-order)
+  - [Font Size](#font-size)
+  - [Font Weight](#font-weight)
+  - [Cloud Color Generation](#cloud-color-generation)
+  - [Change Appearance / CSS](#change-appearance--css)
+
+<br />
+
+---
 
 <br /><br />
 
 ## About
-The `Page Cloud` snippet will fetch a list of all the pages that exist within your vault and list them in a cloud format. Certain pages will display different font sizes and colors depending on how populated the page is with contents.
+The `Page Cloud - Version 1` snippet will fetch a list of all the pages that exist within your vault and list them in a cloud format. Certain pages will display different font sizes and colors depending on how populated the page is with contents.
 
 <br />
 
@@ -47,7 +73,7 @@ The following are preview images of what the snippet will do and appear like:
 
 <br /><br />
 
-## Usage
+## Install
 
 - Install [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
 - Pick one of the two versions below, copy the code, and paste it in your Obsidian note.
@@ -717,7 +743,7 @@ The section below explains how to customize this snippet.
 <br />
 <br />
 
-### Page Titles
+### Page Titles / Frontmatter Support
 Each page within your vault will be displayed in a cloud structure. The name of each page displayed has several ways of being defined, and supports **frontmatter**.
 
 <br />
@@ -811,7 +837,7 @@ const QueryStr = `-"Personal Stuff/My PIN Codes"`;
 <br />
 <br />
 
-### Change Sorting
+### Sort Order
 This snippet allows for two ways of sorting pages:
 1. Alphabetically (Descending A-Z)
 2. Alphabetically (Ascending Z-A)
@@ -862,7 +888,7 @@ const weightWordCount = 0.3;
 <br />
 <br />
 
-### Cloud Colors
+### Cloud Color Generation
 As of `v1.3.0`, this snippet auto generates the colors that will be used for each page listed in the cloud. The color generation code will keep the color tones in the **pastel** range, and will exclude darker colors since the background box color is dark.
 
 <br />
@@ -880,3 +906,18 @@ let B = Math.floor( ( Math.random( ) * 100 ) + 100 );
 For brighter colors, increase `100`. Don't exceed `255`.
 
 For darker colors, decrease `100`. Don't go below `0`.
+
+<br />
+<br />
+
+### Change Appearance / CSS
+This snippet supports tweaking the look and feel of the cloud & tags using the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)** plugin. If you want to change how the tags in this snippet look:
+- Open `Obsidian Settings`
+- Install the `Style Settings` plugin
+- Select `Style Settings` config panel under `Community Plugins`.
+- Click the tab `Page Cloud - Version 1`
+- Edit the settings for the Page Cloud tags
+
+<br />
+
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Page%20Cloud%201/images/install_4.gif"></p>
