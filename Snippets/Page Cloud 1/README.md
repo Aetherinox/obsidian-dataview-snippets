@@ -254,11 +254,18 @@ const CreatePageCloud = async ( ) =>
             if ( fileName == null )
                 return;
 
+            var file_name_fm   = fileName.frontmatter.name || fileName.frontmatter.title;
+            var file_name      = fileName.name
+
+            if (file_name_fm)
+                file_name      = file_name_fm;
+
+
             const fontSize      = Generate_FontSize( fileInfo.backlinks, fileInfo.wordCount );
             const color         = Generate_Color( fileName.name );
             const length        = 0;
 
-            data.push( { name: fileName.name, id: fileName.name, fontSize, color } );
+            data.push( { name: fileName.name, id: file_name, fontSize, color } );
         });
 
 
@@ -495,7 +502,7 @@ const QueryStr = `-"Personal Stuff/My PIN Codes"`;
 <br />
 
 ### Change Sorting
-This snippet allows for two ways of sorting tags:
+This snippet allows for two ways of sorting pages:
 1. Alphabetically (Descending A-Z)
 2. Alphabetically (Ascending Z-A)
 3. Random / Shuffle
@@ -535,7 +542,7 @@ The font weight of a page is determined by two things:
 
 <br />
 
-To limit the font weight sizes used, edit the two properties below. The lower the value, the thinner the tag. Higher numbers will display more bold text. This setting also plays a role in the [Font Size](#font-size)
+To limit the font weight sizes used, edit the two properties below. The lower the value, the thinner the page name. Higher numbers will display more bold text. This setting also plays a role in the [Font Size](#font-size)
 
 ```javascript
 const weightBacklinks = 0.1;
