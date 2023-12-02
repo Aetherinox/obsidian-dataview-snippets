@@ -224,6 +224,6 @@ This version **requires** you to install the following:
 
 <div align="center">
 
-[![View](https://img.shields.io/badge/%20-%20View%20Page%20Cloud%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Tag%20Cloud%202)
+[![View](https://img.shields.io/badge/%20-%20View%20Page%20Cloud%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Page%20Cloud%201)
 
 </div>
