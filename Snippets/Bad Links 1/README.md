@@ -18,6 +18,7 @@
   - [CSS](#css)
 - [Customization](#customization)
   - [Page Titles / Frontmatter Support](#page-titles--frontmatter-support)
+  - [Change Appearance / CSS](#change-appearance--css)
 
 <br />
 
@@ -1012,4 +1013,67 @@ The section below explains how to customize this snippet.
 <br />
 
 ### Page Titles / Frontmatter Support
-This script supports `Frontmatter` / `Metadata` titles.
+This script supports `Frontmatter` / `Metadata` titles. When one of your notes includes a broken link, the name of the note will display in the Bad Links snippet. The name of each page displayed has several ways of being defined, and supports **frontmatter**.
+
+<br />
+
+The name that displays for each page will have the following priority:
+1. `frontmatter.name`
+2. `frontmatter.title`
+3. `frontmatter.alias`
+4. `filename.Name`
+
+<br />
+
+If none of the above frontmatter values are specified, the normal file name of the page will be used.
+
+<br />
+
+Based on the priority list above, if you provide both a frontmatter `name` AND `title`, the frontmatter **name** will be used first. 
+
+<br />
+
+If you provide a frontmatter `title` and frontmatter `alias`, then the frontmatter **title** will be used.
+
+<br />
+
+To define frontmatter values, add the following to the very top of your page:
+
+```markdown
+---
+title:   "Your Page Title"
+---
+```
+
+<br />
+
+You cannot have any blank lines above the first `---`.
+
+<br />
+
+If you do not specify `title`, `name`, or `alias` in your frontmatter, the normal page filename will be used.
+
+<br />
+<br />
+
+### Change Appearance / CSS
+This snippet supports tweaking the look and feel of the cloud & tags using the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)** plugin. If you want to change how this snippet looks:
+- Open `Obsidian Settings`
+- Install the `Style Settings` plugin
+- Select `Style Settings` config panel under `Community Plugins`.
+- Click the tab `Bad Links - Version 1`
+- Edit the settings for the Page Cloud tags
+
+<br />
+
+<p align="center"><img style="width: 70%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Bad%20Links%201/images/example_5.gif"></p>
+
+<br /><br />
+
+<div align="center">
+
+**[`^        back to top        ^`](#table-of-contents-)**
+
+</div>
+
+<br /><br />
