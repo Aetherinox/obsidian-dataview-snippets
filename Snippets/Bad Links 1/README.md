@@ -26,7 +26,7 @@
 <br /><br />
 
 ## About
-The `Page Cloud - Version 1` displays a list of internal links within your vault that lead nowhere, also known as `unresolved links`. 
+The `Bad / Unresolved Links - Version 1` snippet displays a list of internal links within your vault that lead nowhere, also known as `unresolved links`. 
 
 To fix these, you can either delete the link on the associated page, or you can click each item in the list and create a new page.
 
@@ -34,7 +34,7 @@ Once the link has been fixed, it will be removed from the list.
 
 <br />
 
-This snippet supports `Frontmatter` values for the page names. For more information on this, view the customization section: [Page Titles / Frontmatter Support](#page-titles--frontmatter-support).
+This snippet supports `Frontmatter` values for page names. For more information on this, view the customization section: [Page Titles / Frontmatter Support](#page-titles--frontmatter-support).
 
 <br />
 
