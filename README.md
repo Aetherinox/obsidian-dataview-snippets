@@ -9,7 +9,7 @@ These snippets in this repo require you to download and install [Obsidian.md](ob
   - [Table of Contents: Version 1](#table-of-contents-version-1)
   - [Table of Contents: Version 2](#table-of-contents-version-2)
   - [Subfolder Data](#subfolder-data)
-  - [Bad Links](#bad-links)
+  - [Bad Links - Version 1](#bad-links---version-1)
   - [Tag Cloud: Version 1](#tag-cloud-version-1)
   - [Tag Cloud: Version 2](#tag-cloud-version-2)
   - [Page Cloud: Version 1](#page-cloud-version-1)
@@ -47,7 +47,7 @@ This version requires you to install the following:
 
 <div align="center">
 
-[![View](https://img.shields.io/badge/%20-%20View%20Version%201%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/TOC%20Version%201)
+[![View](https://img.shields.io/badge/%20-%20View%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/TOC%20Version%201)
 
 </div>
 
@@ -76,7 +76,7 @@ This version requires you to install the following:
 
 <div align="center">
 
-[![View](https://img.shields.io/badge/%20-%20View%20Version%202%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/TOC%20Version%202)
+[![View](https://img.shields.io/badge/%20-%20View%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/TOC%20Version%202)
 
 </div>
 
@@ -106,7 +106,7 @@ The following plugins are **optional**:
 
 <div align="center">
 
-[![View](https://img.shields.io/badge/%20-%20View%20Subfolder%20Data%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Subfolder%20Data)
+[![View](https://img.shields.io/badge/%20-%20View%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Subfolder%20Data)
 
 </div>
 
@@ -116,11 +116,11 @@ The following plugins are **optional**:
 
 <br /><br />
 
-### Bad Links
+### Bad Links - Version 1
 
-<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Bad%20Links/images/example_2.gif"></p>
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Bad%20Links%201/images/example_4.gif"></p>
 
-The `Table of Contents: Bad Links` snippet displays a list of internal links within your vault that lead nowhere (are broken).
+The `Bad Links: Version 1` snippet displays a list of internal links within your vault that lead nowhere (are broken).
 
 To fix these, you can delete the link on the associated page, or you can click each item in the list and create a new page. Once the link has been fixed, it will be removed from the list.
 
@@ -133,7 +133,7 @@ This version **requires** you to install the following:
 
 <div align="center">
 
-[![View](https://img.shields.io/badge/%20-%20View%20Bad%20Links%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Bad%20Links)
+[![View](https://img.shields.io/badge/%20-%20View%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Bad%20Links%201)
 
 </div>
 
@@ -163,7 +163,7 @@ This version **requires** you to install the following:
 
 <div align="center">
 
-[![View](https://img.shields.io/badge/%20-%20View%20Tag%20Cloud%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Tag%20Cloud%201)
+[![View](https://img.shields.io/badge/%20-%20View%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Tag%20Cloud%201)
 
 </div>
 
@@ -192,7 +192,7 @@ This version **requires** you to install the following:
 
 <div align="center">
 
-[![View](https://img.shields.io/badge/%20-%20View%20Tag%20Cloud%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Tag%20Cloud%202)
+[![View](https://img.shields.io/badge/%20-%20View%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Tag%20Cloud%202)
 
 </div>
 
@@ -224,6 +224,6 @@ This version **requires** you to install the following:
 
 <div align="center">
 
-[![View](https://img.shields.io/badge/%20-%20View%20Page%20Cloud%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Page%20Cloud%201)
+[![View](https://img.shields.io/badge/%20-%20View%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Page%20Cloud%201)
 
 </div>
