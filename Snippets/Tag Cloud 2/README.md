@@ -26,6 +26,7 @@
   - [Font Size](#font-size)
   - [Font Weight](#font-weight)
   - [Cloud Colors](#cloud-colors)
+  - [Change Appearance / CSS](#change-appearance--css)
 
 <br />
 
@@ -1097,6 +1098,17 @@ let B = Math.floor( ( Math.random( ) * 100 ) + 100 );
 For brighter colors, increase `100`. Don't exceed `255`.
 
 For darker colors, decrease `100`. Don't go below `0`.
+
+<br />
+<br />
+
+### Change Appearance / CSS
+This snippet supports tweaking the look and feel of the cloud & tags using the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)** plugin. If you want to change how the tags in this snippet look:
+- Open `Obsidian Settings`
+- Install the `Style Settings` plugin
+- Select `Style Settings` config panel under `Community Plugins`.
+- Click the tab `Tag Cloud - Version 2`
+- Edit the settings for the Page Cloud tags
 
 <br />
 
