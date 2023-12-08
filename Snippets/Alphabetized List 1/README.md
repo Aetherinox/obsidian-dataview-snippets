@@ -66,7 +66,7 @@ The following are preview images of what the snippet will do and appear like:
 
 <br />
 
-<p align="center"><img style="width: 80%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Bad%20Links%201/images/example_1.gif"></p>
+<p align="center"><img style="width: 80%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Alphabetized%20List%201/images/example_1.gif"></p>
 
 <br /><br />
 
