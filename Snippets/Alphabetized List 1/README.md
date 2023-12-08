@@ -224,7 +224,7 @@ id: atx-alv1
 settings:
 -
     id:                     atx-alv1-cat-general
-    title:                  '1. Appearance'
+    title:                  'Appearance'
     description:            'General appearance settings'
     type:                   heading
     level:                  1
@@ -320,22 +320,54 @@ settings:
 
 
 -
-        id:                 atx-alv1-counter-about
+        id:                 atx-alv1-tabs-about
         title:              ''
-        description:        "<br /><br /><h1>Counter</h1>Settings for tag indicator count at top left of each tag when hovered."
+        description:        "<br /><br /><h1>Tabs</h1>Settings for each clickable tab which contains your list of pages inside."
         type:               info-text
         markdown:           true
 -
-        id:                 atx-alv1-counter-bg-clr
-        title:              'Background Color'
-        description:        'Background color for circle'
+        id:                 atx-alv1-tabs-header-bg-clr-n
+        title:              'Header Background Color (Normal)'
+        description:        'Background color for each tab. This is where the letter of the alphabet is shown.'
         type:               variable-themed-color
         opacity:            true
         format:             hex
-        default-light:      '#424242'
-        default-dark:       '#424242'
+        default-light:      '#1b1b1b'
+        default-dark:       '#1b1b1b'
 -
-        id:                 atx-alv1-counter-bg-size
+        id:                 atx-alv1-tabs-header-bg-clr-h
+        title:              'Header Background Color (Hover)'
+        description:        'Background color (on hover) for each tab. This is where the letter of the alphabet is shown.'
+        type:               variable-themed-color
+        opacity:            true
+        format:             hex
+        default-light:      '#8f2045'
+        default-dark:       '#8f2045'
+-
+        id:                 atx-alv1-tabs-header-bg-clr-s
+        title:              'Header Background Color (Selected)'
+        description:        'Background color (selected) for each tab. This is where the letter of the alphabet is shown.'
+        type:               variable-themed-color
+        opacity:            true
+        format:             hex
+        default-light:      '#7c1236'
+        default-dark:       '#7c1236'
+-
+        id:                 atx-alv1-tabs-icon-svg-n
+        title:              'Header Icon (Normal)'
+        description:        'The svg icon to use for left side of tab in normal state'
+        type:               variable-text
+        default:            url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='15px' height='15px' fill='%23FFFFFF'%3E%3Cdefs%3E%3Cstyle%3E.fa-secondary%7Bopacity:.4%7D%3C/style%3E%3C/defs%3E%3Cpath class='fa-primary' d='M438.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L370.7 256 233.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z'%3E%3C/path%3E%3Cpath class='fa-secondary' d='M338.7 224L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0 32-32-32-32z'%3E%3C/path%3E%3C/svg%3E" );
+-
+        id:                 atx-alv1-tabs-icon-svg-s
+        title:              'Header Icon (Selected)'
+        description:        'The svg icon to use for left side of tab in selected state'
+        type:               variable-text
+        default:            url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' width='15px' height='15px' fill='%23FFFFFF'%3E%3Cdefs%3E%3Cstyle%3E.fa-secondary%7Bopacity:.4%7D%3C/style%3E%3C/defs%3E%3Cpath class='fa-primary' d='M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 402.7 54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'%3E%3C/path%3E%3Cpath class='fa-secondary' d='M160 370.7V64c0-17.7 14.3-32 32-32s32 14.3 32 32V370.7l-32 32-32-32z'%3E%3C/path%3E%3C/svg%3E" );
+
+-
+
+        id:                 atx-alv1-tabs-bg-size
         title:              'Circle Size'
         description:        'Size of counter circle'
         type:               variable-number-slider
@@ -345,13 +377,13 @@ settings:
         max:                30
         step:               1
 -
-        id:                 atx-alv1-counter-font-face
+        id:                 atx-alv1-tabs-font-face
         title:              'Font Face'
         description:        'Fonts except from the code texts'
         type:               variable-text
         default:            'sans-serif'
 -
-        id:                 atx-alv1-counter-font-clr-n
+        id:                 atx-alv1-tabs-font-clr-n
         title:              'Font Color'
         description:        'Color of tag text when tag is hovered.'
         type:               variable-themed-color
@@ -360,7 +392,7 @@ settings:
         default-light:      '#FFFFFF'
         default-dark:       '#FFFFFF'
 -
-        id:                 atx-alv1-counter-font-size
+        id:                 atx-alv1-tabs-font-size
         title:              'Font Size'
         description:        'Font size for counter'
         type:               variable-number-slider
@@ -370,7 +402,7 @@ settings:
         max:                30
         step:               1
 -
-        id:                 atx-alv1-counter-font-weight
+        id:                 atx-alv1-tabs-font-weight
         title:              'Font Weight'
         description:        'Options: normal, bold, lighter, bolder'
         type:               variable-text
@@ -381,7 +413,7 @@ settings:
 
 
     id:                     atx-alv1-cat-anim
-    title:                  '2. Animations'
+    title:                  'Animations'
     description:            'Animation settings'
     type:                   heading
     level:                  1
@@ -401,38 +433,10 @@ settings:
             label: Disabled
             value: anim-1-disabled
 -
-        id:                 atx-alv1-cat-anim-2
-        title:              'Scale Animation'
-        description:        'Scale text animation when hovering tag'
-        type:               class-select
-        allowEmpty:         false
-        default:            anim-2-enabled
-        options:
-        -
-            label: Enabled
-            value: anim-2-enabled
-        -
-            label: Disabled
-            value: anim-2-disabled
--
-        id:                 atx-alv1-cat-anim-3
-        title:              'Fade In-Out Effect'
-        description:        'Tags fading in and out on hover'
-        type:               class-select
-        allowEmpty:         false
-        default:            anim-3-enabled
-        options:
-        -
-            label: Enabled
-            value: anim-3-enabled
-        -
-            label: Disabled
-            value: anim-3-disabled
--
 
 
     id:                     atx-alv1-cat-support
-    title:                  '3. Support'
+    title:                  'Support'
     description:            'Links associated to this snippet'
     type:                   heading
     level:                  1
@@ -472,10 +476,6 @@ settings:
         body
         {
             --atx-alv1-anim-1-glow:                     atx-alv1-anim-glow;
-            --atx-alv1-anim-2-in:                       atx-alv1-anim-scale-in;
-            --atx-alv1-anim-2-out:                      atx-alv1-anim-scale-out;
-            --atx-alv1-anim-2-scale:                    scale( 1.3 );
-            --atx-alv1-anim-3-opacity:                  0.5;
 
             --atx-alv1-general-line-spacing:            15px;
             --atx-alv1-general-container-padding:       20px;
@@ -486,12 +486,17 @@ settings:
             --atx-alv1-tags-spacing-internal:           5px;
             --atx-alv1-tags-spacing-external:           7px;
 
-            --atx-alv1-counter-bg-clr:                  #424242;
-            --atx-alv1-counter-bg-size:                 18px;
-            --atx-alv1-counter-font-face:               sans-serif;
-            --atx-alv1-counter-font-clr-n:              #FFFFFF;
-            --atx-alv1-counter-font-size:               10px;
-            --atx-alv1-counter-font-weight:             normal;
+
+
+            --atx-alv1-tabs-header-bg-clr-n             : #1b1b1b;
+            --atx-alv1-tabs-header-bg-clr-h             : #8f2045;
+            --atx-alv1-tabs-header-bg-clr-s             : #7c1236;
+
+            --atx-alv1-tabs-icon-svg-n                  : url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='15px' height='15px' fill='%23FFFFFF'%3E%3Cdefs%3E%3Cstyle%3E.fa-secondary%7Bopacity:.4%7D%3C/style%3E%3C/defs%3E%3Cpath class='fa-primary' d='M438.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L370.7 256 233.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z'%3E%3C/path%3E%3Cpath class='fa-secondary' d='M338.7 224L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0 32-32-32-32z'%3E%3C/path%3E%3C/svg%3E" );
+
+
+            --atx-alv1-tabs-icon-svg-s                  : url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' width='15px' height='15px' fill='%23FFFFFF'%3E%3Cdefs%3E%3Cstyle%3E.fa-secondary%7Bopacity:.4%7D%3C/style%3E%3C/defs%3E%3Cpath class='fa-primary' d='M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 402.7 54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'%3E%3C/path%3E%3Cpath class='fa-secondary' d='M160 370.7V64c0-17.7 14.3-32 32-32s32 14.3 32 32V370.7l-32 32-32-32z'%3E%3C/path%3E%3C/svg%3E" );
+
         }
 
     /*
@@ -523,34 +528,6 @@ settings:
             to
             {
                 box-shadow             : 0 10px 0px rgba(230, 0, 115, 0.05), 0 0 10px rgba(230, 0, 115, 0.05), 0 0 20px rgba(230, 0, 115, 0.19), 0 0 30px rgba(230, 0, 115, 0.05), 0 0 40px rgba(230, 0, 115, 0.05), 0 0 50px rgba(230, 0, 115, 0.39), 0 0 60px rgba(230, 0, 115, 0.05);
-            }
-        }
-
-    /*
-        animation: scale
-    */
-
-        @keyframes atx-alv1-anim-scale-in
-        {
-            0%
-            {
-                transform               : scale( 1 );
-            }
-            100%
-            {
-                transform               : scale( 1.3 );
-            }
-        }
-          
-        @keyframes atx-alv1-anim-scale-out
-        {
-            0%
-            {
-                transform               : scale( 1.3 );
-            }
-            100%
-            {
-                transform               : scale( 1 );
             }
         }
 
@@ -622,9 +599,9 @@ settings:
             cursor                      : pointer;
             transition                  : all ease-in-out 0.3s;
             font-weight                 : bold;
-            background-color            : #1b1b1b;
+            background-color            : var( --atx-alv1-tabs-header-bg-clr-n );
             user-select                 : none;
-            font-size                   : 22px !important;
+            font-size                   : 22px;
         }
 
     /*
@@ -633,7 +610,7 @@ settings:
 
         details summary:hover
         {
-            background-color            : #8f2045;
+            background-color            : var( --atx-alv1-tabs-header-bg-clr-h );
             animation                   : atx-alv1-anim-blink 1s infinite;
         }
 
@@ -643,7 +620,7 @@ settings:
 
         details > summary
         {
-            list-style-image            : url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='15px' height='15px' fill='%23FFFFFF'%3E%3Cdefs%3E%3Cstyle%3E.fa-secondary%7Bopacity:.4%7D%3C/style%3E%3C/defs%3E%3Cpath class='fa-primary' d='M438.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L370.7 256 233.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z'%3E%3C/path%3E%3Cpath class='fa-secondary' d='M338.7 224L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0 32-32-32-32z'%3E%3C/path%3E%3C/svg%3E" );
+            list-style-image            : var( --atx-alv1-tabs-icon-svg-n );
             padding-left                : 20px;
             padding-top                 : 4px;
         }
@@ -654,7 +631,7 @@ settings:
 
         details[ open ] > summary
         {
-            list-style-image            : url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' width='15px' height='15px' fill='%23FFFFFF'%3E%3Cdefs%3E%3Cstyle%3E.fa-secondary%7Bopacity:.4%7D%3C/style%3E%3C/defs%3E%3Cpath class='fa-primary' d='M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 402.7 54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'%3E%3C/path%3E%3Cpath class='fa-secondary' d='M160 370.7V64c0-17.7 14.3-32 32-32s32 14.3 32 32V370.7l-32 32-32-32z'%3E%3C/path%3E%3C/svg%3E" );
+            list-style-image            : var( --atx-alv1-tabs-icon-svg-s );
             padding-left                : 20px;
             padding-top                 : 4px;
         }
@@ -709,7 +686,7 @@ settings:
             border-bottom               : 1px dashed #f73877;
             user-select                 : none;
             margin-bottom               : 5px;
-            background-color            : #7c1236;
+            background-color            : var( --atx-alv1-tabs-header-bg-clr-s );
         }
 
         details[ open ] ul
@@ -717,7 +694,7 @@ settings:
             background-color            : #272727;
             margin-block-start          : -2px;
             margin-block-end            : -10px;
-            animation-name              : atx-alv1-anim-glow !important;
+            animation-name              : var( --atx-alv1-anim-1-glow );
             animation-duration          : 1s;
             animation-timing-function   : ease-in-out;
             animation-iteration-count   : infinite;
