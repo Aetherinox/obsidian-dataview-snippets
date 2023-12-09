@@ -13,6 +13,7 @@ These snippets in this repo require you to download and install [Obsidian.md](ob
   - [Tag Cloud: Version 1](#tag-cloud-version-1)
   - [Tag Cloud: Version 2](#tag-cloud-version-2)
   - [Page Cloud: Version 1](#page-cloud-version-1)
+  - [Alphabetized List: Version 1](#alphabetized-list-version-1)
 
 
 <br /><br />
@@ -225,5 +226,35 @@ This version **requires** you to install the following:
 <div align="center">
 
 [![View](https://img.shields.io/badge/%20-%20View%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Page%20Cloud%201)
+
+</div>
+
+<br /><br />
+
+---
+
+<br /><br />
+
+### Alphabetized List: Version 1
+
+<p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Alphabetized%20List%201/images/example_1.gif"></p>
+
+The `Alphabetized List: Version 1` snippet fetches a list of pages within your vault and displays them in a alphabetized list.
+
+Each page can be clicked on which will re-direct you to that particular page. Page titles also support the frontmatter values:
+- name
+- title
+- alias
+
+<br />
+
+This version **requires** you to install the following:
+- [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
+
+<br />
+
+<div align="center">
+
+[![View](https://img.shields.io/badge/%20-%20View%20Readme-%20%23de2343?style=for-the-badge&logo=github&logoColor=FFFFFF)](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/Alphabetized%20List%201)
 
 </div>
