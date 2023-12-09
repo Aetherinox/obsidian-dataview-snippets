@@ -9,7 +9,7 @@ These snippets in this repo require you to download and install [Obsidian.md](ob
   - [Table of Contents: Version 1](#table-of-contents-version-1)
   - [Table of Contents: Version 2](#table-of-contents-version-2)
   - [Subfolder Data](#subfolder-data)
-  - [Bad Links - Version 1](#bad-links---version-1)
+  - [Bad Links: Version 1](#bad-links-version-1)
   - [Tag Cloud: Version 1](#tag-cloud-version-1)
   - [Tag Cloud: Version 2](#tag-cloud-version-2)
   - [Page Cloud: Version 1](#page-cloud-version-1)
@@ -117,7 +117,7 @@ The following plugins are **optional**:
 
 <br /><br />
 
-### Bad Links - Version 1
+### Bad Links: Version 1
 
 <p align="center"><img style="width: 100%;text-align: center;" src="https://raw.githubusercontent.com/Aetherinox/obsidian-dataview-snippets/main/Snippets/Bad%20Links%201/images/example_4.gif"></p>
 
