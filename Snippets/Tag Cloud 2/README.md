@@ -48,6 +48,13 @@ At the time of writing this script, I am using the following:
 
 <br /><br />
 
+> [!WARNING] WARNING - Using Special Characters In Tags
+> Obsidian currently doesn't support using periods within tags. If you have any tags that contain a period, your tag list may not render.
+> 
+> ex: `#my.tag`
+
+<br />
+
 <div align="center">
 
 **[`^        back to top        ^`](#table-of-contents-)**
