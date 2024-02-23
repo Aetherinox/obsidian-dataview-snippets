@@ -927,7 +927,7 @@ You should see a list of pages associated to your vault.
 
 This snippet supports modifying the CSS values using the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)** plugin. If you want to change how the tags in this snippet look:
 - Open `Obsidian Settings`
-- Install the `Style Settings` plugin
+- Install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin
 - Select `Style Settings` config panel under `Community Plugins`.
 - Click the tab `Tag Cloud - Version 2`
 - Edit the settings for the Page Cloud tags
@@ -1112,7 +1112,7 @@ For darker colors, decrease `100`. Don't go below `0`.
 ### Change Appearance / CSS
 This snippet supports tweaking the look and feel of the cloud & tags using the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings)** plugin. If you want to change how the tags in this snippet look:
 - Open `Obsidian Settings`
-- Install the `Style Settings` plugin
+- Install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin
 - Select `Style Settings` config panel under `Community Plugins`.
 - Click the tab `Tag Cloud - Version 2`
 - Edit the settings for the Page Cloud tags
