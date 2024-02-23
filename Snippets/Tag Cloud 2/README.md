@@ -1023,7 +1023,7 @@ Ensure you use the structure provided. Each tag must be wrapped in quotation mar
 <br />
 
 ### Change Sorting
-This snippet allows for two ways of sorting tags:
+This snippet allows for three ways of sorting tags:
 1. Alphabetically (Descending A-Z)
 2. Alphabetically (Ascending Z-A)
 3. Random / Shuffle
