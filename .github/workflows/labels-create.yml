@@ -1,0 +1,120 @@
+# ---------------------------------------------------------------------------------------
+#   @parent     : github workflow
+#   @desc       : manually activated workflow to create issue labels
+#   @author     : Aetherinox
+#   @url        : https://github.com/Aetherinox
+# ---------------------------------------------------------------------------------------
+
+name: "🎫 Labels › Create"
+run-name: "🎫 Labels › Create"
+
+# ---------------------------------------------------------------------------------------
+#   triggers
+# ---------------------------------------------------------------------------------------
+
+on:
+  workflow_dispatch:
+
+# ---------------------------------------------------------------------------------------
+#   environment variables
+# ---------------------------------------------------------------------------------------
+
+env:
+  ASSIGN_USER:          Aetherinox
+  BOT_NAME_1:           AdminServ
+  BOT_NAME_2:           AdminServX
+  BOT_NAME_DEPENDABOT:  dependabot[bot]
+  LABELS_JSON: |
+    [
+      { "name": "AC ✦ Changes Made",           "color": "8F1784", "description": "Requested changes have been made and are pending a re-scan" },
+      { "name": "AC ✦ Changes Required",       "color": "8F1784", "description": "Requires changes to be made to the package before being accepted" },
+      { "name": "AC ✦ Failed",                 "color": "a61f2d", "description": "Autocheck failed to run through a complete cycle, requires investigation" },
+      { "name": "AC ✦ Needs Rebase",           "color": "8F1784", "description": "Due to the permissions on the requesting repo, this pull request must be rebased by the author" },
+      { "name": "AC ✦ Passed",                 "color": "146b4a", "description": "Ready to be reviewed" },
+      { "name": "AC ✦ Review Required",        "color": "8F1784", "description": "PR needs to be reviewed by another person, after the requested changes have been made" },
+      { "name": "AC ✦ Security Warning",       "color": "761620", "description": "Does not conform to developer policies, or includes potentially dangerous code" },
+      { "name": "AC ✦ Skipped Scan",           "color": "8F1784", "description": "Author has skipped code scan" },
+      { "name": "Status 𐄂 Duplicate",          "color": "75536b", "description": "Issue or pull request already exists" },
+      { "name": "Status 𐄂 Accepted",            "color": "2e7539", "description": "This pull request has been accepted" },
+      { "name": "Status 𐄂 Autoclosed",          "color": "3E0915", "description": "Originally stale and was autoclosed for no activity" },
+      { "name": "Status 𐄂 Denied",              "color": "ba4058", "description": "Pull request has been denied" },
+      { "name": "Status 𐄂 Locked",              "color": "550F45", "description": "Automatically locked by AdminServ for a prolonged period of inactivity" },
+      { "name": "Status 𐄂 Need Info",           "color": "2E3C4C", "description": "Not enough information to resolve" },
+      { "name": "Status 𐄂 No Action",           "color": "030406", "description": "Closed without any action being taken" },
+      { "name": "Status 𐄂 Pending",             "color": "984b12", "description": "Pending pull request" },
+      { "name": "Status 𐄂 Released",            "color": "1b6626", "description": "Issues or PR has been implemented and is now live" },
+      { "name": "Status 𐄂 Reopened",            "color": "8a6f14", "description": "A previously closed PR which has been re-opened" },
+      { "name": "Status 𐄂 Review",              "color": "9e1451", "description": "Currently pending review" },
+      { "name": "Status 𐄂 Stale",               "color": "928282", "description": "Has not had any activity in over 30 days" },
+      { "name": "Type ◦ Bug",                   "color": "9a2c2c", "description": "Something isn't working" },
+      { "name": "Type ◦ Dependency",            "color": "243759", "description": "Item is associated to dependency" },
+      { "name": "Type ◦ Docs",                  "color": "0e588d", "description": "Improvements or modifications to docs" },
+      { "name": "Type ◦ Feature",               "color": "3c4e93", "description": "Feature request" },
+      { "name": "Type ◦ Git Action",            "color": "030406", "description": "GitHub Action / workflow" },
+      { "name": "Type ◦ Pull Request",          "color": "8F1784", "description": "Normal pull request" },
+      { "name": "Type ◦ Roadmap",               "color": "8F1784", "description": "Feature or bug currently planned for implementation" },
+      { "name": "⚠ Urgent",                    "color": "a8740e", "description": "Requires urgent attention" }
+    ]
+
+jobs:
+
+  # ---------------------------------------------------------------------------------------
+  #   Verify Existing Labels
+  #   This job will ensure you have labels already created in your repo.
+  #
+  #   All labels come from the JSON table LABELS_JSON.
+  # ---------------------------------------------------------------------------------------
+
+  issues-labels-create:
+    name: 🎫 Labels › Create
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: "✅ Start"
+        run: |
+              echo "Assigning labels and assignees"
+
+      # ---------------------------------------------------------------------------------------
+      #   checkout
+      # ---------------------------------------------------------------------------------------
+
+      - name: "☑️ Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ---------------------------------------------------------------------------------------
+      #   Check if repo has labels currently added to issues
+      # ---------------------------------------------------------------------------------------
+
+      - name: 🏷️ Verify Existing Labels
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
+          script: |
+            const labels = JSON.parse( process.env.LABELS_JSON );
+            for ( const label of labels )
+            {
+                try
+                {
+                    await github.rest.issues.createLabel(
+                    {
+                        owner:        context.repo.owner,
+                        repo:         context.repo.repo,
+                        name:         label.name,
+                        description:  label.description || '',
+                        color:        label.color
+                    });
+                }
+                catch ( err )
+                {
+                    if ( err.status === 422 )
+                    {
+                        console.log( `Label '${label.name}' already exists. Skipping.` );
+                    }
+                    else
+                    {
+                        console.error( `Error creating label '${label.name}': ${err}` );
+                    }
+                }
+            }
