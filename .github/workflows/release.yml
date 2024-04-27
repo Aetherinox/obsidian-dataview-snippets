@@ -188,7 +188,7 @@ jobs:
               if: ${{ startsWith( inputs.PRERELEASE, false ) }}
               run: |
                   echo Building STABLE Package .zip PACKAGE_VERSION
-                  zip -r ${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip package.json README.md LICENSE snippets
+                  zip -r ${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip package.json README.md LICENSE Snippets
                   ls
               env:
                 NODE_AUTH_TOKEN: ${{ secrets.ADMINSERV_TOKEN_CL }}
@@ -198,7 +198,7 @@ jobs:
               if: ${{ startsWith( inputs.PRERELEASE, true ) }}
               run: |
                   echo Building PRE-RELEASE Package .zip PACKAGE_VERSION
-                  zip -r ${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}-rc.${{ inputs.VERSION_RC }}.zip package.json README.md LICENSE snippets
+                  zip -r ${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}-rc.${{ inputs.VERSION_RC }}.zip package.json README.md LICENSE Snippets
                   ls
               env:
                 NODE_AUTH_TOKEN: ${{ secrets.ADMINSERV_TOKEN_CL }}
