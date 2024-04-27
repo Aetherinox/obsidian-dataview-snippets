@@ -1,0 +1,11 @@
+coverage
+dist
+.opt-*
+node_modules
+
+# Package Locks
+yarn.lock
+
+# Private
+.dev
+.env

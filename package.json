@@ -39,5 +39,21 @@
       "env-uuid": "npx --quiet env-cmd --no-override node obs.js uuid",
       "env-guid": "npx --quiet env-cmd --no-override node obs.js guid",
       "env-version": "node -p require('./package.json').version;"
+    },
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^25.0.7",
+        "@rollup/plugin-image": "^3.0.3",
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@rollup/plugin-replace": "^5.0.5",
+        "@rollup/plugin-terser": "^0.4.4",
+        "@rollup/plugin-typescript": "^11.1.6",
+        "@types/semver": "^7.5.8",
+        "@types/uuid": "^9.0.8",
+        "obsidian": "^1.0.0",
+        "rollup": "^4.16.4",
+        "semver": "^7.6.0",
+        "uuid": "^9.0.1",
+        "rollup-plugin-license": "^3.3.1",
+        "all-contributors-cli": "^6.26.1"
     }
 }
