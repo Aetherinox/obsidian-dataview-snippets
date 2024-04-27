@@ -88,14 +88,20 @@ let p = dv.pages(filter_page)
         {
             const headings = cache.headings; // get headings from cache
 
+            if ( typeof headings === 'undefined') {
+                dv.el("div", '⭕ No Subheaders Found', { cls: "toc_results_none_subheader" });
+                dv.el("div", "<br />");
+                return;
+            }
+
             if (headings)
             {
                 const houtput = headings.slice(0) // exclude the first heading
                 .filter(h => h.level <= 6)
                 .map(h =>
                 {
-                    var file_head     = h.heading
-                    var header_skip   = file_head.replace(/ /g,"_").toLowerCase();
+                    let file_head       = h.heading
+                    const header_skip   = file_head.replace(/ /g,"_").toLowerCase();
                     if (header_skip === "table_of_contents" || header_skip === "toc")
                     {
                         return ""
@@ -104,13 +110,13 @@ let p = dv.pages(filter_page)
                     count++;
 
                     // Determine indentation based on heading level
-                    let indent        = " ".repeat(h.level);
-                    var file_name     = p.file.name;
+                    let indent          = " ".repeat(h.level);
+                    const file_name     = p.file.name;
                     
                     // remove backticks and tag symbols
-                    var file_head     = file_head.replace(/`/g, '');
-                    var file_head     = file_head.replace(/#/g, '');
-                    var file_title    = h.heading.split('#')[0];
+                    file_head           = file_head.replace(/`/g, '');
+                    file_head           = file_head.replace(/#/g, '');
+                    const file_title    = h.heading.split('#')[0];
 
                     let objLink       = "[[" + file_name + "#" + file_head + "|" + file_title + "]]";
 
@@ -127,7 +133,7 @@ let p = dv.pages(filter_page)
                     else if ( h.level == 6 )
                         return indent + "     - <span class='toc_h6'>" + objLink + "</span>";
                     else
-                        return indent + "- " + objLink;
+                        return 'No Result'
                 })
                 .join("\n")
 
@@ -186,7 +192,7 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
 */
 
     /*
-        toc > header 2
+        header 2
     */
 
         .toc_h2 a
@@ -198,7 +204,7 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
         }
 
     /*
-        toc > header 3
+        header 3
     */
 
         .toc_h3 a
@@ -210,7 +216,7 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
         }
 
     /*
-        toc > header 4, 5, 6
+        header 4, 5, 6
     */
 
         .toc_h4 a, .toc_h5 a, .toc_h6 a
@@ -222,7 +228,7 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
         }
 
     /*
-        toc > bad links > path
+        bad links > path
     */
 
         .toc_badpaths_path, .toc_badpaths_path a
@@ -234,13 +240,23 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
         }
 
     /*
-        toc > no results
+        no results > total
     */
 
         .toc_results_none
         {
             text-align: center;
             font-size: 12pt;
+        }
+
+    /*
+        no results > subheader
+    */
+
+        .toc_results_none_subheader
+        {
+            padding-left: 12px;
+            font-size: 10pt;
         }
 ```
 
