@@ -47,13 +47,11 @@ The snippets in this repo require you to download and install the following:
   - [Alphabetized List: Version 1](#alphabetized-list-version-1)
 - [Contributors ✨](#contributors-)
 
-
 <br /><br />
 
 ---
 
 <br /><br />
-
 
 ## Snippets
 The following snippets are available in this repo
@@ -298,7 +296,7 @@ This version **requires** you to install the following:
 <br />
 
 ## Contributors ✨
-We are always looking for contributors. If you feel that you can provide something useful to Gistr, then we'd love to review your suggestion. Before submitting your contribution, please review the following resources:
+We are always looking for contributors. If you feel that you can provide something useful to these Obsidian snippets, then we'd love to see your work. Before submitting your contribution, please review the following resources:
 
 - [Pull Request Procedure](.github/PULL_REQUEST_TEMPLATE.md)
 - [Contributor Policy](CONTRIBUTING.md)
