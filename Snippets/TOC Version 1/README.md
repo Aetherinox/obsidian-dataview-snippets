@@ -1,14 +1,27 @@
-# Obsidian: Table of Contents: Version 1
-This snippet requires a copy of [Obsidian.md](obsidian.md/)
+<div align="center">
+<h1>📃 Table of Contents: Version 1 📃</h1>
 <br />
-This snippet requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview).
-<br />
-This snippet requires the [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes).
+<p>A dataview script which displays a table of contents. It compiles a list of all your folder's current subpages and pulls the headers from each page to display in a simple and neat list.</p>
 
-<br /><br />
+<br />
+
+> [!NOTE]
+> Need a table of contents snippet which does **not** require the [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes)?
+> 
+> Click here to install [Table of Contents: Version 2](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/TOC%20Version%202)
+
+<br />
+
+</div>
+
+<br />
 
 ## About
-The `Table of Contents: Version 1` snippet displays a table of contents. It compiles a list of all your folder's current subpages and pulls the headers from each page to display in a simple and neat list.
+
+This snippet requires you to have:
+- [Obsidian.md](obsidian.md/)
+- [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
+- [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes)
 
 <br />
 

@@ -1,12 +1,26 @@
-# Obsidian: Table of Contents: Version 2
-This snippet requires a copy of [Obsidian.md](obsidian.md/)
+<div align="center">
+<h1>📃 Table of Contents: Version 2 📃</h1>
 <br />
-This snippet requires the [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview).
+<p>A dataview script which displays a table of contents. The code within this page should be pasted at the top of your Obsidian note which contains headers and subheaders. It will populate a list of all the headers and show them in a list.</p>
 
-<br /><br />
+<br />
+
+> [!NOTE]
+> Want a table of contents which is compatible with the [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes)?
+> 
+> Click here to install [Table of Contents: Version 1](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/TOC%20Version%201)
+
+<br />
+
+</div>
+
+<br />
 
 ## About
-The `Table of Contents: Version 2` snippet displays a table of contents. It compiles a list of all your folder's current subpages and pulls the headers from each page to display in a simple and neat list.
+
+This snippet requires you to have:
+- [Obsidian.md](obsidian.md/)
+- [Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)
 
 <br />
 
@@ -82,8 +96,8 @@ let p = dv.pages(filter_page)
                 .filter(h => h.level <= 6)
                 .map(h =>
                 {
-                    var file_head     = h.heading
-                    var header_skip   = file_head.replace(/ /g,"_").toLowerCase();
+                    let file_head       = h.heading
+                    const header_skip   = file_head.replace(/ /g,"_").toLowerCase();
                     if (header_skip === "table_of_contents" || header_skip === "toc")
                     {
                         return ""
@@ -92,15 +106,15 @@ let p = dv.pages(filter_page)
                     count++;
 
                     // Determine indentation based on heading level
-                    let indent        = " ".repeat(h.level);
-                    var file_name     = p.file.name;
+                    let indent          = " ".repeat(h.level);
+                    const file_name     = p.file.name;
                     
                     // remove backticks and tag symbols
-                    var file_head     = file_head.replace(/`/g, '');
-                    var file_head     = file_head.replace(/#/g, '');
-                    var file_title    = h.heading.split('#')[0];
+                    file_head           = file_head.replace(/`/g, '');
+                    file_head           = file_head.replace(/#/g, '');
+                    const file_title    = h.heading.split('#')[0];
 
-                    let objLink       = "[[" + file_name + "#" + file_head + "|" + file_title + "]]";
+                    let objLink         = "[[" + file_name + "#" + file_head + "|" + file_title + "]]";
 
                     if ( h.level == 1 )
                         return indent + "- " + objLink + "";
@@ -170,7 +184,7 @@ Copy the code below and paste it into the new `toc.css` file which should be in 
 
 ```css
 /*
-    Snippet: Table of Contents
+    Snippet: Table of Contents > v2
 */
 
     /*
