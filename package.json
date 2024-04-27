@@ -1,0 +1,43 @@
+{
+    "name": "@aetherinox/obsidian-dataview-snippets",
+    "version": "1.4.2",
+    "description": "A collection of Obsidian.md scripts to be used in combination with the dataview plugin.",
+    "homepage": "https://github.com/Aetherinox/obsidian-dataview-snippets",
+    "author": "Aetherinox <adminservx@proton.me>",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Aetherinox",
+            "email": "adminservx@proton.me",
+            "url": "https://github.com/Aetherinox"
+        },
+        {
+            "name": "AdminServ",
+            "email": "adminservx@proton.me",
+            "url": "https://github.com/AdminServ"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Aetherinox/obsidian-dataview-snippets.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Aetherinox/obsidian-dataview-snippets/issues"
+    },
+    "keywords": [
+        "obsidian",
+        "dataview",
+        "folder_notes",
+        "snippets",
+        "scripts",
+        "notes"
+    ],
+    "scripts": {
+      "obs": "node obs.js",
+      "obs:generate": "node obs.js generate",
+      "env-obs": "npx --quiet env-cmd --no-override node obs.js",
+      "env-uuid": "npx --quiet env-cmd --no-override node obs.js uuid",
+      "env-guid": "npx --quiet env-cmd --no-override node obs.js guid",
+      "env-version": "node -p require('./package.json').version;"
+    }
+}
