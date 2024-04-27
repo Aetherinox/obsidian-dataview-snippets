@@ -3,16 +3,14 @@
 <br />
 <p>A dataview script which displays a table of contents. The code within this page should be pasted at the top of your Obsidian note which contains headers and subheaders. It will populate a list of all the headers and show them in a list.</p>
 
+</div>
+
 <br />
 
 > [!NOTE]
 > Want a table of contents which is compatible with the [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes)?
 > 
 > Click here to install [Table of Contents: Version 1](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/TOC%20Version%201)
-
-<br />
-
-</div>
 
 <br />
 

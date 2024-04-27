@@ -3,16 +3,14 @@
 <br />
 <p>A dataview script which displays a table of contents. It compiles a list of all your folder's current subpages and pulls the headers from each page to display in a simple and neat list.</p>
 
+</div>
+
 <br />
 
 > [!NOTE]
 > Need a table of contents snippet which does **not** require the [Folder Notes Plugin](https://github.com/LostPaul/obsidian-folder-notes)?
 > 
 > Click here to install [Table of Contents: Version 2](https://github.com/Aetherinox/obsidian-dataview-snippets/tree/main/Snippets/TOC%20Version%202)
-
-<br />
-
-</div>
 
 <br />
 
