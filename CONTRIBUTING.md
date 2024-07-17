@@ -278,7 +278,7 @@ Pick the config file below depending on which version of ESLint you are using. T
 - [eslint.config.mjs](https://github.com/aetherinox/obsidian-dataview-snippets/blob/main/eslint.config.mjs)
 - [eslint.config.js](https://github.com/aetherinox/obsidian-dataview-snippets/blob/main/eslint.config.js)
 
-    https://github.com/Aetherinox/obsidian-dataview-snippets/blob/27ba6d6984aaf6c4d24a1c0b7e37fece88ada788/eslint.config.js#L1-L151
+    https://github.com/Aetherinox/obsidian-dataview-snippets/blob/9e4aa53c1268d8852d3a0ab3980cb25adf239e99/eslint.config.js#L1-L151
 
 <br />
 
