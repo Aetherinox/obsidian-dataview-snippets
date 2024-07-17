@@ -1,8 +1,12 @@
 <div align="center">
-<h1>⭕ Obsidian Script Collection ⭕</h1>
+<h6>Dataview Snippets</h6>
+<h1>⭕ Obsidian Snippet Collection ⭕</h1>
+
 <br />
+
 <p>A collection of dataview scripts which can be utilized within your Obsidian.md notes to perform various tasks and display data.</p>
 
+<br />
 <br />
 
 </div>
@@ -10,10 +14,33 @@
 <div align="center">
 
 <!-- prettier-ignore-start -->
-[![Version][badge-version-gh]][link-version-gh] [![Size][badge-size-gh]][badge-size-gh] [![Last Commit][badge-commit]][badge-commit] [![Contributors][badge-all-contributors]](#contributors-)
+[![Version][github-version-img]][github-version-uri]
+[![Build Status][github-build-img]][github-build-uri]
+[![Downloads][github-downloads-img]][github-downloads-uri]
+[![Size][github-size-img]][github-size-img]
+[![Last Commit][github-commit-img]][github-commit-img]
+[![Contributors][contribs-all-img]](#contributors-)
 <!-- prettier-ignore-end -->
 
 </div>
+
+<br />
+
+---
+
+<br />
+
+- [About](#about)
+- [Snippets](#snippets)
+  - [Table of Contents: Version 1](#table-of-contents-version-1)
+  - [Table of Contents: Version 2](#table-of-contents-version-2)
+  - [Subfolder Data](#subfolder-data)
+  - [Bad Links: Version 1](#bad-links-version-1)
+  - [Tag Cloud: Version 1](#tag-cloud-version-1)
+  - [Tag Cloud: Version 2](#tag-cloud-version-2)
+  - [Page Cloud: Version 1](#page-cloud-version-1)
+  - [Alphabetized List: Version 1](#alphabetized-list-version-1)
+- [Contributors ✨](#contributors-)
 
 <br />
 
@@ -33,25 +60,6 @@ The snippets in this repo require you to download and install the following:
 ---
 
 <br />
-
-## Table of Contents <!-- omit from toc -->
-- [About](#about)
-- [Snippets](#snippets)
-  - [Table of Contents: Version 1](#table-of-contents-version-1)
-  - [Table of Contents: Version 2](#table-of-contents-version-2)
-  - [Subfolder Data](#subfolder-data)
-  - [Bad Links: Version 1](#bad-links-version-1)
-  - [Tag Cloud: Version 1](#tag-cloud-version-1)
-  - [Tag Cloud: Version 2](#tag-cloud-version-2)
-  - [Page Cloud: Version 1](#page-cloud-version-1)
-  - [Alphabetized List: Version 1](#alphabetized-list-version-1)
-- [Contributors ✨](#contributors-)
-
-<br /><br />
-
----
-
-<br /><br />
 
 ## Snippets
 The following snippets are available in this repo
@@ -296,7 +304,7 @@ This version **requires** you to install the following:
 <br />
 
 ## Contributors ✨
-We are always looking for contributors. If you feel that you can provide something useful to these Obsidian snippets, then we'd love to see your work. Before submitting your contribution, please review the following resources:
+We are always looking for contributors. If you feel that you can provide something useful to Gistr, then we'd love to review your suggestion. Before submitting your contribution, please review the following resources:
 
 - [Pull Request Procedure](.github/PULL_REQUEST_TEMPLATE.md)
 - [Contributor Policy](CONTRIBUTING.md)
@@ -310,8 +318,12 @@ Want to help but can't write code?
 
 The following people have helped get this project going:
 
+<br />
+
+<div align="center">
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![Contributors][badge-all-contributors]](#contributors-)
+[![Contributors][contribs-all-img]](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
@@ -320,70 +332,81 @@ The following people have helped get this project going:
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://gitlab.com/Aetherinox"><img src="https://avatars.githubusercontent.com/u/118329232?v=4?s=40" width="40px;" alt="Aetherinox"/><br /><sub><b>Aetherinox</b></sub></a><br /><a href="https://github.com/Aetherinox/obsidian-dataview-snippets/commits?author=Aetherinox" title="Code">💻</a> <a href="#projectManagement-Aetherinox" title="Project Management">📆</a> <a href="#fundingFinding-Aetherinox" title="Funding Finding">🔍</a></td>
+      <td align="center" valign="top"><a href="https://gitlab.com/Aetherinox"><img src="https://avatars.githubusercontent.com/u/118329232?v=4?s=40" width="80px;" alt="Aetherinox"/><br /><sub><b>Aetherinox</b></sub></a><br /><a href="https://github.com/Aetherinox/obsidian-dataview-snippets/commits?author=Aetherinox" title="Code">💻</a> <a href="#projectManagement-Aetherinox" title="Project Management">📆</a> <a href="#fundingFinding-Aetherinox" title="Funding Finding">🔍</a></td>
     </tr>
   </tbody>
 </table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
+</div>
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-
 
 <br />
 <br />
 
 <!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
 <!-- BADGE > GENERAL -->
-[link-general-npm]: https://npmjs.com
-[link-general-nodejs]: https://nodejs.org
-[link-npmtrends]: http://npmtrends.com/obsidian-gistr
+  [general-npmjs-uri]: https://npmjs.com
+  [general-nodejs-uri]: https://nodejs.org
+  [general-npmtrends-uri]: http://npmtrends.com/obsidian-dataview-snippets
+
 <!-- BADGE > VERSION > GITHUB -->
-[badge-version-gh]: https://img.shields.io/github/v/tag/Aetherinox/obsidian-dataview-snippets?logo=GitHub&label=Version&color=ba5225
-[link-version-gh]: https://github.com/Aetherinox/obsidian-dataview-snippets/releases
+  [github-version-img]: https://img.shields.io/github/v/tag/Aetherinox/obsidian-dataview-snippets?logo=GitHub&label=Version&color=ba5225
+  [github-version-uri]: https://github.com/Aetherinox/obsidian-dataview-snippets/releases
+
 <!-- BADGE > VERSION > NPMJS -->
-[badge-version-npm]: https://img.shields.io/npm/v/obsidian-gistr?logo=npm&label=Version&color=ba5225
-[link-version-npm]: https://npmjs.com/package/obsidian-gistr
-<!-- BADGE > LICENSE -->
-[badge-license-mit]: https://img.shields.io/badge/MIT-FFF?logo=creativecommons&logoColor=FFFFFF&label=License&color=9d29a0
-[link-license-mit]: https://github.com/Aetherinox/obsidian-dataview-snippets/blob/main/LICENSE
-<!-- BADGE > BUILD -->
-[badge-build]: https://img.shields.io/github/actions/workflow/status/Aetherinox/obsidian-dataview-snippets/release-npm.yml?logo=github&logoColor=FFFFFF&label=Build&color=%23278b30
-[link-build]: https://github.com/Aetherinox/obsidian-dataview-snippets/actions/workflows/release-npm.yml
-<!-- BADGE > DOWNLOAD COUNT -->
-[badge-downloads-gh]: https://img.shields.io/github/downloads/Aetherinox/obsidian-dataview-snippets/total?logo=github&logoColor=FFFFFF&label=Downloads&color=376892
-[link-downloads-gh]: https://github.com/Aetherinox/obsidian-dataview-snippets/releases
-[badge-downloads-npm]: https://img.shields.io/npm/dw/%40aetherinox%2Fmarked-alert-fa?logo=npm&&label=Downloads&color=376892
-[link-downloads-npm]: https://npmjs.com/package/obsidian-gistr
-<!-- BADGE > DOWNLOAD SIZE -->
-[badge-size-gh]: https://img.shields.io/github/repo-size/Aetherinox/obsidian-dataview-snippets?logo=github&label=Size&color=59702a
-[link-size-gh]: https://github.com/Aetherinox/obsidian-dataview-snippets/releases
-[badge-size-npm]: https://img.shields.io/npm/unpacked-size/obsidian-gistr/latest?logo=npm&label=Size&color=59702a
-[link-size-npm]: https://npmjs.com/package/obsidian-gistr
-<!-- BADGE > COVERAGE -->
-[badge-coverage]: https://img.shields.io/codecov/c/github/Aetherinox/obsidian-dataview-snippets?token=MPAVASGIOG&logo=codecov&logoColor=FFFFFF&label=Coverage&color=354b9e
-[link-coverage]: https://codecov.io/github/Aetherinox/obsidian-dataview-snippets
+  [npm-version-img]: https://img.shields.io/npm/v/obsidian-dataview-snippets?logo=npm&label=Version&color=ba5225
+  [npm-version-uri]: https://npmjs.com/package/obsidian-dataview-snippets
+
+<!-- BADGE > VERSION > PYPI -->
+  [pypi-version-img]: https://img.shields.io/pypi/v/obsidian-dataview-snippets-plugin
+  [pypi-version-uri]: https://pypi.org/project/obsidian-dataview-snippets-plugin/
+
+<!-- BADGE > LICENSE > MIT -->
+  [license-mit-img]: https://img.shields.io/badge/MIT-FFF?logo=creativecommons&logoColor=FFFFFF&label=License&color=9d29a0
+  [license-mit-uri]: https://github.com/Aetherinox/obsidian-dataview-snippets/blob/main/LICENSE
+
+<!-- BADGE > GITHUB > DOWNLOAD COUNT -->
+  [github-downloads-img]: https://img.shields.io/github/downloads/Aetherinox/obsidian-dataview-snippets/total?logo=github&logoColor=FFFFFF&label=Downloads&color=376892
+  [github-downloads-uri]: https://github.com/Aetherinox/obsidian-dataview-snippets/releases
+
+<!-- BADGE > NPMJS > DOWNLOAD COUNT -->
+  [npmjs-downloads-img]: https://img.shields.io/npm/dw/%40aetherinox%2Fmkdocs-link-embeds?logo=npm&&label=Downloads&color=376892
+  [npmjs-downloads-uri]: https://npmjs.com/package/obsidian-dataview-snippets
+
+<!-- BADGE > GITHUB > DOWNLOAD SIZE -->
+  [github-size-img]: https://img.shields.io/github/repo-size/Aetherinox/obsidian-dataview-snippets?logo=github&label=Size&color=59702a
+  [github-size-uri]: https://github.com/Aetherinox/obsidian-dataview-snippets/releases
+
+<!-- BADGE > NPMJS > DOWNLOAD SIZE -->
+  [npmjs-size-img]: https://img.shields.io/npm/unpacked-size/obsidian-dataview-snippets/latest?logo=npm&label=Size&color=59702a
+  [npmjs-size-uri]: https://npmjs.com/package/obsidian-dataview-snippets
+
+<!-- BADGE > CODECOV > COVERAGE -->
+  [codecov-coverage-img]: https://img.shields.io/codecov/c/github/Aetherinox/obsidian-dataview-snippets?token=MPAVASGIOG&logo=codecov&logoColor=FFFFFF&label=Coverage&color=354b9e
+  [codecov-coverage-uri]: https://codecov.io/github/Aetherinox/obsidian-dataview-snippets
+
 <!-- BADGE > ALL CONTRIBUTORS -->
-[badge-all-contributors]: https://img.shields.io/github/all-contributors/Aetherinox/obsidian-dataview-snippets?logo=contributorcovenant&color=de1f6f&label=contributors
-[link-all-contributors]: https://github.com/all-contributors/all-contributors
-[badge-tests]: https://img.shields.io/github/actions/workflow/status/Aetherinox/marked-alert-fa/npm-tests.yml?logo=github&label=Tests&color=2c6488
-[link-tests]: https://github.com/Aetherinox/obsidian-dataview-snippets/actions/workflows/tests.yml
-[badge-commit]: https://img.shields.io/github/last-commit/Aetherinox/obsidian-dataview-snippets?logo=conventionalcommits&logoColor=FFFFFF&label=Last%20Commit&color=313131
-[link-commit]: https://github.com/Aetherinox/obsidian-dataview-snippets/commits/main/
+  [contribs-all-img]: https://img.shields.io/github/all-contributors/Aetherinox/obsidian-dataview-snippets?logo=contributorcovenant&color=de1f6f&label=contributors
+  [contribs-all-uri]: https://github.com/all-contributors/all-contributors
+
+<!-- BADGE > GITHUB > BUILD > NPM -->
+  [github-build-img]: https://img.shields.io/github/actions/workflow/status/Aetherinox/obsidian-dataview-snippets/release.yml?logo=github&logoColor=FFFFFF&label=Build&color=%23278b30
+  [github-build-uri]: https://github.com/Aetherinox/obsidian-dataview-snippets/actions/workflows/release.yml
+
+<!-- BADGE > GITHUB > BUILD > Pypi -->
+  [github-build-pypi-img]: https://img.shields.io/github/actions/workflow/status/Aetherinox/obsidian-dataview-snippets/release-pypi.yml?logo=github&logoColor=FFFFFF&label=Build&color=%23278b30
+  [github-build-pypi-uri]: https://github.com/Aetherinox/obsidian-dataview-snippets/actions/workflows/pypi-release.yml
+
+<!-- BADGE > GITHUB > TESTS -->
+  [github-tests-img]: https://img.shields.io/github/actions/workflow/status/Aetherinox/obsidian-dataview-snippets/npm-tests.yml?logo=github&label=Tests&color=2c6488
+  [github-tests-uri]: https://github.com/Aetherinox/obsidian-dataview-snippets/actions/workflows/npm-tests.yml
+
+<!-- BADGE > GITHUB > COMMIT -->
+  [github-commit-img]: https://img.shields.io/github/last-commit/Aetherinox/obsidian-dataview-snippets?logo=conventionalcommits&logoColor=FFFFFF&label=Last%20Commit&color=313131
+  [github-commit-uri]: https://github.com/Aetherinox/obsidian-dataview-snippets/commits/main/
+
 <!-- prettier-ignore-end -->
+<!-- markdownlint-restore -->
