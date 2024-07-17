@@ -1,0 +1,17 @@
+.all-contributorsrc
+.github
+.gitea
+CONTRIBUTING
+CONTRIBUTING.md
+README
+README.md
+LICENSE
+node_modules
+coverage
+dist
+tests
+docs
+manifest.json
+tsconfig.json
+styles.css
+rollup.config.mjs
