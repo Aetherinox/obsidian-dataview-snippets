@@ -8,13 +8,13 @@
     "contributors": [
         {
             "name": "Aetherinox",
-            "email": "adminservx@proton.me",
+            "email": "118329232+Aetherinox@users.noreply.github.com",
             "url": "https://github.com/Aetherinox"
         },
         {
-            "name": "AdminServ",
-            "email": "adminservx@proton.me",
-            "url": "https://github.com/AdminServ"
+            "name": "EuropaServ",
+            "email": "161414668+EuropaServ@users.noreply.github.com",
+            "url": "https://github.com/EuropaServ"
         }
     ],
     "repository": {
@@ -24,6 +24,15 @@
     "bugs": {
         "url": "https://github.com/Aetherinox/obsidian-dataview-snippets/issues"
     },
+    "build": {
+        "appId": "com.obsidian.dataview.snippets.id"
+    },
+    "funding": [
+        {
+            "type": "individual",
+            "url": "https://buymeacoffee.com/aetherinox"
+        }
+    ],
     "keywords": [
         "obsidian",
         "dataview",
@@ -33,14 +42,31 @@
         "notes"
     ],
     "scripts": {
-      "obs": "node obs.js",
-      "obs:generate": "node obs.js generate",
-      "env-obs": "npx --quiet env-cmd --no-override node obs.js",
-      "env-uuid": "npx --quiet env-cmd --no-override node obs.js uuid",
-      "env-guid": "npx --quiet env-cmd --no-override node obs.js guid",
-      "env-version": "node -p require('./package.json').version;"
+        "pretest": "npm run lint",
+        "lint": "eslint src/**/*.ts",
+        "lint:fix": "eslint --fix src/**/*.ts",
+        "pretty": "prettier . --check",
+        "pretty:fix": "prettier . --write",
+        "pretty:ignore": "prettier . --write --ignore-unknown",
+        "obs": "node obs.js",
+        "contrib:add": "all-contributors add",
+        "contrib:generate": "all-contributors generate",
+        "root": "node obs.js",
+        "root:generate": "node obs.js generate",
+        "env:obs": "npx --quiet env-cmd --no-override node obs.js",
+        "env:uuid": "npx --quiet env-cmd --no-override node obs.js uuid",
+        "env:guid": "npx --quiet env-cmd --no-override node obs.js guid",
+        "env:version": "node -p require('./package.json').version;"
     },
     "devDependencies": {
+        "eslint-plugin-prettier": "^5.1.3",
+        "typescript-eslint": "^7.14.0",
+        "@typescript-eslint/parser": "^7.16.0",
+        "@typescript-eslint/eslint-plugin": "^7.16.0",
+        "@stylistic/eslint-plugin-js": "^2.3.0",
+        "@stylistic/eslint-plugin-ts": "^2.3.0",
+        "@stylistic/eslint-plugin-plus": "^2.3.0",
+        "prettier": "^3.2.5",
         "@rollup/plugin-commonjs": "^26.0.1",
         "@rollup/plugin-image": "^3.0.3",
         "@rollup/plugin-node-resolve": "^15.2.3",
@@ -48,9 +74,9 @@
         "@rollup/plugin-terser": "^0.4.4",
         "@rollup/plugin-typescript": "^11.1.6",
         "rollup-plugin-license": "^3.5.2",
-        "@types/semver": "^7.5.8",
+        "@types/semver": "^7.6.3",
         "@types/uuid": "^9.0.8",
-        "obsidian": "^1.0.0",
+        "obsidian": "^1.6.6",
         "rollup": "^4.18.1",
         "semver": "^7.6.2",
         "uuid": "^9.0.1",
