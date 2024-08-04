@@ -23,6 +23,7 @@ env:
   ASSIGN_USER:          Aetherinox
   BOT_NAME_1:           AdminServ
   BOT_NAME_2:           AdminServX
+  BOT_NAME_3:           EuropaServ
   BOT_NAME_DEPENDABOT:  dependabot[bot]
   LABELS_JSON: |
     [
@@ -82,7 +83,7 @@ env:
       { "name": "⚠ Announcement",               "color": "DB4712", "description": "KeeWeb announcements" },
       { "name": "📰 Progress Report",           "color": "392297", "description": "Updates on the development of KeeWeb" },
       { "name": "📦 Release",                   "color": "277542", "description": "Release announcements" },
-      { "name": "✔️ Poll",                      "color": "972255", "description": "Community polls" }
+      { "name": "✔️ Poll",                      "color": "972255", "description": "Community polls" },
       { "name": "❔ Question",                  "color": "FFFFFF", "description": "All questions" }
     ]
 
