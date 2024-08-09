@@ -11,8 +11,8 @@
 #     - roadmap
 # ---------------------------------------------------------------------------------------
 
-name: "🎫 Issue › New › Assignment"
-run-name: "🎫 Issue › New › Assignment - ${{ github.event.issue.number }}: ${{ github.event.issue.title }}"
+name: "🎫 Issue › New"
+run-name: "🎫 Issue › New › ${{ github.event.issue.number }}: ${{ github.event.issue.title }}"
 
 # ---------------------------------------------------------------------------------------
 #   triggers
@@ -50,6 +50,7 @@ env:
   ASSIGN_USER:          Aetherinox
   BOT_NAME_1:           AdminServ
   BOT_NAME_2:           AdminServX
+  BOT_NAME_3:           EuropaServ
   BOT_NAME_DEPENDABOT:  dependabot[bot]
 
   LABELS_JSON: |
@@ -78,7 +79,7 @@ jobs:
     steps:
 
       - name: "✅ Start"
-        run: | 
+        run: |
               echo "Assigning labels and assignees"
 
       - name: "☑️ Checkout"
@@ -89,7 +90,7 @@ jobs:
       # ---------------------------------------------------------------------------------------
       #   Check if repo has labels currently added to issues
       # ---------------------------------------------------------------------------------------
-        
+
       - name: 🏷️ Verify Existing Labels
         uses: actions/github-script@v7
         with:
@@ -157,7 +158,7 @@ jobs:
             core.info( `Setting env issue title: ${ iss_title }` )
 
             console.log( "\n\n" )
-            
+
 
       # ---------------------------------------------------------------------------------------
       #   Label > Bug
@@ -239,7 +240,7 @@ jobs:
 
             /*
                 - Check if issue title matches the issue label "Bug:"
-                - Check if title contains word in words 
+                - Check if title contains word in words
             */
 
             if ( iss_title_lc.startsWith( bug_tag.toLowerCase( ) ) || bIncWordT || bFoundMatchTitle || bFoundMatchBody )
@@ -252,7 +253,7 @@ jobs:
                 console.log( "Already starts with " + road_tag + " ..... " + iss_title_lc.startsWith( road_tag.toLowerCase( ) ) )
 
                 add_labels.push( `${ bug_lbl }` );
-                
+
                 console.log( `Adding Tag ....................... ${ bug_lbl }` )
                 console.log( "\n" )
 
@@ -285,7 +286,7 @@ jobs:
 
             core.setOutput( 'issue_title', iss_title )
             console.log( "\n\n" )
-            
+
       # ---------------------------------------------------------------------------------------
       #   Label > FEATURE
       # ---------------------------------------------------------------------------------------
@@ -365,7 +366,7 @@ jobs:
 
             /*
                 - Check if issue title matches the issue label "Feature:"
-                - Check if title contains word in words 
+                - Check if title contains word in words
             */
 
             // change TAG per category
@@ -494,7 +495,7 @@ jobs:
 
             /*
                 - Check if issue title matches the issue label "Urgent:"
-                - Check if title contains word in words 
+                - Check if title contains word in words
             */
 
             // change TAG per category
@@ -625,7 +626,7 @@ jobs:
 
             /*
                 - Check if issue title matches the issue label "Roadmap:"
-                - Check if title contains word in words 
+                - Check if title contains word in words
             */
 
             // change TAG per category
@@ -691,7 +692,7 @@ jobs:
     environment:
       name: Orion
     steps:
-  
+
       # ---------------------------------------------------------------------------------------
       #   checkout
       # ---------------------------------------------------------------------------------------
@@ -778,7 +779,7 @@ jobs:
               message.push  ( HE_message );
               bHasMessage   = true;
             }
-            
+
             /*
                 Bot has message to send
             */
@@ -835,4 +836,3 @@ jobs:
                     core.setFailed( error.message );
                 }
             }
-  
