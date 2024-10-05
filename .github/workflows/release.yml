@@ -505,11 +505,11 @@ jobs:
 
             - name: >-
                 📋 Upload Artifacts › ${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip
-              id: task_release_artifact_i386
+              id: task_release_artifact
               uses: actions/upload-artifact@v4
               if: always()
               with:
-                name: "reee"
+                name: "release"
                 path: ${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip
                 retention-days: 30
 
@@ -552,7 +552,7 @@ jobs:
             - name: "🕛 Get Env Vars"
               id: task_complete_set_envs
               run: |
-                release_stable_file="${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip"
+                release_stable_file="release/${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip"
                 release_stable_sha256="$(shasum --algorithm 256 ${release_stable_file} | awk '{ print $1 }')"
 
                 echo "FILE_STABLE=${release_stable_file}" >> $GITHUB_ENV
