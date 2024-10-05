@@ -68,9 +68,9 @@ const QueryFiles        = dv.pages( QueryStr );
 const bRandomColor      = true;
 const sortOption        = 1;
 const weightBacklinks   = 0.1;
-const weightWordCount   = 0.3;
+const weightWordCount   = 0.05;
 const minFontSize       = 12;
-const maxFontSize       = 32;
+const maxFontSize       = 36;
 const tagsFilter        = [ "#tag1", "#tag2" ];
 const arrColors         = [];
 
@@ -323,9 +323,9 @@ const QueryFiles        = dv.pages( QueryStr );
 const bRandomColor      = true;
 const sortOption        = 1;
 const weightBacklinks   = 0.1;
-const weightWordCount   = 0.3;
+const weightWordCount   = 0.05;
 const minFontSize       = 12;
-const maxFontSize       = 32;
+const maxFontSize       = 36;
 const tagsFilter        = [ "#tag1", "#tag2" ];
 
 const arrColors=[];dv.container.className+=" atx-tcv1-dataview";for(let t=0;t<40;t++){let t=Math.floor(100*Math.random()+100),o=Math.floor(100*Math.random()+100),e=Math.floor(100*Math.random()+100),a=(t<<16)+(o<<8)+e,n=`#${a.toString(16)}`;arrColors.push(n)}async function QueryBacklinks(t){const o=t.split("/").pop().split(".").slice(0,-1).join(".");return dv.query(`\n    LIST\n    FROM [[${o}]] AND ${QueryStr}\n    SORT file.name DESC\n    `)}async function QueryWordcount(t){const o=require("fs"),e=require("path"),a=o.readFileSync(e.join(app.vault.adapter.basePath,t),"utf-8").replace(/---[\s\S]*?---|```[\s\S]*?```|\$[\s\S]*?\$|\$\$[\s\S]*?\$\$/g,"").match(/\S+/g);return a?a.length:0}function Generate_FontSize(t,o){const e=2.5*Math.sqrt(t*weightBacklinks+o*weightWordCount);return Math.round(e/100*(maxFontSize-minFontSize)+minFontSize)}function Generate_Color(t,o){if(null==t)return"#FFFFFF";let e=Object.keys(arrColors).length;t.split(/\W+/g);const a=Math.floor(Math.random()*e),n=dv.pages(t).length;return!0===bRandomColor?arrColors[Object.keys(arrColors)[a]]:arrColors[Object.keys(arrColors)[n]]}function Sort_DESC(t){return t.sort(((t,o)=>t.id.localeCompare(o.id))),t}function Sort_ASC(t){return t.sort(((t,o)=>o.id.localeCompare(t.id))),t}function Sort_Shuffle(t){for(let o=t.length-1;o>0;o--){const e=Math.floor(Math.random()*(o+1));[t[o],t[e]]=[t[e],t[o]]}return t}const CreateTagCloud=async()=>{const tags=new Map,files=new Map;Promise.all(QueryFiles.map((async t=>{const o=t.file,e=QueryBacklinks(o.path),a=QueryWordcount(o.path);o.tags&&await Promise.all(o.tags.map((async t=>{tags.has(t)||tags.set(t,{backlinks:0,wordCount:0});const o=tags.get(t),n=await e;o.backlinks+=n.value.values.length;const r=await a;o.wordCount+=r})));for(let t=0;t<tagsFilter.length;t++)tags.has(tagsFilter[t])&&tags.delete(tagsFilter[t]);const n={backlinks:0,wordCount:0},r=await e;n.backlinks=r.value.values.length;const s=await a;n.wordCount=s,files.set(o,n)}))).then((()=>{const data=[];let count=0;if(tags.forEach(((t,o)=>{count++;const e=Generate_FontSize(t.backlinks,t.wordCount),a=Generate_Color(o,t),n=dv.pages(o).length;data.push({name:`\\${o}`,id:o,length:n,fontSize:e,color:a})})),0===count){const t=dv.el("div","🔖 No Tags Found",{cls:"atx-tcv1-results_none"});return t.setAttribute("style","text-align:center;"),""}const sortOptions={1:"Sort_DESC",2:"Sort_ASC",3:"Sort_Shuffle"};let funcSort=sortOptions[sortOption];return void 0===funcSort&&(funcSort=sortOptions[1]),eval(funcSort)(data).map((t=>`<div class="cloudtags-v1-item"><a class="cloudtags-v1-link" href="obsidian://search?query=tag:${encodeURIComponent(t.id)}" style="font-size:${t.fontSize}px; color: ${t.color};">${t.id}</a><div class="tagcloud-v1-length">${t.length}</div></div>`)).join("")})).then((t=>dv.paragraph(t))).catch((t=>{console.error("Error: "+t)}))};CreateTagCloud();
