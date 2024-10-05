@@ -316,14 +316,27 @@ const CreateTagCloud = async ( ) =>
         Calculate font size and font color.
     */
 
+    let count = 0;
     tags.forEach( ( tagInfo, tagName ) =>
     {
+        count++;
         const fontSize      = Generate_FontSize( tagInfo.backlinks, tagInfo.wordCount );
         const color         = Generate_Color( tagName, tagInfo );
         const length        = dv.pages( tagName ).length;
 		
         data.push( { name: `\\${tagName}`, id: tagName, length: length, fontSize, color } );
     });
+
+    /*
+        No tags found
+    */
+
+	if (count === 0)
+	{
+		const rootNode = dv.el("div", "🔖 No Tags Found", { cls: "atx-tcv2-results_none" });
+		rootNode.setAttribute("style", "text-align:center;");
+		return ``;
+	}
 
     /*
         Sorting functions
@@ -907,6 +920,22 @@ settings:
             transform:                  translateX( -50% );
             line-height:                var( --atx-tcv2-counter-bg-size );
           }
+
+    /*
+        Tag Cloud > No results
+    */
+
+        .atx-tcv2-results_none
+        {
+            text-align: center;
+            font-size: 14pt;
+        }
+
+        .atx-tcv2-results_none_subheader
+        {
+            padding-left: 12px;
+            font-size: 10pt;
+        }
 ```
 
 <br />

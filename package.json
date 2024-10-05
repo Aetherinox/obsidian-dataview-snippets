@@ -1,6 +1,6 @@
 {
     "name": "@aetherinox/obsidian-dataview-snippets",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "description": "A collection of Obsidian.md scripts to be used in combination with the dataview plugin.",
     "homepage": "https://github.com/Aetherinox/obsidian-dataview-snippets",
     "author": "Aetherinox <adminservx@proton.me>",
