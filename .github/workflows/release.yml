@@ -510,7 +510,7 @@ jobs:
               if: always()
               with:
                 name: "${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip"
-                path: src/${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip
+                path: ${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip
                 retention-days: 30
 
     # #
@@ -572,5 +572,4 @@ jobs:
                   echo "| **${{ env.FILE_STABLE }}**      | ${{ env.SHA_STABLE }} |" >> $GITHUB_STEP_SUMMARY
                   echo "| **GUID**                        | ${{ env.GUID }} |" >> $GITHUB_STEP_SUMMARY
                   echo "| **UUID**                        | ${{ env.UUID }} |" >> $GITHUB_STEP_SUMMARY
-                  echo "| **File**                        | ${{ env.SHA_DEB_ARM }} |" >> $GITHUB_STEP_SUMMARY
 
