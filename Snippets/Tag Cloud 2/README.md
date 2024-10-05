@@ -134,8 +134,8 @@ const bRandomColor      = true;
 const sortOption        = 1;
 const weightBacklinks   = 0.1;
 const weightWordCount   = 0.5;
-const minFontSize       = 12;
-const maxFontSize       = 32;
+const minFontSize       = 10;
+const maxFontSize       = 36;
 const tagsFilter        = [ "#tag1", "#tag2" ];
 const arrColors         = [];
 
@@ -389,11 +389,11 @@ const bRandomColor      = true;
 const sortOption        = 1;
 const weightBacklinks   = 0.1;
 const weightWordCount   = 0.5;
-const minFontSize       = 12;
-const maxFontSize       = 32;
+const minFontSize       = 10;
+const maxFontSize       = 36;
 const tagsFilter        = [ "#tag1", "#tag2" ];
 
-const arrColors=[];dv.container.className+=" atx-tcv2-dataview";for(let i=0;i<40;i++){let itemColor=`#${((Math.floor(100*Math.random()+100)<<16)+(Math.floor(100*Math.random()+100)<<8)+Math.floor(100*Math.random()+100)).toString(16)}`;arrColors.push(itemColor)}async function QueryBacklinks(t){let e=t.split("/").pop().split(".").slice(0,-1).join(".");return dv.query(`LIST FROM [[${e}]] AND ${QueryStr} SORT file.name DESC`)}async function QueryWordcount(t){let e=require("fs"),r=require("path"),a=e.readFileSync(r.join(app.vault.adapter.basePath,t),"utf-8"),o=/---[\s\S]*?---|```[\s\S]*?```|\$[\s\S]*?\$|\$\$[\s\S]*?\$\$/g,l=a.replace(o,""),n=l.match(/\S+/g);return n?n.length:0}function Generate_FontSize(t,e){let r=2.5*Math.sqrt(t*weightBacklinks+e*weightWordCount);return Math.round(r/100*(maxFontSize-minFontSize)+minFontSize)}function Generate_Color(t,e){if(null==t)return"#FFFFFF";let r=Object.keys(arrColors).length;t.split(/\W+/g);let a=Math.floor(Math.random()*r),o=dv.pages(t).length;return!0===bRandomColor?arrColors[Object.keys(arrColors)[a]]:arrColors[Object.keys(arrColors)[o]]}function Sort_DESC(t){return t.sort((t,e)=>t.id.localeCompare(e.id)),t}function Sort_ASC(t){return t.sort((t,e)=>e.id.localeCompare(t.id)),t}function Sort_Shuffle(t){for(let e=t.length-1;e>0;e--){let r=Math.floor(Math.random()*(e+1));[t[e],t[r]]=[t[r],t[e]]}return t}const CreateTagCloud=async()=>{let tags=new Map,files=new Map;Promise.all(QueryFiles.map(async t=>{let e=t.file,r=QueryBacklinks(e.path),a=QueryWordcount(e.path);e.tags&&await Promise.all(e.tags.map(async t=>{tags.has(t)||tags.set(t,{backlinks:0,wordCount:0});let e=tags.get(t),o=await r;e.backlinks+=o.value.values.length;let l=await a;e.wordCount+=l}));for(let o=0;o<tagsFilter.length;o++)tags.has(tagsFilter[o])&&tags.delete(tagsFilter[o]);let l={backlinks:0,wordCount:0},n=await r;l.backlinks=n.value.values.length;let s=await a;l.wordCount=s,files.set(e,l)})).then(()=>{let data=[];tags.forEach((t,e)=>{let r=Generate_FontSize(t.backlinks,t.wordCount),a=Generate_Color(e,t),o=dv.pages(e).length;data.push({name:`\\${e}`,id:e,length:o,fontSize:r,color:a})});let sortOptions={1:"Sort_DESC",2:"Sort_ASC",3:"Sort_Shuffle"},funcSort=sortOptions[sortOption];return void 0===funcSort&&(funcSort=sortOptions[1]),eval(funcSort)(data).map(t=>`<div class="atx-tcv2-child atx-tcv2-item-tags"><a class="atx-tcv2-link" href="obsidian://search?query=tag:${encodeURIComponent(t.id)}" style="font-size:${t.fontSize}px; color: ${t.color};">${t.id}</a><div class="atx-tcv2-counter">${t.length}</div></div>`).join("")}).then(t=>dv.paragraph(t)).catch(t=>{console.error("Error: "+t)})};CreateTagCloud();
+const arrColors=[];dv.container.className+=" atx-tcv2-dataview";for(let t=0;t<40;t++){let t=Math.floor(100*Math.random()+100),o=Math.floor(100*Math.random()+100),a=Math.floor(100*Math.random()+100),e=(t<<16)+(o<<8)+a,n=`#${e.toString(16)}`;arrColors.push(n)}async function QueryBacklinks(t){const o=t.split("/").pop().split(".").slice(0,-1).join(".");return dv.query(`\n    LIST\n    FROM [[${o}]] AND ${QueryStr}\n    SORT file.name DESC\n    `)}async function QueryWordcount(t){const o=require("fs"),a=require("path"),e=o.readFileSync(a.join(app.vault.adapter.basePath,t),"utf-8").replace(/---[\s\S]*?---|```[\s\S]*?```|\$[\s\S]*?\$|\$\$[\s\S]*?\$\$/g,"").match(/\S+/g);return e?e.length:0}function Generate_FontSize(t,o){const a=2.5*Math.sqrt(t*weightBacklinks+o*weightWordCount);return Math.round(a/100*(maxFontSize-minFontSize)+minFontSize)}function Generate_Color(t,o){if(null==t)return"#FFFFFF";let a=Object.keys(arrColors).length;t.split(/\W+/g);const e=Math.floor(Math.random()*a),n=dv.pages(t).length;return!0===bRandomColor?arrColors[Object.keys(arrColors)[e]]:arrColors[Object.keys(arrColors)[n]]}function Sort_DESC(t){return t.sort(((t,o)=>t.id.localeCompare(o.id))),t}function Sort_ASC(t){return t.sort(((t,o)=>o.id.localeCompare(t.id))),t}function Sort_Shuffle(t){for(let o=t.length-1;o>0;o--){const a=Math.floor(Math.random()*(o+1));[t[o],t[a]]=[t[a],t[o]]}return t}const CreateTagCloud=async()=>{const tags=new Map,files=new Map;Promise.all(QueryFiles.map((async t=>{const o=t.file,a=QueryBacklinks(o.path),e=QueryWordcount(o.path);o.tags&&await Promise.all(o.tags.map((async t=>{tags.has(t)||tags.set(t,{backlinks:0,wordCount:0});const o=tags.get(t),n=await a;o.backlinks+=n.value.values.length;const r=await e;o.wordCount+=r})));for(let t=0;t<tagsFilter.length;t++)tags.has(tagsFilter[t])&&tags.delete(tagsFilter[t]);const n={backlinks:0,wordCount:0},r=await a;n.backlinks=r.value.values.length;const s=await e;n.wordCount=s,files.set(o,n)}))).then((()=>{const data=[];let count=0;if(tags.forEach(((t,o)=>{count++;const a=Generate_FontSize(t.backlinks,t.wordCount),e=Generate_Color(o,t),n=dv.pages(o).length;data.push({name:`\\${o}`,id:o,length:n,fontSize:a,color:e})})),0===count){const t=dv.el("div","🔖 No Tags Found",{cls:"atx-tcv2-results_none"});return t.setAttribute("style","text-align:center;"),""}const sortOptions={1:"Sort_DESC",2:"Sort_ASC",3:"Sort_Shuffle"};let funcSort=sortOptions[sortOption];return void 0===funcSort&&(funcSort=sortOptions[1]),eval(funcSort)(data).map((t=>`<div class="atx-tcv2-child atx-tcv2-item-tags"><a class="atx-tcv2-link" href="obsidian://search?query=tag:${encodeURIComponent(t.id)}" style="font-size:${t.fontSize}px; color: ${t.color};">${t.id}</a><div class="atx-tcv2-counter">${t.length}</div></div>`)).join("")})).then((t=>dv.paragraph(t))).catch((t=>{console.error("Error: "+t)}))};CreateTagCloud();
 ```
 ````
 
@@ -811,6 +811,8 @@ settings:
         {
             padding-left:           var( --atx-tcv2-general-container-padding );
             padding-right:          var( --atx-tcv2-general-container-padding );
+            padding-top:            20px;
+            padding-bottom:         20px;
         }
 
     /*
