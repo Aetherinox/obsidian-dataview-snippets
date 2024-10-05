@@ -1,4 +1,4 @@
-# --------------------------------------------------------------------------------------
+#
 #   Try prettier's new ternary formatting before it becomes the
 #   default behavior.
 #
@@ -12,34 +12,38 @@
 #   @ref        : https://prettier.io/docs/en/options.html
 #                 https://prettier.io/docs/en/options.html#experimental-ternaries
 #                 https://github.com/prettier/prettier/pull/13183
-# --------------------------------------------------------------------------------------
+# #
+
 # experimentalTernaries: false
 
-# --------------------------------------------------------------------------------------
+# #
 #   Specify the line length that the printer will wrap on.
 #
 #   @default    : 80
 #   @ref        : https://prettier.io/docs/en/options.html#print-width
-# --------------------------------------------------------------------------------------
+# #
+
 printWidth: 120
 
-# --------------------------------------------------------------------------------------
+# #
 #   Specify the number of spaces per indentation-level.
 #
 #   @default    : 2
 #   @ref        : https://prettier.io/docs/en/options.html#tab-width
-# --------------------------------------------------------------------------------------
+# #
+
 tabWidth: 4
 
-# --------------------------------------------------------------------------------------
+# #
 #   Indent lines with tabs instead of spaces.
 #
 #   @default    : false
 #   @ref        : https://prettier.io/docs/en/options.html#tabs
-# --------------------------------------------------------------------------------------
+# #
+
 useTabs: false
 
-# --------------------------------------------------------------------------------------
+# #
 #   Print semicolons at the ends of statements.
 #
 #   true            : Add a semicolon at the end of every statement.
@@ -48,18 +52,20 @@ useTabs: false
 #
 #   @default        : true
 #   @ref            : https://prettier.io/docs/en/options.html#semicolons
-# --------------------------------------------------------------------------------------
+# #
+
 semi: false
 
-# --------------------------------------------------------------------------------------
+# #
 #   Use single quotes instead of double quotes.
 #
 #   @default        : false
 #   @ref            : https://prettier.io/docs/en/options.html#quotes
-# --------------------------------------------------------------------------------------
+# #
+
 singleQuote: true
 
-# --------------------------------------------------------------------------------------
+# #
 #   Change when properties in objects are quoted.
 #
 #   "as-needed"     : Only add quotes around object properties where required.
@@ -69,18 +75,20 @@ singleQuote: true
 #
 #   @default        : "as-needed"
 #   @ref            : https://prettier.io/docs/en/options.html#quote-props
-# --------------------------------------------------------------------------------------
+# #
+
 quoteProps: 'preserve'
 
-# --------------------------------------------------------------------------------------
+# #
 #   Use single quotes instead of double quotes in JSX.
 #
 #   @default        : false
 #   @ref            : https://prettier.io/docs/en/options.html#jsx-quotes
-# --------------------------------------------------------------------------------------
+# #
+
 jsxSingleQuote: true
 
-# --------------------------------------------------------------------------------------
+# #
 #   Print trailing commas wherever possible in multi-line comma-separated
 #   syntactic structures.
 #
@@ -104,10 +112,11 @@ jsxSingleQuote: true
 #
 #   @default        : "all"
 #   @ref            : https://prettier.io/docs/en/options.html#trailing-commas
-# --------------------------------------------------------------------------------------
+# #
+
 trailingComma: none
 
-# --------------------------------------------------------------------------------------
+# #
 #   Print spaces between brackets in object literals.
 #
 #   true            : Example: { foo: bar }.
@@ -115,10 +124,11 @@ trailingComma: none
 #
 #   @default        : true
 #   @ref            : https://prettier.io/docs/en/options.html#bracket-spacing
-# --------------------------------------------------------------------------------------
+# #
+
 bracketSpacing: true
 
-# --------------------------------------------------------------------------------------
+# #
 #   Put the > of a multi-line HTML (HTML, JSX, Vue, Angular) element at the end of the
 #   last line instead of being alone on the next line (does not apply to self closing
 #   elements).
@@ -144,10 +154,11 @@ bracketSpacing: true
 #
 #   @default        : false
 #   @ref            : https://prettier.io/docs/en/options.html#bracket-line
-# --------------------------------------------------------------------------------------
+# #
+
 bracketSameLine: false
 
-# --------------------------------------------------------------------------------------
+# #
 #   Include parentheses around a sole arrow function parameter.
 #
 #   First available in v1.9.0, default value changed from avoid to always in v2.0.0
@@ -158,10 +169,11 @@ bracketSameLine: false
 #
 #   @default        : "always"
 #   @ref            : https://prettier.io/docs/en/options.html#arrow-function-parentheses
-# --------------------------------------------------------------------------------------
+# #
+
 arrowParens: always
 
-# --------------------------------------------------------------------------------------
+# #
 #   By default, Prettier will not change wrapping in markdown text since some services
 #   use a linebreak-sensitive renderer, e.g. GitHub comments and BitBucket. To have
 #   Prettier wrap prose to the print width, change this option to "always". If you want
@@ -177,10 +189,11 @@ arrowParens: always
 #
 #   @default        : "preserve"
 #   @ref            : https://prettier.io/docs/en/options.html#prose-wrap
-# --------------------------------------------------------------------------------------
+# #
+
 proseWrap: 'preserve'
 
-# --------------------------------------------------------------------------------------
+# #
 #   Specify the global whitespace sensitivity for HTML, Vue, Angular, and Handlebars.
 #   See whitespace-sensitive formatting for more info.
 #
@@ -195,10 +208,11 @@ proseWrap: 'preserve'
 #   @default        : "css"
 #   @ref            : https://prettier.io/docs/en/options.html#html-whitespace-sensitivity
 #                     https://prettier.io/blog/2018/11/07/1.15.0.html#whitespace-sensitive-formatting
-# --------------------------------------------------------------------------------------
+# #
+
 htmlWhitespaceSensitivity: 'ignore'
 
-# --------------------------------------------------------------------------------------
+# #
 #   For historical reasons, there exist two common flavors of line endings in text
 #   files. That is:
 #       - \n (or LF for Line Feed)
@@ -227,10 +241,11 @@ htmlWhitespaceSensitivity: 'ignore'
 #
 #   @default        : "lf"
 #   @ref            : https://prettier.io/docs/en/options.html#end-of-line
-# --------------------------------------------------------------------------------------
+# #
+
 endOfLine: 'auto'
 
-# --------------------------------------------------------------------------------------
+# #
 #   Control whether Prettier formats quoted code embedded in the file.
 #
 #   When Prettier identifies cases where it looks like you've placed some code it knows
@@ -249,10 +264,11 @@ endOfLine: 'auto'
 #
 #   @default        : "auto"
 #   @ref            : https://prettier.io/docs/en/options.html#embedded-language-formatting
-# --------------------------------------------------------------------------------------
+# #
+
 embeddedLanguageFormatting: 'auto'
 
-# --------------------------------------------------------------------------------------
+# #
 #   Enforce single attribute per line in HTML, Vue and JSX.
 #
 #   true            : Enforce single attribute per line.
@@ -260,5 +276,6 @@ embeddedLanguageFormatting: 'auto'
 #
 #   @default        : false
 #   @ref            : https://prettier.io/docs/en/options.html#single-attribute-per-line
-# --------------------------------------------------------------------------------------
+# #
+
 singleAttributePerLine: false
