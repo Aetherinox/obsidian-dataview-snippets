@@ -79,7 +79,7 @@
         "obsidian": "^1.7.2",
         "rollup": "^4.24.0",
         "semver": "^7.6.3",
-        "uuid": "^9.0.1",
+        "uuid": "^10.0.0",
         "all-contributors-cli": "^6.26.1"
     }
 }
