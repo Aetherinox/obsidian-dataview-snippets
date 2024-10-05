@@ -509,7 +509,7 @@ jobs:
               uses: actions/upload-artifact@v4
               if: always()
               with:
-                name: "${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip"
+                name: "reee"
                 path: ${{ inputs.PLUGIN_NAME }}-${{ env.PACKAGE_VERSION }}.zip
                 retention-days: 30
 
