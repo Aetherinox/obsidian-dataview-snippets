@@ -247,7 +247,7 @@ jobs:
                     for file in ${CHANGED_FILES}; do
                         echo "$file was changed"
                     done
-                    env:
+                env:
                     ADDED_FILES:      ${{ steps.task_autocheck_changed_files_get.outputs.added_files }}
                     MODIFIED_FILES:   ${{ steps.task_autocheck_changed_files_get.outputs.modified_files }}
                     CHANGED_FILES:    ${{ steps.task_autocheck_changed_files_get.outputs.all_changed_files }}
