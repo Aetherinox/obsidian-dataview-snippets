@@ -148,8 +148,8 @@ jobs:
 
                       // Fetch labels from the source repository
                       const response = await github.rest.issues.listLabelsForRepo({
-                          owner: targetRepo.split('/')[0],
-                          repo: targetRepo.split('/')[1],
+                          owner: targetOwner,
+                          repo: targetRepo,
                       });
                       console.log("Labels fetched: ", response.data);
 
