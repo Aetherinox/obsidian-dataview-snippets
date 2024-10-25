@@ -1,12 +1,17 @@
 # #
 #   @type               github workflow
-#   @desc               cleans up the list of deployments in the environment history
+#   @desc               manually activated workflow to remove issue labels
 #   @author             Aetherinox
 #   @url                https://github.com/Aetherinox
+#
+#   This Github action must be activated manually.  This workflow script will do the
+#   following:
+#
+#       - Remove all existing labels in repository
 # #
 
-name: "⚙️ Deploy › Clean"
-run-name: "⚙️ Deploy › Clean"
+name: "🎫 Labels › Remove"
+run-name: "🎫 Labels › Remove"
 
 # #
 #   triggers
@@ -20,9 +25,7 @@ on:
 # #
 
 env:
-    BOT_NAME_1:           AdminServ
-    BOT_NAME_2:           AdminServX
-    BOT_NAME_3:           EuropaServ
+    BOT_NAME_1:           EuropaServ
     BOT_NAME_DEPENDABOT:  dependabot[bot]
     LABELS_JSON: |
       [
@@ -91,16 +94,69 @@ env:
 # #
 
 jobs:
-    cleanup:
+
+    # #
+    #   Job › Remove Labels
+    #
+    #   This job removes all existing labels
+    # #
+
+    issues-labels-remove:
+        name: >-
+            🎫 Labels › Remove
         runs-on: ubuntu-latest
-        permissions: write-all
-  
+        permissions:
+            contents: 'read'
+            id-token: 'write'
+            issues: 'write'
         steps:
+
+            # #
+            #   [ Delete Labels ] Start
+            # #
+
             - name: >-
-                ⚙️ Deployments › Clean
-              uses: Aetherinox/delete-deploy-env-action@v3
+                  ✅ Start
+              id: task_label_remove_start
+              run: |
+                  echo "Starting workflow"
+
+            # #
+            #   [ Delete Labels ] Checkout
+            # #
+
+            - name: >-
+                  ☑️ Checkout
+              id: task_label_remove_checkout
+              uses: actions/checkout@v4
               with:
-                  token: ${{ secrets.SELF_TOKEN_CL }}
-                  environment: orion
-                  onlyRemoveDeployments: true
-                  delay: "1000"
+                  fetch-depth: 0
+
+            # #
+            #   [ Delete Labels ] Start
+            # #
+
+            - name: >-
+                  🏷️ Delete Existing Labels
+              id: task_label_remove_run
+              uses: actions/github-script@v7
+              with:
+                  github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
+                  script: |
+                      const labels = JSON.parse( process.env.LABELS_JSON );
+                      for ( const label of labels )
+                      {
+                          try
+                          {
+                              await github.rest.issues.deleteLabel(
+                              {
+                                  owner:        context.repo.owner,
+                                  repo:         context.repo.repo,
+                                  name:         label.name,
+                              });
+                          }
+                          catch ( err )
+                          {
+                            console.error("Error: " + err);
+                          }
+                      }
