@@ -603,7 +603,7 @@ jobs:
             uses: actions/stale@v9
             id: task_issues_stale_run
             with:
-                repo-token: ${{ secrets.ADMINSERV_TOKEN }}
+                repo-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
                 stale-issue-message: |
                     ⚠️ It looks like there hasn't been any recent updates on this
                     issue.  If you created this issue and no longer consider it
@@ -646,8 +646,8 @@ jobs:
               with:
                   add-pr-labels: 'Status 𐄂 Locked'
                   add-issue-labels: 'Status 𐄂 Locked'
-                  github-token: ${{ secrets.ADMINSERV_TOKEN }}
-                  issue-inactive-days: '180'
+                  github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
+                  issue-inactive-days: '60'
                   issue-lock-reason: 'resolved'
                   pr-inactive-days: '365'
                   pr-lock-reason: 'resolved'
