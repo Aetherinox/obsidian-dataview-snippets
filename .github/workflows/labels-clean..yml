@@ -143,7 +143,28 @@ jobs:
               with:
                   github-token: ${{ secrets.ADMINSERV_TOKEN_CL }}
                   script: |
-                      const labels = JSON.parse( process.env.LABELS_JSON );
+                      const targetOwner = context.repo.owner;
+                      const targetRepo = context.repo.repo;
+
+                      // Fetch labels from the source repository
+                      const response = await github.rest.issues.listLabelsForRepo({
+                          owner: sourceRepo.split('/')[0],
+                          repo: sourceRepo.split('/')[1],
+                      });
+                      console.log("Labels fetched: ", response.data);
+
+                      const labels = response.data;
+                      if (labels.length === 0) {
+                          console.log("No labels found in the source repository.");
+                      }
+
+                      // Fetch all labels from the target repository and delete them
+                      const existingLabels = await github.rest.issues.listLabelsForRepo({
+                          owner: targetOwner,
+                          repo: targetRepo,
+                      });
+
+                      // const labels = JSON.parse( process.env.LABELS_JSON );
                       for ( const label of labels )
                       {
                           try
