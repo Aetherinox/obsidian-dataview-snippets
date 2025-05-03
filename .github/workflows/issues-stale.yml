@@ -56,8 +56,8 @@ run-name: '🎫 Issues › Stale'
 
 on:
     workflow_dispatch:
-    schedule:
-        - cron: "0 0 * * *"
+  # schedule:
+   #    - cron: "0 0 * * *"
 
 # #
 #   environment variables
@@ -217,9 +217,9 @@ jobs:
 
             # #
             #   Issues (Stale) › Labels › Create › Verify Existing
-            #   
+            #
             #   check if repo has all of the needed issue / pr labels; create label if not exists
-            #   
+            #
             #   action needed if using 'pull_request' and 'issue_comment'
             #   to get the pull request, you would normally use ${{ github.event.number }}
             #   however this isnt available for 'issue_comment'
@@ -291,7 +291,7 @@ jobs:
 
             # #
             #   Issues (Stale) › Labels › Assign Missing › Check
-            #   
+            #
             #   Check if repo has labels to use
             # #
 
@@ -782,7 +782,7 @@ jobs:
               # #
               #   Stale › Check Condition
               # #
-              
+
             - name: >-
                   💤 Stale › Check Condition
               id: task_issues_inactive_stale
